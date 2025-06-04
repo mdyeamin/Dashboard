@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+        @theme {
+        /* --color-clifford: #da373d; */
+        --color-primary-bg: #efeeee ;
+        --color-light-gray: #da373d;
+        --color-dark-gray: #132022;
+        --color-yellow: #fbcd13
+      }
+    </style>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Enthrall</title>
+</head>
+
+<body class="bg-primary-bg w-11/12 mx-auto">
+    <header class="bg-white h-16 my-3 rounded-2xl px-5">
+        <div class="h-full flex justify-between items-center ">
+            <img class="w-40" src="images/logo.png" alt="">
+            <div class="flex items-center gap-5">
+                <i class="fa-solid fa-bell text-lg"></i>
+                <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+            </div>
+        </div>
+    </header>
+
+    </head>
+
+    <div class="min-h-screen flex">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-white w-64 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Dashboard</h2>
+      <nav class="space-y-2">
+        <button onclick="loadPage('challenge')" class="w-full text-left px-4 py-2 rounded hover:bg-yellow-400 bg-yellow-300 font-semibold">Challenge</button>
+        <button onclick="loadPage('courses')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Add Courses</button>
+        <button onclick="loadPage('quiz')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Quiz List</button>
+        <button onclick="loadPage('homework')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Home Work</button>
+        <button onclick="loadPage('exam')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Exam</button>
+        <button onclick="loadPage('resources')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Resources</button>
+        <button onclick="loadPage('bootcamp')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Bootcamp</button>
+        <button onclick="loadPage('automation')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Automation</button>
+        <button onclick="loadPage('schedule')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Class Schedule</button>
+      </nav>
+    </div>
+
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+    <!-- Main content -->
+    <div class="flex-1 p-4 md:ml-64">
+      <!-- Mobile toggle button -->
+      <button onclick="toggleSidebar()" class="md:hidden mb-4 text-white bg-yellow-500 px-4 py-2 rounded">☰ Menu</button>
+
+      <!-- Dynamic Content -->
+      <div id="main-content">
+        <h1 class="text-2xl font-bold mb-4">Welcome to Dashboard</h1>
+        <p class="text-gray-700">Click any item from the sidebar to view its page content here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('hidden');
+      overlay.classList.toggle('hidden');
+    }
+
+    function loadPage(page) {
+      const content = {
+        challenge: `
+          <div>
+            <h1 class="text-2xl font-bold">Challenge</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">Challenge Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        `,
+        courses: `<h1 class='text-2xl font-bold'>Add Courses</h1><p class='mt-2'>Course form or listing here...</p>`,
+        quiz: `<h1 class='text-2xl font-bold'>Quiz List</h1><p class='mt-2'>Quiz information here...</p>`,
+        homework: `<h1 class='text-2xl font-bold'>Home Work</h1><p class='mt-2'>Homework details here...</p>`,
+        exam: `<h1 class='text-2xl font-bold'>Exam</h1><p class='mt-2'>Exam schedule or content...</p>`,
+        resources: `<h1 class='text-2xl font-bold'>Resources</h1><p class='mt-2'>Links and materials...</p>`,
+        bootcamp: `<h1 class='text-2xl font-bold'>Bootcamp</h1><p class='mt-2'>Bootcamp content...</p>`,
+        automation: `<h1 class='text-2xl font-bold'>Automation</h1><p class='mt-2'>Automated tools and tracking...</p>`,
+        schedule: `<h1 class='text-2xl font-bold'>Class Schedule</h1><p class='mt-2'>Your schedule appears here...</p>`
+      };
+
+      document.getElementById('main-content').innerHTML = content[page] || `<h1 class='text-xl font-bold'>Page not found</h1>`;
+
+      if (window.innerWidth < 768) toggleSidebar();
+    }
+  </script>
+</body>
+    <!-- <script src="index.js"></script> -->
+</body>
+
+</html>
