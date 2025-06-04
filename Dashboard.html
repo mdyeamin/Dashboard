@@ -40,26 +40,25 @@
             class="bg-white w-64 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-lg">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Dashboard</h2>
             <nav class="space-y-2">
-               
-                <button onclick="loadPage('courses')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Add
-                    Courses</button>
-                <button onclick="loadPage('quiz')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Quiz
-                    List</button>
-                <button onclick="loadPage('homework')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Home
-                    Work</button>
-                    <button onclick="loadPage('challenge')"
-                    class="w-full text-left px-4 py-2 rounded hover:bg-yellow-400 bg-yellow-300 font-semibold">Challenge</button>
+
+                <button onclick="loadPage('courses')"
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Add Courses</button>
+                <button onclick="loadPage('quiz')"
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Quiz List</button>
+                <button onclick="loadPage('homework')"
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Home Work</button>
+                <button onclick="loadPage('challenge')"
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Challenge</button>
                 <button onclick="loadPage('exam')"
-                    class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Exam</button>
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Exam</button>
                 <button onclick="loadPage('resources')"
-                    class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Resources</button>
-                     
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Resources</button>
                 <button onclick="loadPage('bootcamp')"
-                    class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Bootcamp</button>
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Bootcamp</button>
                 <button onclick="loadPage('automation')"
-                    class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Automation</button>
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Automation</button>
                 <button onclick="loadPage('schedule')"
-                    class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Class Schedule</button>
+                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Class Schedule</button>
             </nav>
         </div>
 
@@ -81,18 +80,45 @@
     </div>
 
     <script>
+
+
+        const buttons = document.querySelectorAll('.toggle-btn');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                resetButtons();
+                button.classList.remove('bg-gray-300', 'hover:bg-gray-400', 'text-black');
+                button.classList.add('bg-yellow', 'hover:bg-yellow', 'text-dark-gray');
+            });
+        });
+
+        document.addEventListener('click', () => {
+            resetButtons();
+        });
+
+        function resetButtons() {
+            buttons.forEach((btn) => {
+                btn.classList.remove('bg-yellow', 'hover:bg-yellow', 'text-white');
+                btn.classList.add('bg-gray-300', 'hover:bg-gray-400', 'text-black');
+            });
+        }
+
+
+
+
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('overlay');
             sidebar.classList.toggle('hidden');
             overlay.classList.toggle('hidden');
         }
-// dashboard content
+        // dashboard content
         function loadPage(page) {
             const content = {
-               
 
-        // courses content 
+
+                // courses content 
                 courses: `
           <div>
             <h1 class="text-2xl font-bold">Add Courses</h1>
@@ -263,7 +289,7 @@
             </table>
           </div>
         `,
-        // quiz content 
+                // quiz content 
                 quiz: `
                 <div>
             <h1 class="text-2xl font-bold">Quiz Name</h1>
@@ -606,7 +632,7 @@
             </table>
           </div>
                 `,
-                 // challenge content
+                // challenge content
                 challenge: `
 
  <!-- Challenge Section -->
@@ -780,8 +806,8 @@
           </div>
 
         `,
-            // exm content     
-        exam: `
+                // exm content     
+                exam: `
         <div>
             <h1 class="text-2xl font-bold">Exam</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -951,10 +977,10 @@
             </table>
           </div>
         `,
-              
-        
-        // resourse content 
-        resources: `
+
+
+                // resourse content 
+                resources: `
         <div>
             <h1 class="text-2xl font-bold">Resources</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -1124,10 +1150,10 @@
             </table>
           </div>
         `,
-           
 
-            //   bootcamt content   
-        bootcamp: `
+
+                //   bootcamt content   
+                bootcamp: `
         <div>
             <h1 class="text-2xl font-bold">Bootcamp</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -1297,9 +1323,9 @@
             </table>
           </div>
         `,
-               
-        // automation content 
-        automation: `
+
+                // automation content 
+                automation: `
         
         <div>
             <h1 class="text-2xl font-bold">Automation</h1>
@@ -1470,10 +1496,10 @@
             </table>
           </div>
         `,
-                
-        
-        // schedule content  
-        schedule: `
+
+
+                // schedule content  
+                schedule: `
         <div>
             <h1 class="text-2xl font-bold">Schedule</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
