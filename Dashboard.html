@@ -40,18 +40,20 @@
             class="bg-white w-64 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-lg">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Dashboard</h2>
             <nav class="space-y-2">
-                <button onclick="loadPage('challenge')"
-                    class="w-full text-left px-4 py-2 rounded hover:bg-yellow-400 bg-yellow-300 font-semibold">Challenge</button>
+               
                 <button onclick="loadPage('courses')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Add
                     Courses</button>
                 <button onclick="loadPage('quiz')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Quiz
                     List</button>
                 <button onclick="loadPage('homework')" class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Home
                     Work</button>
+                    <button onclick="loadPage('challenge')"
+                    class="w-full text-left px-4 py-2 rounded hover:bg-yellow-400 bg-yellow-300 font-semibold">Challenge</button>
                 <button onclick="loadPage('exam')"
                     class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Exam</button>
                 <button onclick="loadPage('resources')"
                     class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Resources</button>
+                     
                 <button onclick="loadPage('bootcamp')"
                     class="w-full text-left px-4 py-2 rounded hover:bg-gray-200">Bootcamp</button>
                 <button onclick="loadPage('automation')"
@@ -85,17 +87,20 @@
             sidebar.classList.toggle('hidden');
             overlay.classList.toggle('hidden');
         }
-// challenge button
+// dashboard content
         function loadPage(page) {
             const content = {
-                challenge: `
-          <div class="w-full">
-            <h1 class="text-2xl font-bold">Challenge</h1>
-            <table class="w-full max-md:overflow-x-auto mt-4 text-left bg-white rounded shadow-sm wi">
+               
+
+        // courses content 
+                courses: `
+          <div>
+            <h1 class="text-2xl font-bold">Add Courses</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
               <thead class="bg-yellow-300">
                 <tr class="text-sm font-semibold">
                   <th class="px-4 py-2">SL</th>
-                  <th class="px-4 py-2">Challenge Name</th>
+                  <th class="px-4 py-2">Course Name</th>
                   <th class="px-4 py-2">Batch</th>
                   <th class="px-4 py-2">Starting Date</th>
                   <th class="px-4 py-2">Submission Date</th>
@@ -120,16 +125,493 @@
               </tbody>
 
 
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Enter</button>
+                  </td>
+                <tr/> 
+              </tbody>
               
 
             </table>
           </div>
         `,
+        // quiz content 
+                quiz: `
+                <div>
+            <h1 class="text-2xl font-bold">Quiz Name</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">Quiz Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
 
-        // courses button 
-                courses: `
-          <div>
-            <h1 class="text-2xl font-bold">Add Courses</h1>
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+            </table>
+          </div>
+                `,
+
+                // homework content 
+                homework: `
+                <div>
+            <h1 class="text-2xl font-bold">Add Home Work</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">Home work Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+            </table>
+          </div>
+                `,
+                 // challenge content
+                challenge: `
+
+ <!-- Challenge Section -->
+<div>
+            <h1 class="text-2xl font-bold">Challenge</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
               <thead class="bg-yellow-300">
                 <tr class="text-sm font-semibold">
@@ -296,14 +778,871 @@
 
             </table>
           </div>
+
         `,
-                quiz: `<h1 class='text-2xl font-bold'>Quiz List</h1><p class='mt-2'>Quiz information here...</p>`,
-                homework: `<h1 class='text-2xl font-bold'>Home Work</h1><p class='mt-2'>Homework details here...</p>`,
-                exam: `<h1 class='text-2xl font-bold'>Exam</h1><p class='mt-2'>Exam schedule or content...</p>`,
-                resources: `<h1 class='text-2xl font-bold'>Resources</h1><p class='mt-2'>Links and materials...</p>`,
-                bootcamp: `<h1 class='text-2xl font-bold'>Bootcamp</h1><p class='mt-2'>Bootcamp content...</p>`,
-                automation: `<h1 class='text-2xl font-bold'>Automation</h1><p class='mt-2'>Automated tools and tracking...</p>`,
-                schedule: `<h1 class='text-2xl font-bold'>Class Schedule</h1><p class='mt-2'>Your schedule appears here...</p>`
+            // exm content     
+        exam: `
+        <div>
+            <h1 class="text-2xl font-bold">Exam</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">Exam Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+            </table>
+          </div>
+        `,
+              
+        
+        // resourse content 
+        resources: `
+        <div>
+            <h1 class="text-2xl font-bold">Resources</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">Resources Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+            </table>
+          </div>
+        `,
+           
+
+            //   bootcamt content   
+        bootcamp: `
+        <div>
+            <h1 class="text-2xl font-bold">Bootcamp</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">Bootcamp Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+            </table>
+          </div>
+        `,
+               
+        // automation content 
+        automation: `
+        
+        <div>
+            <h1 class="text-2xl font-bold">Automation</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">Automation Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+            </table>
+          </div>
+        `,
+                
+        
+        // schedule content  
+        schedule: `
+        <div>
+            <h1 class="text-2xl font-bold">Schedule</h1>
+            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+              <thead class="bg-yellow-300">
+                <tr class="text-sm font-semibold">
+                  <th class="px-4 py-2">SL</th>
+                  <th class="px-4 py-2">schedule Name</th>
+                  <th class="px-4 py-2">Batch</th>
+                  <th class="px-4 py-2">Starting Date</th>
+                  <th class="px-4 py-2">Submission Date</th>
+                  <th class="px-4 py-2">Score</th>
+                  <th class="px-4 py-2">Percentage</th>
+                  <th class="px-4 py-2">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+
+              <tbody class="text-sm divide-y">
+                <tr>
+                  <td class="px-4 py-2">01</td>
+                  <td class="px-4 py-2">type test</td>
+                  <td class="px-4 py-2">2025QA01</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">12 May 2025</td>
+                  <td class="px-4 py-2">07/10</td>
+                  <td class="px-4 py-2">70%</td>
+                  <td class="px-4 py-2">
+                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
+                  </td>
+                <tr/> 
+              </tbody>
+              
+
+            </table>
+          </div>
+        `
             };
 
             document.getElementById('main-content').innerHTML = content[page] || `<h1 class='text-xl font-bold'>Page not found</h1>`;
