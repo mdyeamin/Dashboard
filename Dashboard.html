@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- fontawesome cdn  -->
+   <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
   <!-- custom css -->
   <style type="text/tailwindcss">
     @theme {
@@ -38,16 +40,18 @@
     <!-- Sidebar -->
     <div id="sidebar"
       class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
-      <h2 class="text-2xl font-bold text-dark-gray mb-6">Dashboard</h2>
+      <h2 class="text-2xl font-bold text-dark-gray mb-6"><a href="#"></a>Dashboard</h2>
       <nav class="space-y-2">
 
         <button onclick="loadPage('courses')"
           class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Add
           Courses</button>
         <button onclick="loadPage('quiz')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Quiz List</button>
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Quiz
+          List</button>
         <button onclick="loadPage('homework')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Home Work</button>
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Home
+          Work</button>
         <button onclick="loadPage('challenge')"
           class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Challenge</button>
         <button onclick="loadPage('exam')"
@@ -76,9 +80,10 @@
       <!-- Dynamic Content -->
       <div id="main-content">
         <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
-        <div class="grid grid-cols-12 bg-yellow p-10 rounded-lg shadow-md gap-4">
-          <div class="col-span-6 flex flex-col justify-center">
-            <h1 class="text-2xl font-bold ">You are going great! Push yourself <br> a little and You can be BEST!</h1>
+        <div class="grid grid-cols-12 bg-yellow p-10 max-md:p-4 rounded-lg shadow-md gap-4">
+          <div class="col-span-6 max-md:col-span-12 flex flex-col justify-center">
+            <h1 class="text-2xl max-md:text-lg font-bold ">You are going great! Push yourself <br> a little and You can
+              be BEST!</h1>
             <div class="flex items-center mt-4">
 
               <div class="w-full h-6 bg-gray-200 rounded-sm dark:bg-gray-700">
@@ -88,10 +93,56 @@
             </div>
             <p>Your Overall Score</p>
           </div>
-          <div class="col-span-6 flex flex-col justify-center items-end">
+          <div class="col-span-6 max-md:col-span-12 flex flex-col justify-center items-end max-md:items-center">
             <img class="w-50" src="images/dashboard.png" alt="">
           </div>
         </div>
+
+        <!-- classes  -->
+        <h2 class="my-5 text-lg font-bold">My Courses</h2>
+        <div class="grid grid-cols-12 gap-5">
+          <!-- class 1  -->
+          <div class="col-span-6 max-md:col-span-12 bg-white rounded-lg shadow-lg lg:p-4 max-md:p-2 border-2 border-white hover:border-yellow border-rounded-lg transition-all duration-300 bg-linear-to-tr-bl from-yellow-100 to-white hover:bg-gradient-to-tr hover:shadow-xl">
+            <div class=" w-full h-full grid grid-cols-12 mx-auto gap-5">
+              <div class="col-span-6 max-md:col-span-12 flex items-center justify-center">
+                <img class="h-full w-full object-cover rounded-md" src="images/computer.jpg" alt="">
+              </div>
+              <div class="lg:col-span-6 max-md:col-span-12">
+                <div class=" flex flex-col justify-center items-start h-full">
+                  <h1 class="text-2xl  max-md:text-xl font-semibold leading-6">Business Analyst <br> bootcamp</h1>
+
+                  <div class="w-full flex gap-x-5 items-center max-md:justify-center mt-8">
+                    <button
+                      class="w-full bg-yellow hover:bg-dark-gray text-dark-gray text-sm font-semibold hover:text-yellow py-2 px-6 rounded transition duration-300">
+                      Join Class <i class="fa-solid fa-video fa-fade ml-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- class 2  -->
+          <div class="col-span-6 max-md:col-span-12 bg-white rounded-lg shadow-lg lg:p-4 max-md:p-2 border-2 border-white hover:border-yellow border-rounded-lg transition-all duration-300 bg-linear-to-tr-bl from-yellow-100 to-white hover:bg-gradient-to-tr hover:shadow-xl">
+            <div class=" w-full h-full grid grid-cols-12 mx-auto gap-5">
+              <div class="col-span-6 max-md:col-span-12 flex items-center justify-center">
+                <img class="h-full w-full object-cover rounded-md" src="images/computer.jpg" alt="">
+              </div>
+              <div class="lg:col-span-6 max-md:col-span-12">
+                <div class=" flex flex-col justify-center items-start h-full">
+                  <h1 class="text-2xl  max-md:text-xl font-semibold leading-6">Business Analyst <br> bootcamp</h1>
+
+                  <div class="w-full flex gap-x-5 items-center max-md:justify-center mt-8">
+                    <button
+                      class="w-full bg-yellow hover:bg-dark-gray text-dark-gray text-sm font-semibold hover:text-yellow py-2 px-6 rounded transition duration-300">
+                      Join Class <i class="fa-solid fa-video fa-fade ml-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
