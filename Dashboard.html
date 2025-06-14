@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- custom css -->
-    <style type="text/tailwindcss">
-        @theme {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- custom css -->
+  <style type="text/tailwindcss">
+    @theme {
         /* --color-clifford: #da373d; */
         --color-primary-bg: #efeeee ;
         --color-light-gray: #da373d;
@@ -15,111 +15,128 @@
         --color-yellow: #fbcd13
       }
     </style>
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Enthrall</title>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Enthrall</title>
 </head>
 
 <body class="bg-primary-bg w-11/12 mx-auto">
-    <header class="bg-white h-16 my-3 rounded-2xl px-5">
-        <div class="h-full flex justify-between items-center ">
-            <img class="w-40" src="images/logo.png" alt="">
-            <div class="flex items-center gap-5">
-                <i class="fa-solid fa-bell text-lg"></i>
-                <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
-            </div>
-        </div>
-    </header>
+  <header class="bg-white h-16 my-3 rounded-2xl px-5">
+    <div class="h-full flex justify-between items-center ">
+      <img class="w-40" src="images/logo.png" alt="">
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-bell text-lg"></i>
+        <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+      </div>
+    </div>
+  </header>
 
-    </head>
+  </head>
 
-    <div class="min-h-screen flex">
-        <!-- Sidebar -->
-        <div id="sidebar"
-            class="bg-white w-64 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-lg">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Dashboard</h2>
-            <nav class="space-y-2">
+  <div class="min-h-screen flex">
+    <!-- Sidebar -->
+    <div id="sidebar"
+      class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
+      <h2 class="text-2xl font-bold text-dark-gray mb-6">Dashboard</h2>
+      <nav class="space-y-2">
 
-                <button onclick="loadPage('courses')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Add Courses</button>
-                <button onclick="loadPage('quiz')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Quiz List</button>
-                <button onclick="loadPage('homework')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Home Work</button>
-                <button onclick="loadPage('challenge')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Challenge</button>
-                <button onclick="loadPage('exam')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Exam</button>
-                <button onclick="loadPage('resources')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Resources</button>
-                <button onclick="loadPage('bootcamp')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Bootcamp</button>
-                <button onclick="loadPage('automation')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Automation</button>
-                <button onclick="loadPage('schedule')"
-                    class="toggle-btn w-full text-left px-4 py-2 rounded font-semibold bg-gray-300 text-black">Class Schedule</button>
-            </nav>
-        </div>
-
-        <!-- Overlay for mobile -->
-        <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
-
-        <!-- Main content -->
-        <div class="flex-1 p-4 ">
-            <!-- Mobile toggle button -->
-            <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
-                Menu</button>
-
-            <!-- Dynamic Content -->
-            <div id="main-content">
-                <h1 class="text-2xl font-bold mb-4">Welcome to Dashboard</h1>
-                <p class="text-gray-700">Click any item from the sidebar to view its page content here.</p>
-            </div>
-        </div>
+        <button onclick="loadPage('courses')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Add
+          Courses</button>
+        <button onclick="loadPage('quiz')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Quiz List</button>
+        <button onclick="loadPage('homework')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Home Work</button>
+        <button onclick="loadPage('challenge')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Challenge</button>
+        <button onclick="loadPage('exam')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Exam</button>
+        <button onclick="loadPage('resources')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Resources</button>
+        <button onclick="loadPage('bootcamp')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Bootcamp</button>
+        <button onclick="loadPage('automation')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Automation</button>
+        <button onclick="loadPage('schedule')"
+          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Class
+          Schedule</button>
+      </nav>
     </div>
 
-    <script>
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+    <!-- Main content -->
+    <div class="flex-1 p-4 ">
+      <!-- Mobile toggle button -->
+      <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
+        Menu</button>
+
+      <!-- Dynamic Content -->
+      <div id="main-content">
+        <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
+        <div class="grid grid-cols-12 bg-yellow p-10 rounded-lg shadow-md gap-4">
+          <div class="col-span-6 flex flex-col justify-center">
+            <h1 class="text-2xl font-bold ">You are going great! Push yourself <br> a little and You can be BEST!</h1>
+            <div class="flex items-center mt-4">
+
+              <div class="w-full h-6 bg-gray-200 rounded-sm dark:bg-gray-700">
+                <div class="h-6 bg-dark-gray rounded-sm" style="width: 78%"></div>
+              </div>
+              <span class="text-4xl font-medium text-dark-gray dark:text-gray-400 ml-5">78%</span>
+            </div>
+            <p>Your Overall Score</p>
+          </div>
+          <div class="col-span-6 flex flex-col justify-center items-end">
+            <img class="w-50" src="images/dashboard.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
 
 
-        const buttons = document.querySelectorAll('.toggle-btn');
+    const buttons = document.querySelectorAll('.toggle-btn');
 
-        buttons.forEach((button) => {
-            button.addEventListener('click', (e) => {
-                e.stopPropagation();
-                resetButtons();
-                button.classList.remove('bg-gray-300', 'hover:bg-gray-400', 'text-black');
-                button.classList.add('bg-yellow', 'hover:bg-yellow', 'text-dark-gray');
-            });
-        });
+    buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        resetButtons();
+        button.classList.remove('bg-gray-100', 'hover:bg-gray-100', 'text-black');
+        button.classList.add('bg-yellow', 'hover:bg-yellow', 'text-dark-gray');
+      });
+    });
 
-        document.addEventListener('click', () => {
-            resetButtons();
-        });
+    // document.addEventListener('click', () => {
+    //   resetButtons();
+    // });
 
-        function resetButtons() {
-            buttons.forEach((btn) => {
-                btn.classList.remove('bg-yellow', 'hover:bg-yellow', 'text-white');
-                btn.classList.add('bg-gray-300', 'hover:bg-gray-400', 'text-black');
-            });
-        }
-
-
+    function resetButtons() {
+      buttons.forEach((btn) => {
+        btn.classList.remove('bg-yellow', 'hover:bg-yellow', 'text-white');
+        btn.classList.add('bg-gray-100', 'hover:bg-gray-100', 'text-black');
+      });
+    }
 
 
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-            sidebar.classList.toggle('hidden');
-            overlay.classList.toggle('hidden');
-        }
-        // dashboard content
-        function loadPage(page) {
-            const content = {
 
 
-                // courses content 
-                courses: `
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('hidden');
+      overlay.classList.toggle('hidden');
+    }
+    // dashboard content
+    function loadPage(page) {
+      const content = {
+
+
+        // courses content 
+        courses: `
           <div>
             <h1 class="text-2xl font-bold">Add Courses</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -289,8 +306,8 @@
             </table>
           </div>
         `,
-                // quiz content 
-                quiz: `
+        // quiz content 
+        quiz: `
                 <div>
             <h1 class="text-2xl font-bold">Quiz Name</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -461,8 +478,8 @@
           </div>
                 `,
 
-                // homework content 
-                homework: `
+        // homework content 
+        homework: `
                 <div>
             <h1 class="text-2xl font-bold">Add Home Work</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -632,8 +649,8 @@
             </table>
           </div>
                 `,
-                // challenge content
-                challenge: `
+        // challenge content
+        challenge: `
 
  <!-- Challenge Section -->
 <div>
@@ -806,8 +823,8 @@
           </div>
 
         `,
-                // exm content     
-                exam: `
+        // exm content     
+        exam: `
         <div>
             <h1 class="text-2xl font-bold">Exam</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -979,8 +996,8 @@
         `,
 
 
-                // resourse content 
-                resources: `
+        // resourse content 
+        resources: `
         <div>
             <h1 class="text-2xl font-bold">Resources</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -1152,8 +1169,8 @@
         `,
 
 
-                //   bootcamt content   
-                bootcamp: `
+        //   bootcamt content   
+        bootcamp: `
         <div>
             <h1 class="text-2xl font-bold">Bootcamp</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -1324,8 +1341,8 @@
           </div>
         `,
 
-                // automation content 
-                automation: `
+        // automation content 
+        automation: `
         
         <div>
             <h1 class="text-2xl font-bold">Automation</h1>
@@ -1498,8 +1515,8 @@
         `,
 
 
-                // schedule content  
-                schedule: `
+        // schedule content  
+        schedule: `
         <div>
             <h1 class="text-2xl font-bold">Schedule</h1>
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
@@ -1669,13 +1686,13 @@
             </table>
           </div>
         `
-            };
+      };
 
-            document.getElementById('main-content').innerHTML = content[page] || `<h1 class='text-xl font-bold'>Page not found</h1>`;
+      document.getElementById('main-content').innerHTML = content[page] || `<h1 class='text-xl font-bold'>Page not found</h1>`;
 
-            if (window.innerWidth < 768) toggleSidebar();
-        }
-    </script>
+      if (window.innerWidth < 768) toggleSidebar();
+    }
+  </script>
 </body>
 <!-- <script src="index.js"></script> -->
 </body>
