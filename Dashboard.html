@@ -23,7 +23,7 @@
   <title>Enthrall</title>
 </head>
 
-<body class="bg-primary-bg w-11/12 mx-auto">
+<body class="bg-primary-bg max-w-6xl mx-auto">
   <header class="bg-white h-16 my-3 rounded-2xl px-5">
     <div class="h-full flex justify-between items-center ">
       <img class="w-40" src="images/logo.png" alt="">
@@ -40,53 +40,93 @@
     <!-- Sidebar -->
     <div id="sidebar"
       class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
-      <h2 class="text-2xl font-bold text-dark-gray mb-6"><a href="#"></a><i class="fa-solid fa-table-columns"></i> Dashboard</h2>
+      <h2 class="flex items-center justify-start text-2xl font-bold text-dark-gray mb-6">
+        <img class="mr-2 w-6" src="images/dashboard.png" alt="">
+        <span>Dashboard</span>
+      </h2>
       <nav class="space-y-2">
 
         <button onclick="loadPage('courses')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black"><i class="fa-regular mr-1 fa-square-plus"></i> Add
-          Courses</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/course.png" alt=""> 
+            <span>Add Courses</span>
+          </button>
         <button onclick="loadPage('quiz')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black"><i class="fa-solid mr-1 fa-bars"></i> Quiz
-          List</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black"> 
+          <img class="mr-2" src="images/quiz.png" alt=""> 
+          <span>Quiz List</span>
+        </button>
         <button onclick="loadPage('homework')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black"><i class="fa-regular mr-1 fa-book-open"></i> Home
-          Work</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+             <img class="mr-2" src="images/homework.png" alt=""> 
+         <span> Home Work</span>
+            </button>
         <button onclick="loadPage('challenge')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black"><i class="fa-solid mr-1 fa-code"></i> Challenge</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+           <img class="mr-2" src="images/challenge.png" alt=""> 
+          <span>Challenge</span>
+          </button>
         <button onclick="loadPage('exam')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Exam</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/exam.png" alt=""> 
+          <span>Exam</span>
+        </button>
         <button onclick="loadPage('resources')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Resources</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/resources.png" alt=""> 
+          <span>Resources</span>
+        </button>
         <button onclick="loadPage('bootcamp')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Bootcamp</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/bootcamp.png" alt=""> 
+          <span>Bootcamp</span>
+        </button>
         <button onclick="loadPage('automation')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Automation</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/automation.png" alt="">
+          <span>Automation</span>
+        </button>
         <button onclick="loadPage('schedule')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">Class
-          Schedule</button>
-          <!-- super user data  -->
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/schedule.png" alt="">
+          <span>Schedule</span>
+        </button>
+        <!-- super user data  -->
         <button onclick="loadPage('super_user_quiz')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
-          Quiz List</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/quiz.png" alt="">
+          <span>Quiz List</span>
+        </button>
         <button onclick="loadPage('super_user_home_work')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
-          Home Work</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/homework.png" alt="">  
+          <span>Home Work</span>
+        </button>
         <button onclick="loadPage('super_user_challenge')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
-          Challenge</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/challenge.png" alt="">
+          <span>Challenge</span>
+        </button>
         <button onclick="loadPage('super_user_exam')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
-          Exam</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/exam.png" alt="">
+          <span>Exam</span>
+        </button>
         <button onclick="loadPage('super_user_bootcamp')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
-          Bootcamp</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/bootcamp.png" alt="">
+          <span>Bootcamp</span>
+        </button>
         <button onclick="loadPage('super_user_others')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
-          Others</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/others.png" alt="">
+          <span>Others</span>
+        </button>
         <button onclick="loadPage('super_user_join_class')"
-          class="toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
-          Join The Class</button>
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
+          <img class="mr-2" src="images/quiz.png" alt="">
+          <span>Join The Class</span>
+        </button>
       </nav>
     </div>
 
@@ -1966,9 +2006,9 @@
             </table>
           </div>
         `,
-        
-        
-        
+
+
+
         // super user dashboard items
         // user user schedule content  
         super_user_quiz: `
@@ -2336,7 +2376,7 @@
         `,
 
         // user user challenge  
-       super_user_challenge: `
+        super_user_challenge: `
         <div>
             <h1 class="text-2xl font-bold">Coding Challenge List</h1>
             <div class="flex gap-5 my-3 items-center justify-center">
@@ -2518,7 +2558,7 @@
         `,
 
         // user user exam  
-       super_user_exam: `
+        super_user_exam: `
         <div>
             <h1 class="text-2xl font-bold">Exam List</h1>
             <div class="flex gap-5 my-3 items-center justify-center">
@@ -2700,7 +2740,7 @@
         `,
 
         // user user bootcamp  
-       super_user_bootcamp: `
+        super_user_bootcamp: `
         <div>
             <h1 class="text-2xl font-bold">Bootcamp List</h1>
             <div class="flex gap-5 my-3 items-center justify-center">
@@ -2882,7 +2922,7 @@
         `,
 
         // user user others  
-       super_user_others: `
+        super_user_others: `
         <div>
             <h1 class="text-2xl font-bold">Others List</h1>
             <div class="flex gap-5 my-3 items-center justify-center">
@@ -3065,7 +3105,7 @@
 
 
         // user user bootcamp  
-       super_user_join_class: `
+        super_user_join_class: `
         <div>
             <h1 class="text-2xl font-bold">Meeting List</h1>
             <div class="flex gap-5 my-3 items-center justify-center">
