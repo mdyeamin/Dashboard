@@ -1621,6 +1621,30 @@
         automation: `
         
         <div>
+
+           <div class="flex flex-wrap gap-4 mt-4">
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-5 rounded">
+                Dashboard
+              </button>
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-5 rounded">
+                Profile
+              </button>
+              <!--js dashboard button-->
+              <button onclick="loadPage('enroll')"
+          class="toggle-btn bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-5 rounded">
+          
+          <span>Enroll Now</span>
+        </button>
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-5 rounded">
+                Return Site
+              </button>
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-5 rounded">
+                Others
+              </button>
+            </div>
+
+
+
             <h1 class="text-2xl font-bold">Automation</h1>
             
             <table class="w-full mt-4 text-left bg-white rounded shadow-sm border border-gray-300">
@@ -1922,6 +1946,84 @@
 
             </table>
           </div>
+        `,
+
+
+
+        // Enroll content  
+        enroll: `
+        <div class="w-full bg-gray-100 min-h-screen p-6">
+            <h2 class="text-2xl font-bold mb-1">Select your course from the dropdown</h2>
+            <p class="text-gray-600 mb-6">Please enter your personal and contact information.</p>
+
+            <form class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <!-- Row 1 -->
+              <input type="text" placeholder="First Name*" class="p-2 border rounded w-full">
+              <input type="text" placeholder="Middle Name" class="p-2 border rounded w-full">
+              <input type="text" placeholder="Last Name*" class="p-2 border rounded w-full">
+
+              <!-- Row 2 -->
+              <select class="p-2 border rounded w-full"><option>Select Profession</option></select>
+              <select class="p-2 border rounded w-full"><option>Select Course</option></select>
+              <input type="text" placeholder="Phone Number*" class="p-2 border rounded w-full">
+
+              <!-- Row 3 -->
+              <input type="email" placeholder="Email Address*" class="p-2 border rounded w-full">
+              <input type="password" placeholder="Password *" class="p-2 border rounded w-full">
+              <select class="p-2 border rounded w-full"><option>Choose Sex</option></select>
+
+              <!-- Row 4 -->
+              <div class="w-full">
+                <label class="block text-sm mb-1">Personal Image*</label>
+                <input type="file" class="w-full border rounded p-2">
+              </div>
+              <div class="w-full">
+                <label class="block text-sm mb-1">Photo ID*</label>
+                <input type="file" class="w-full border rounded p-2">
+              </div>
+
+              <!-- Row 5 -->
+              <select class="p-2 border rounded w-full"><option>Select Birth Year</option></select>
+              <select class="p-2 border rounded w-full"><option>Select Birth Month</option></select>
+              <select class="p-2 border rounded w-full"><option>Select Birth Date</option></select>
+
+              <!-- Row 6 -->
+              <input type="text" placeholder="Home Address Line 1*" class="p-2 border rounded w-full">
+
+              <!-- Row 7 -->
+              <input type="text" placeholder="City*" class="p-2 border rounded w-full">
+              <select class="p-2 border rounded w-full"><option>Select State</option></select>
+              <input type="text" placeholder="ZIP Code*" class="p-2 border rounded w-full">
+
+              <!-- Row 8 -->
+              <select class="p-2 border rounded w-full"><option>Select Status</option></select>
+              <input type="text" placeholder="Date of Arrival" class="p-2 border rounded w-full">
+              <input type="text" placeholder="Emergency Contact (name, phone no.)" class="p-2 border rounded w-full">
+
+              <!-- Row 9 -->
+              <input type="text" placeholder="How did you know about EnthrallIT" class="p-2 border rounded w-full">
+              <select class="p-2 border rounded w-full"><option>Select Education</option></select>
+              <select class="p-2 border rounded w-full"><option>Select Country</option></select>
+
+              <!-- Row 10 -->
+              <select class="p-2 border rounded w-full"><option>Select Language</option></select>
+              <input type="text" placeholder="Signature*" class="p-2 border rounded w-full">
+
+              <!-- Terms -->
+              <div class="col-span-1 md:col-span-3 flex items-center space-x-2 mt-2">
+                <input type="checkbox" id="terms" class="accent-blue-500">
+                <label for="terms" class="text-xs">Double Click to the <a href="#" class="text-blue-600">Terms and condition</a></label>
+              </div>
+
+              <!-- Buttons -->
+              <div class="col-span-1 md:col-span-3 flex flex-wrap gap-4 mt-4">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded">Submit</button>
+                <button type="button" class="bg-blue-400 hover:bg-blue-500 text-white px-5 py-2 rounded">Right Click Action</button>
+              </div>
+            </form>
+          </div>
+
+
         `,
 
 
