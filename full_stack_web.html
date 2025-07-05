@@ -21,7 +21,6 @@
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Enthrall</title>
-   
 </head>
 
 <body class="bg-primary-bg max-w-6xl mx-auto">
@@ -37,12 +36,12 @@
 
     </head>
 
-    <div class="min-h-screen flex ">
+    <div class="min-h-screen flex">
         <!-- Sidebar -->
         <div id="sidebar"
             class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
 
-            <nav class="h-screen md:h-screen overflow-y-auto">
+            <nav class="space-y-2">
                 <button
                     class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium bg-gray-100 text-black">
                     <a href="index.html" class="flex items-center justify-start w-full">
@@ -277,77 +276,26 @@
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
 
-            <!-- Dynamic Content -->
+            <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
-                <div class="grid grid-cols-12 bg-yellow p-10 max-md:p-4 rounded-lg shadow-md gap-4">
-                    <div class="col-span-6 max-md:col-span-12 flex flex-col justify-center">
-                        <h1 class="text-2xl max-md:text-lg font-bold ">You are going great! Push yourself <br> a little
-                            and You can
-                            be BEST!</h1>
-                        <div class="flex items-center mt-4">
-
-                            <div class="w-full h-6 bg-gray-200 rounded-sm dark:bg-gray-700">
-                                <div class="h-6 bg-dark-gray rounded-sm" style="width: 78%"></div>
-                            </div>
-                            <span class="text-4xl font-medium text-dark-gray dark:text-gray-400 ml-5">78%</span>
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-4">Full Stack Web Development with Python, Django & React
+                        Batches</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
+                            <h3 class="text-lg font-bold mb-2">2025 Dev Live Evening July</h3>
+                            <p class="text-center">D2025L01</p>
+                            <button
+                                class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
+                                View Course
+                            </button>
                         </div>
-                        <p>Your Overall Score</p>
-                    </div>
-                    <div
-                        class="col-span-6 max-md:col-span-12 flex flex-col justify-center items-end max-md:items-center">
-                        <img class="w-50" src="images/dashboard_img.png" alt="">
+
                     </div>
                 </div>
 
-                <!-- classes  -->
-                <h2 class="my-5 text-lg font-bold">My Courses</h2>
-                <div class="grid grid-cols-12 gap-5">
-                    <!-- class 1  -->
-                    <div
-                        class="col-span-6 max-md:col-span-12 bg-white rounded-lg shadow-lg lg:p-4 max-md:p-2 border-2 border-white hover:border-yellow border-rounded-lg transition-all duration-300 bg-linear-to-tr-bl from-yellow-100 to-white hover:bg-gradient-to-tr hover:shadow-xl">
-                        <div class=" w-full h-full grid grid-cols-12 mx-auto gap-5">
-                            <div class="col-span-6 max-md:col-span-12 flex items-center justify-center">
-                                <img class="h-full w-full object-cover rounded-md" src="images/computer.jpg" alt="">
-                            </div>
-                            <div class="lg:col-span-6 max-md:col-span-12">
-                                <div class=" flex flex-col justify-center items-start h-full">
-                                    <h1 class="text-2xl  max-md:text-xl font-semibold leading-6">Business Analyst <br>
-                                        bootcamp</h1>
 
-                                    <div class="w-full flex gap-x-5 items-center max-md:justify-center mt-8">
-                                        <button
-                                            class="w-full bg-yellow hover:bg-dark-gray text-dark-gray text-sm font-semibold hover:text-yellow py-2 px-6 rounded transition duration-300">
-                                            Join Class <i class="fa-solid fa-video fa-fade ml-2"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- class 2  -->
-                    <div
-                        class="col-span-6 max-md:col-span-12 bg-white rounded-lg shadow-lg lg:p-4 max-md:p-2 border-2 border-white hover:border-yellow border-rounded-lg transition-all duration-300 bg-linear-to-tr-bl from-yellow-100 to-white hover:bg-gradient-to-tr hover:shadow-xl">
-                        <div class=" w-full h-full grid grid-cols-12 mx-auto gap-5">
-                            <div class="col-span-6 max-md:col-span-12 flex items-center justify-center">
-                                <img class="h-full w-full object-cover rounded-md" src="images/computer.jpg" alt="">
-                            </div>
-                            <div class="lg:col-span-6 max-md:col-span-12">
-                                <div class=" flex flex-col justify-center items-start h-full">
-                                    <h1 class="text-2xl  max-md:text-xl font-semibold leading-6">Business Analyst <br>
-                                        bootcamp</h1>
 
-                                    <div class="w-full flex gap-x-5 items-center max-md:justify-center mt-8">
-                                        <button
-                                            class="w-full bg-yellow hover:bg-dark-gray text-dark-gray text-sm font-semibold hover:text-yellow py-2 px-6 rounded transition duration-300">
-                                            Join Class <i class="fa-solid fa-video fa-fade ml-2"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -388,310 +336,8 @@
             overlay.classList.toggle('hidden');
         }
         // dashboard content
-        function loadPage(page) {
-            const content = {
 
-
-                // courses content 
-                courses: `
-          
-        `,
-                // quiz content 
-                quiz: `
-                
-                `,
-
-                // homework content 
-                homework: `
-                
-                `,
-                // challenge content
-                challenge: `
-
- <!-- Challenge Section -->
-        
-
-        `,
-                // exm content     
-                exam: `
-        
-        `,
-
-
-                // resourse content 
-                resources: `
-        
-        `,
-
-
-                //   bootcamt content   
-                bootcamp: `
-        
-        `,
-
-                // automation content 
-                automation: `
-        
-        
-        `,
-
-
-                // schedule content  
-                schedule: `
-        
-        `,
-
-
-
-                // Enroll content  
-                enroll: `
-       
-
-
-        `,
-
-
-
-                // super user dashboard items
-                // user user schedule content  
-                super_user_quiz: `
-       
-        `,
-
-
-                // user user home work 
-
-                super_user_home_work: `
-        
-           `,
-
-                // user user challenge  
-                super_user_challenge: `
-        
-        `,
-
-                // user user exam  
-                super_user_exam: `
-        
-        `,
-
-                // user user bootcamp  
-                super_user_bootcamp: `
-        <div>
-            <h1 class="text-2xl font-bold">Bootcamp List</h1>
-            <div class="flex gap-5 my-3 items-center justify-center">
-              <form class=" rounded-xl shadow-md w-6/12 bg-white  ">
-                <select id="option" name="option" class="w-full p-2 rounded-md focus:outline-none">
-                  <option value="">Select Your Course</option>
-                  <option value="one">Option One</option>
-                  <option value="two">Option Two</option>
-                  <option value="three">Option Three</option>
-                </select>
-              </form>
-
-              <form class="bg-white rounded-xl shadow-md w-6/12">
-                      <div class="flex">
-                          <input type="text" id="search" name="search" placeholder="Type to search..."
-                              class="flex-grow p-2 focus:outline-none ">
-                          <button type="submit" class="bg-yellow-400 text-black px-4 rounded-r-md hover:bg-yellow-500"><i
-                                  class="fa-solid fa-magnifying-glass"></i></button>
-                      </div>
-
-                  </form>
-
-            </div>
-            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
-              <thead class="bg-yellow-300">
-                <tr class="text-sm font-semibold">
-                  <th class="px-4 py-2">SL</th>
-                  <th class="px-4 py-2">Bootcamp Name</th>
-                  <th class="px-4 py-2">Batch</th>
-                  <th class="px-4 py-2">Starting Date</th>
-                  
-                  <th class="px-4 py-2">Action</th>
-                </tr>
-              </thead>
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  
-                  <td class="px-4 py-2">
-                    <button class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Result</button>
-                    <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-            </table>
-          </div>
-        `,
-
-                // user user others  
-                super_user_others: `
-        
-        `,
-
-
-                // user user bootcamp  
-                super_user_join_class: `
-       
-        `,
-
-
-            };
-
-            // document.getElementById('main-content').innerHTML = content[page] || `<h1 class='text-xl font-bold'>Page not found</h1>`;
-
-            // if (window.innerWidth < 768) toggleSidebar();
-        }
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </body>
