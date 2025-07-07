@@ -278,21 +278,202 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="p-6">
-                    <h2 class="text-2xl font-semibold mb-4">Software Mobile Test Automation Engineering Batches</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Young Coders: Python</h3>
-                            <p class="text-center">2024YC01</p>
-                            <a href="section-list_23.html"><button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button></a>
-                        </div>
-                        
+                <div class="p-6 space-y-6 w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-semibold">Bootcamp List</h2>
+                        <button class="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded font-semibold text-sm">
+                            + Create Quiz
+                        </button>
+                    </div>
 
+                    <div class="overflow-x-auto bg-white shadow rounded">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">SL
+                                    </th>
+                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Batch
+                                    </th>
+                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Topic
+                                    </th>
+                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">
+                                        Bootcamp Name</th>
+                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Start
+                                        Date</th>
+                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">End
+                                        Date</th>
+                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">
+                                        Submission Date</th>
+                                    <th class="px-4 py-3 text-center text-xs font-semibold text-gray-700 uppercase">
+                                        Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 text-sm">
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="px-4 py-3">1</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">Java</td>
+                                    <td class="px-4 py-3">Quiz_Control_Statement</td>
+                                    <td class="px-4 py-3">03/02/2024<br>13:30</td>
+                                    <td class="px-4 py-3">12/30/2025<br>23:59</td>
+                                    <td class="px-4 py-3">12/30/2025</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="px-4 py-3">2</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">SQL</td>
+                                    <td class="px-4 py-3">Quiz_YC_SQL04</td>
+                                    <td class="px-4 py-3">01/07/2024<br>10:00</td>
+                                    <td class="px-4 py-3">12/31/2025<br>10:00</td>
+                                    <td class="px-4 py-3">12/31/2025</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="px-4 py-3">3</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">Java</td>
+                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
+                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
+                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
+                                    <td class="px-4 py-3">12/30/2026</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="px-4 py-3">3</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">Java</td>
+                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
+                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
+                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
+                                    <td class="px-4 py-3">12/30/2026</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td class="px-4 py-3">3</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">Java</td>
+                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
+                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
+                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
+                                    <td class="px-4 py-3">12/30/2026</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 6 -->
+                                <tr>
+                                    <td class="px-4 py-3">3</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">Java</td>
+                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
+                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
+                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
+                                    <td class="px-4 py-3">12/30/2026</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 7 -->
+                                <tr>
+                                    <td class="px-4 py-3">3</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">Java</td>
+                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
+                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
+                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
+                                    <td class="px-4 py-3">12/30/2026</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 8 -->
+                                <tr>
+                                    <td class="px-4 py-3">3</td>
+                                    <td class="px-4 py-3">Young Coders</td>
+                                    <td class="px-4 py-3">Java</td>
+                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
+                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
+                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
+                                    <td class="px-4 py-3">12/30/2026</td>
+                                    <td class="px-4 py-3 flex justify-center space-x-2">
+                                        <button
+                                            class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded">Add</button>
+                                        <button
+                                            class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded">Edit</button>
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded">Delete</button>
+                                        <button
+                                            class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded">View</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+
 
 
 
