@@ -278,9 +278,78 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <h1 class="text-3xl font-bold mb-4">Payment</h1>
+                <h1 class="text-3xl font-bold mb-4">Payment Infotmation</h1>
 
+                <div class="min-h-screen flex items-center justify-center  px-4 py-10">
+                    <div class="w-full max-w-2xl bg-white rounded-xl shadow-xl p-8">
 
+                        <!-- Heading -->
+                        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">💳 Payment Information</h2>
+
+                        <!-- User Information -->
+                        <div class="bg-yellow-50 border border-yellow-300 rounded-md p-5 mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">User Details</h3>
+                            <ul class="space-y-1 text-gray-700">
+                                <li><span class="font-medium">Name:</span> md yeamin</li>
+                                <li><span class="font-medium">Email:</span> ahmedyeamin05@gmail.com</li>
+                                <li><span class="font-medium">Phone:</span> 123-456-789</li>
+                            </ul>
+                        </div>
+
+                        <!-- Form -->
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            <!-- Due Date -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Due Date</label>
+                                <input type="text" disabled value="August 07, 2025"
+                                    class="w-full bg-gray-100 border border-gray-300 text-gray-600 rounded-md px-4 py-2" />
+                            </div>
+
+                            <!-- Installment -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Select Installment</label>
+                                <select
+                                    class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                    <option>-- Installment --</option>
+                                </select>
+                            </div>
+
+                            <!-- Amount -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Amount ($)</label>
+                                <input type="number" value="500"
+                                    class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-yellow-400 focus:outline-none" />
+                                <p class="text-xs text-gray-400 mt-1">You can change</p>
+                            </div>
+
+                            <!-- Payment Date -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Payment Date</label>
+                                <input type="text" disabled value="July 09, 2025"
+                                    class="w-full bg-gray-100 border border-gray-300 text-gray-600 rounded-md px-4 py-2" />
+                                <p class="text-xs text-gray-400 mt-1">Current Date</p>
+                            </div>
+
+                            <!-- Recipient -->
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Select Recipient</label>
+                                <select
+                                    class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-yellow-400">
+                                    <option>-- receipt --</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="md:col-span-2">
+                                <button type="submit"
+                                    class="w-full bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-3 rounded-md shadow-md transition duration-200">
+                                    💰 Pay Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
 
 
