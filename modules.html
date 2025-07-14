@@ -7,9 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- fontawesome cdn  -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
-    <!-- alpainjs  -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
     <!-- custom css -->
     <style type="text/tailwindcss">
         @theme {
@@ -281,97 +278,146 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="  min-h-screen">
-                    <div class="bg-white p-6 rounded shadow-md max-w-7xl mx-auto">
-                        <div class="flex items-center justify-between mb-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Payment Approval</h2>
-                            <div class="relative">
-                                <input type="text" placeholder="Search..."
-                                    class="px-4 py-2 border rounded-md w-64 text-sm" />
+                <div>
+                    <h1 class="text-2xl font-bold">Module List</h1>
+                    <div class=" p-4 rounded  space-y-4">
+                        <!-- Top: Filter/Search -->
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                            <!-- Search by Milestone Name -->
+                            <div class="flex items-center space-x-2 w-full sm:w-auto">
+                                <label for="milestoneSearch"
+                                    class="text-sm font-medium text-gray-700 whitespace-nowrap">Name:</label>
+                                <input id="milestoneSearch" type="text" placeholder="Search by Milestone Name"
+                                    class="border border-gray-300 rounded px-3 py-1.5 text-sm w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded transition">
+                                    Search
+                                </button>
+                                <button
+                                    class="bg-red-400 hover:bg-red-500 text-white text-sm font-medium px-4 py-1.5 rounded flex items-center space-x-1 transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    <span>Add New Milestone</span>
+                                </button>
                             </div>
                         </div>
 
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full border border-gray-300 text-sm text-gray-700">
-                                <thead class=" font-semibold bg-yellow-300 text-gray-800">
-                                    <tr>
-                                        <th class="px-1 py-3 border border-gray-300">User</th>
-                                        <th class="px-1 py-3 border border-gray-300">Amount</th>
-                                        <th class="px-1 py-3 border border-gray-300">Installment</th>
-                                        <th class="px-1 py-3 border border-gray-300">Payment Method</th>
-                                        <th class="px-1 py-3 border border-gray-300">Created At</th>
-                                        <th class="px-1 py-3 border border-gray-300">Receipt</th>
-                                        <th class="px-1 py-3 border border-gray-300">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="px-1 py-3 border border-gray-300 ">
-                                            <div class="flex items-center space-x-3">
-                                                <img src="images/profile.jpg" alt="Profile"
-                                                    class="w-7  h-7 object-cover rounded-full border" />
-                                                <div class="leading-tight">
-                                                    <p class="font-medium text-sm">Yeamin</p>
-                                                    <p class="text-xs text-gray-500 overflow">ahmedyeamin05@gmail.com
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">$500</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">2nd Installment</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">Paypal</td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
-                                            <div class="">Jul 02, 2025</div>
-                                            <div class="text-xs text-gray-500">00:49</div>
-                                        </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
-                                            <button
-                                                class="border border-blue-500 text-blue-500 text-xs px-0.5  py-1 rounded-md hover:bg-blue-500 hover:text-white transition duration-200 shadow-sm">
-                                                View Receipt
-                                            </button>
-
-                                        </td>
-
-                                        <td class="px-1 py-3 text-center">
-                                            <div class="flex items-center justify-center space-x-2">
-                                                <button
-                                                    class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs sm:text-sm transition">
-                                                    Approve
-                                                </button>
-                                                <button
-                                                    class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-xs sm:text-sm transition">
-                                                    Reject
-                                                </button>
-                                            </div>
-                                        </td>
-
-                                    </tr>
-
-
-                                    <!-- Add more rows as needed -->
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Pagination and entry control -->
-                        <div class="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
-                            <div class="text-sm">
-                                <label for="entries" class="mr-2">Show</label>
-                                <select id="entries" class="border border-gray-300 rounded px-2 py-1 text-sm">
+                        <!-- Bottom: Show entries + Right search -->
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                            <!-- Show entries -->
+                            <div class="flex items-center space-x-2 text-sm text-gray-700">
+                                <label for="entriesSelect">Show</label>
+                                <select id="entriesSelect"
+                                    class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-yellow-300">
                                     <option>10</option>
-                                    <option>20</option>
+                                    <option>25</option>
                                     <option>50</option>
                                 </select>
-                                <span class="ml-2">entries</span>
+                                <span>entries</span>
                             </div>
-                            <div class="space-x-2 text-sm">
-                                <button class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Previous</button>
-                                <button class="px-3 py-1 bg-blue-500 text-white rounded">1</button>
-                                <button class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Next</button>
+
+                            <!-- Table search -->
+                            <div class="flex items-center space-x-2 text-sm text-gray-700">
+                                <label for="tableSearch">Search:</label>
+                                <input id="tableSearch" type="text"
+                                    class="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300">
                             </div>
                         </div>
                     </div>
+
+                    <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+                        <thead class="bg-yellow-300">
+                            <tr class="text-sm font-semibold ">
+                                <th class="px-4 py-2">SL</th>
+                                <th class="px-4 py-2">Milestone</th>
+                                <th class="px-4 py-2">Module Name</th>
+
+                                <th class="px-4 py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y">
+                            <tr class="">
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">Milestone: JavaScript</td>
+                                <td class="px-4 py-2">Module- abcd</td>
+                                <td class="px-4 py-3 flex space-x-2 align-top">
+                                    <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                            class="fas fa-edit text-white"></i></button>
+                                    <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                            class="fas fa-trash-alt text-white"></i></button>
+                                </td>
+                                <tr />
+                        </tbody>
+
+                        <tbody class="text-sm divide-y">
+                            <tr class="">
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">Milestone: JavaScript</td>
+                                <td class="px-4 py-2">Module- abcd</td>
+                                <td class="px-4 py-3 flex space-x-2 align-top">
+                                    <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                            class="fas fa-edit text-white"></i></button>
+                                    <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                            class="fas fa-trash-alt text-white"></i></button>
+                                </td>
+                                <tr />
+                        </tbody>
+
+                        <tbody class="text-sm divide-y">
+                            <tr class="">
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">Milestone: JavaScript</td>
+                                <td class="px-4 py-2">Module- abcd</td>
+                                <td class="px-4 py-3 flex space-x-2 align-top">
+                                    <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                            class="fas fa-edit text-white"></i></button>
+                                    <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                            class="fas fa-trash-alt text-white"></i></button>
+                                </td>
+                                <tr />
+                        </tbody>
+                    </table>
+                    <div class="flex justify-center mt-6">
+                        <nav class="inline-flex items-center space-x-1 text-sm">
+                            <!-- Previous Button -->
+                            <button
+                                class="px-3 py-1 border border-gray-300 rounded-l bg-white hover:bg-gray-100 text-gray-700 disabled:opacity-50"
+                                disabled>
+                                Previous
+                            </button>
+
+                            <!-- Page Numbers -->
+                            <button
+                                class="px-3 py-1 border border-gray-300 bg-yellow-300 text-black font-medium hover:bg-yellow-400">
+                                1
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 bg-white hover:bg-yellow-100 text-gray-700">
+                                2
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 bg-white hover:bg-yellow-100 text-gray-700">
+                                3
+                            </button>
+
+                            <!-- Next Button -->
+                            <button
+                                class="px-3 py-1 border border-gray-300 rounded-r bg-white hover:bg-gray-100 text-gray-700">
+                                Next
+                            </button>
+                        </nav>
+                    </div>
+
                 </div>
+
+
+
+
 
 
             </div>
