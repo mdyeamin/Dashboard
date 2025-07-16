@@ -358,8 +358,16 @@
                         <!-- Payment Info Content -->
                         <div x-show="tab === 'payment'" class="p-4 border-t border-gray-300">
                             <div class="bg-white border border-gray-300 rounded shadow-sm p-4 mt-6">
+                                <!-- Top Right Button -->
+                                <div class="flex justify-end mb-4">
+                                    <button class="bg-red-400 hover:bg-red-500 text-white text-sm px-4 py-2 rounded">⬇
+                                    Download Invoice</button>
+                                </div>
+
+                                <!-- Heading -->
                                 <h2 class="text-lg font-semibold text-gray-800 mb-4">Payment Details</h2>
 
+                                <!-- Payment Table -->
                                 <div class="overflow-x-auto">
                                     <table class="min-w-full text-sm text-left text-gray-800">
                                         <thead class="bg-gray-100 border-b border-gray-300">
@@ -373,21 +381,17 @@
                                         </thead>
                                         <tbody>
                                             <tr class="border-t border-gray-200">
-                                                <td colspan="5" class="text-center px-4 py-4 text-gray-500">No payment
-                                                    transactions found</td>
+                                                <td colspan="5" class="text-center px-4 py-4 text-gray-500">
+                                                    No payment transactions found
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-
-                                <!-- Download Button -->
-                                <div class="mt-6 text-right">
-                                    <button
-                                        class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white text-sm px-4 py-2 rounded transition duration-200">
-                                        Download Invoice
-                                    </button>
-                                </div>
                             </div>
+
+
+
 
                         </div>
                     </div>
