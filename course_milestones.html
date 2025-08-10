@@ -17,6 +17,7 @@
         --color-yellow: #fbcd13
       }
     </style>
+
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -285,101 +286,159 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="p-6">
-                    <h2 class="text-2xl font-semibold mb-4">Courses List</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Full Stack Web Development with Python, Django & React
-                            </h3>
-                            <a href="full_stack_web.html"><button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button></a>
+                <div class=" space-y-6 w-full">
+                    <h2 class="text-2xl font-semibold">Milestone List</h2>
+                    <div class="flex flex-col md:flex-row md-space-x-5 space-y-5 space-x-5  mb-4 w-full">
+                        <!-- Search 1 -->
+                        <div class="flex flex-1">
+                            <input type="text" placeholder="Search by Name" class="border px-3 py-2 w-full  rounded-l-lg ">
+                            <button class="bg-yellow  px-4 rounded-r-lg">Search</button>
                         </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Software Test Automation Engineering (Java)</h3>
-                            <a href="softwate_test_automation_java.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
+
+                        <!-- Search 2 -->
+                        <div class="flex flex-1">
+                            
+                            <input type="text" placeholder="Search by Name" class="border px-3 py-2 w-full  rounded-l-lg">
+                            <button class="bg-yellow  px-4 rounded-r-lg">Search</button>
                         </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Software Test Automation Engineering (Python)</h3>
-                            <a href="softwate_test_automation_py.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
+
+                        <!-- Add New Milestone -->
+                        <div class="">
+                            <button class="bg-[#46B669] text-white px-4 py-2 flex-shrink-0 w-full md:w-auto rounded-lg">
+                                <i class="fa-solid fa-plus"></i> Add New Milestone
+                            </button>
                         </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Business Analyst Bootcamp</h3>
-                            <a href="business_analyst_bootcamp.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
+                    </div>
+
+
+
+                    <!-- show & search -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 my-10">
+                        <!-- Show entries dropdown -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <p>Show:</p>
+                            <div class="relative inline-block w-20">
+                                <select
+                                    class="block w-full border border-gray-300 px-4 py-2 pr-10 rounded-md text-gray-700 focus:outline-none focus:ring-2 appearance-none bg-white">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p>entries</p>
                         </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Embedded Device Tester (Manual)</h3>
-                            <a href="embedded_device_tester.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
+
+                        <!-- Search box -->
+                        <div class="w-full md:w-auto flex">
+                            <input type="text" placeholder="Search here..."
+                                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-yellow-500" />
+                            <button
+                                class="px-4 py-2 bg-black text-yellow font-semibold rounded-r-md focus:outline-none focus:ring-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                         </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Python Expedition</h3>
-                            <a href="python_expedition.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
-                        </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Software Mobile Test Automation Engineering</h3>
-                            <a href="Software Mobile test_automation_engineering.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
-                        </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Software Test Automation Engineering (C#)</h3>
-                            <a href="software_test_automation_c_hash.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
-                        </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Vehicle Test Engineering</h3>
-                            <a href="vehicle_test_engineering.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
-                        </div>
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Young Coders</h3>
-                            <a href="young_coders.html">
-                                <button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button>
-                            </a>
+                    </div>
+
+                    <div class="overflow-x-auto bg-white shadow rounded">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-yellow">
+                                <tr>
+                                    <th class=" px-4 py-3 text-left text-xs font-bold text-gray-700">SL</th>
+                                    <th class=" px-4 py-3 text-left text-xs font-bold text-gray-700">Milestone Name</th>
+                                    <th class=" px-4 py-3 text-left text-xs font-bold text-gray-700">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 text-sm">
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="px-4 py-3 align-top">1</td>
+                                    <td class="px-4 py-3 align-top">Master Free Class | Core Java</td>
+                                    <td class="px-4 py-3 flex justify-start space-x-2 align-top">
+                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-edit text-white"></i></button>
+
+                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-trash-alt text-white"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="px-4 py-3 align-top">1</td>
+                                    <td class="px-4 py-3 align-top">Master Free Class | Core Java</td>
+                                    <td class="px-4 py-3 flex justify-start space-x-2 align-top">
+                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-edit text-white"></i></button>
+
+                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-trash-alt text-white"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="px-4 py-3 align-top">1</td>
+                                    <td class="px-4 py-3 align-top">Master Free Class | Core Java</td>
+                                    <td class="px-4 py-3 flex justify-start space-x-2 align-top">
+                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-edit text-white"></i></button>
+
+                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-trash-alt text-white"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="px-4 py-3 align-top">1</td>
+                                    <td class="px-4 py-3 align-top">Master Free Class | Core Java</td>
+                                    <td class="px-4 py-3 flex justify-start space-x-2 align-top">
+                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-edit text-white"></i></button>
+
+                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-trash-alt text-white"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td class="px-4 py-3 align-top">1</td>
+                                    <td class="px-4 py-3 align-top">Master Free Class | Core Java</td>
+                                    <td class="px-4 py-3 flex justify-start space-x-2 align-top">
+                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-edit text-white"></i></button>
+
+                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
+                                                class="fas fa-trash-alt text-white"></i></button>
+                                    </td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                      <!-- Pagination -->
+                    <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
+                        <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
+                        <div class="flex gap-2">
+                            <button class="px-2 py-1 border rounded">1</button>
+                            <button class="px-2 py-1 border rounded">2</button>
+                            <button class="px-2 py-1 border rounded">3</button>
+                            <button class="px-2 py-1 border rounded">Next →</button>
                         </div>
                     </div>
                 </div>
-
 
 
 
