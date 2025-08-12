@@ -286,186 +286,144 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class=" space-y-6 w-full">
-                    <h2 class="text-2xl font-semibold">Question Repositories</h2>
-                    <!-- select section  -->
-                    <div class="w-full">
-                        <div class="rounded-lg w-full">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
+                <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
+                    <h2 class="text-2xl font-semibold">Question Create</h2>
 
-                                <!-- Section -->
-                                <div class="flex flex-col">
-                                    <label class="text-sm font-medium text-gray-700 mb-1">Section</label>
-                                    <select
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                                        <option>--------</option>
+                    <div class="p-4">
+                        <form class="space-y-4">
+
+                            <!-- Course & Batch -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-medium">Section *</label>
+                                    <select class="w-full border rounded p-2">
+                                        <option>Quiz</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block font-medium">Topic *</label>
+                                    <select class="w-full border rounded p-2">
+                                        <option>---------</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-medium">Question Type *</label>
+                                    <select class="w-full border rounded p-2">
+                                        <option>Checkboxes</option>
                                     </select>
                                 </div>
 
-                                <!-- Course -->
-                                <div class="flex flex-col">
-                                    <label class="text-sm font-medium text-gray-700 mb-1">Course</label>
-                                    <select
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                                        <option>--------</option>
-                                    </select>
-                                </div>
+                            </div>
 
-                                <!-- Topic -->
-                                <div class="flex flex-col">
-                                    <label class="text-sm font-medium text-gray-700 mb-1">Topic</label>
-                                    <select
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                                        <option>--------</option>
-                                    </select>
-                                </div>
-
-                                <!-- Question Type -->
-                                <div class="flex flex-col">
-                                    <label class="text-sm font-medium text-gray-700 mb-1">Question Type</label>
-                                    <select
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                                        <option>--------</option>
-                                    </select>
-                                </div>
-
-                                <!-- Search -->
-                                <div class="flex flex-col">
-                                    <label class="text-sm font-medium text-gray-700 mb-1">Search</label>
-                                    <div class="flex">
-                                        <input type="text" placeholder="Question, Mark"
-                                            class="w-full placeholder:text-sm px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-yellow-400" />
-                                        <button
-                                            class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-4 rounded-r-md transition">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                        </button>
+                            <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Question</label>
+                                        <input type="text" class="w-full border rounded p-2" placeholder="Type...">
                                     </div>
                                 </div>
 
                             </div>
-                        </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Question</label>
+                                        <input type="text" class="w-full border rounded p-2"
+                                            value="Multiple Answare allowed if is there any">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Marks</label>
+                                        <input type="text" class="w-full border rounded p-2" value="5.0">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Image</label>
+                                        <input type="file" accept="image/*" class="w-full border rounded p-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <!-- Answer with checkbox -->
+                                <div>
+                                    <div>
+                                        <label class="block font-medium flex items-center gap-2">
+                                            <input type="checkbox" class="form-checkbox">
+                                            Answer
+                                        </label>
+                                        <input type="text" class="w-full border rounded p-2" placeholder="Enter answer">
+                                    </div>
+                                </div>
+
+                                <!-- Correct Answer -->
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Correct Answer</label>
+                                        <input type="text" class="w-full border rounded p-2"
+                                            placeholder="Enter correct answer">
+                                    </div>
+                                </div>
+                                <!-- Answer with checkbox -->
+                                <div>
+                                    <div>
+                                        <label class="block font-medium flex items-center gap-2">
+                                            <input type="checkbox" class="form-checkbox">
+                                            Answer
+                                        </label>
+                                        <input type="text" class="w-full border rounded p-2" placeholder="Enter answer">
+                                    </div>
+                                </div>
+
+                                <!-- Correct Answer -->
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Correct Answer</label>
+                                        <input type="text" class="w-full border rounded p-2"
+                                            placeholder="Enter correct answer">
+                                    </div>
+                                </div>
+                                <!-- Answer with checkbox -->
+                                <div>
+                                    <div>
+                                        <label class="block font-medium flex items-center gap-2">
+                                            <input type="checkbox" class="form-checkbox">
+                                            Answer
+                                        </label>
+                                        <input type="text" class="w-full border rounded p-2" placeholder="Enter answer">
+                                    </div>
+                                </div>
+
+                                <!-- Correct Answer -->
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Correct Answer</label>
+                                        <input type="text" class="w-full border rounded p-2"
+                                            placeholder="Enter correct answer">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Buttons -->
+                            <div class="flex space-x-2 justify-center ">
+                                <button type="submit" class="bg-yellow-400 w-full md:w-5/12 text-black px-4 py-2 rounded">Create</button>
+                                
+                            </div>
+
+                        </form>
                     </div>
 
 
-
-
-                    <div class="flex flex-col justify-end items-end mb-4">
-
-                        <a href="create_the_question.html">
-                            <button class="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded font-semibold text-sm">
-                            + Create Question
-                        </button>
-                        </a>
-                        <div class="flex items-center space-x-3 mt-4">
-                            <label for="search" class="text-lg text-gray-800 font-medium">Search:</label>
-                            <input type="text" id="search" placeholder=""
-                                class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 w-64" />
-                        </div>
-
-                    </div>
-
-                    <div class="overflow-x-auto bg-white shadow rounded">
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-100">
-                                <tr>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">SL</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Section</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Question Type</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Course</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Topic</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Question</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Marks</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200 text-sm">
-                                <!-- Row 1 -->
-                                <tr>
-                                    <td class="px-4 py-3 align-top">1</td>
-                                    <td class="px-4 py-3 align-top">Coding Challenge</td>
-                                    <td class="px-4 py-3 align-top">Checkboxes</td>
-                                    <td class="px-4 py-3 align-top">Python Expedition</td>
-                                    <td class="px-4 py-3 align-top">Python Lists</td>
-                                    <td class="px-4 py-3 align-top">How to use a range of indexes to print the third,
-                                        fourth, and
-                                        fifth item in the list?
-
-                                        <p class=" mt-3">programmingLanguage = ["Python", "Java", "C++", "C#",
-                                            "Javacsript", "SQL",
-                                            "C++", "Java", "Scala"]</p>
-                                    </td>
-                                    <td class="px-4 py-3 align-top">5.00</td>
-                                    <td class="px-4 py-3 flex justify-end space-x-2 align-top">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-copy text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 2 -->
-                                <tr>
-                                    <td class="px-4 py-3 align-top">1</td>
-                                    <td class="px-4 py-3 align-top">Coding Challenge</td>
-                                    <td class="px-4 py-3 align-top">Checkboxes</td>
-                                    <td class="px-4 py-3 align-top">Python Expedition</td>
-                                    <td class="px-4 py-3 align-top">Python Lists</td>
-                                    <td class="px-4 py-3 align-top">How to use a range of indexes to print the third,
-                                        fourth, and
-                                        fifth item in the list?
-
-                                        <p class=" mt-3">programmingLanguage = ["Python", "Java", "C++", "C#",
-                                            "Javacsript", "SQL",
-                                            "C++", "Java", "Scala"]</p>
-                                    </td>
-                                    <td class="px-4 py-3 align-top">5.00</td>
-                                    <td class="px-4 py-3 flex justify-end space-x-2 align-top">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-copy text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 3 -->
-                                <tr>
-                                    <td class="px-4 py-3 align-top">1</td>
-                                    <td class="px-4 py-3 align-top">Coding Challenge</td>
-                                    <td class="px-4 py-3 align-top">Checkboxes</td>
-                                    <td class="px-4 py-3 align-top">Python Expedition</td>
-                                    <td class="px-4 py-3 align-top">Python Lists</td>
-                                    <td class="px-4 py-3 align-top">How to use a range of indexes to print the third,
-                                        fourth, and
-                                        fifth item in the list?
-
-                                        <p class=" mt-3">programmingLanguage = ["Python", "Java", "C++", "C#",
-                                            "Javacsript", "SQL",
-                                            "C++", "Java", "Scala"]</p>
-                                    </td>
-                                    <td class="px-4 py-3 align-top">5.00</td>
-                                    <td class="px-4 py-3 flex justify-end space-x-2 align-top">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-copy text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-
-
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
