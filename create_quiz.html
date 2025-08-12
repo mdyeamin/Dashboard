@@ -17,6 +17,7 @@
         --color-yellow: #fbcd13
       }
     </style>
+
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -285,201 +286,128 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="p-6 space-y-6 w-full">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-2xl font-semibold">Quiz List</h2>
-                        <a href="create_quiz.html">
-                            <button class="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded font-semibold text-sm">
-                                + Create Quiz
-                            </button>
-                        </a>
+                <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
+                    <h2 class="text-2xl font-semibold">Quiz Create</h2>
+
+                    <div class="p-4">
+                        <form class="space-y-4">
+
+                            <!-- Course & Batch -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-medium">Import *</label>
+                                    <select class="w-full border rounded p-2">
+                                        <option>Quiz</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block font-medium">Title *</label>
+                                    <input type="text" class="w-full border rounded p-2" placeholder="Type...">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-medium">Start Date *</label>
+                                    <input type="date" class="w-full border rounded p-2" placeholder="Type...">
+                                </div>
+                                <div>
+                                    <label class="block font-medium">Submision Date *</label>
+                                    <input type="date" class="w-full border rounded p-2" placeholder="Type...">
+                                </div>
+
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Short</label>
+                                        <input type="text" class="w-full border rounded p-2" value="Q">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Color</label>
+                                        <input type="text" class="w-full border rounded p-2" value="#fff">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">weighted Value</label>
+                                        <input type="text" class="w-full border rounded p-2" value="0.0">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Allow Reset</label>
+                                        <select class="w-full border rounded p-2">
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Random</label>
+                                        <select class="w-full border rounded p-2">
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Show Answare</label>
+                                        <select class="w-full border rounded p-2">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Class Note Topic</label>
+                                        <select class="w-full border rounded p-2">
+                                            <option>--------</option>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Feedback Question</label>
+                                        <input type="text" class="w-full border rounded p-2" placeholder="type...">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+
+                                <div>
+                                    <div>
+                                        <label class="block font-medium">Description</label>
+                                        <textarea class="w-full border rounded p-2" placeholder="type..." rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                           
+
+                        </form>
                     </div>
 
-                    <div class="overflow-x-auto bg-white shadow rounded">
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-100">
-                                <tr>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">SL</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Batch</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Topic</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Quiz Name</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Start Date</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">End Date</th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Submission Date
-                                    </th>
-                                    <th class=" py-3 text-center text-xs font-semibold text-gray-700">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200 text-sm">
-                                <!-- Row 1 -->
-                                <tr>
-                                    <td class="px-4 py-3">1</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_Control_Statement</td>
-                                    <td class="px-4 py-3">03/02/2024<br>13:30</td>
-                                    <td class="px-4 py-3">12/30/2025<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2025</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 2 -->
-                                <tr>
-                                    <td class="px-4 py-3">2</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">SQL</td>
-                                    <td class="px-4 py-3">Quiz_YC_SQL04</td>
-                                    <td class="px-4 py-3">01/07/2024<br>10:00</td>
-                                    <td class="px-4 py-3">12/31/2025<br>10:00</td>
-                                    <td class="px-4 py-3">12/31/2025</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 3 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 4 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 5 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 6 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 7 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                                <!-- Row 8 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-4 py-3 flex justify-center space-x-2">
-                                        <button class="bg-yellow-400 hover:bg-yellow-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-plus-square text-white"></i></button>
-                                        <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-edit text-white"></i></button>
-                                        <button class="bg-blue-400 hover:bg-blue-500 text-xs px-2 py-1 rounded"><i
-                                                class="fa fa-eye text-white"></i></button>
-                                        <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                                class="fas fa-trash-alt text-white"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+
                 </div>
-
-
-
-
-
             </div>
         </div>
     </div>
