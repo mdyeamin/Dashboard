@@ -203,7 +203,7 @@
 
 
 
-                
+
             </nav>
         </div>
 
@@ -376,7 +376,7 @@
                         <!-- Right: Avatar -->
                         <div class="w-full lg:w-1/4">
                             <div class="bg-white   rounded p-4 text-center">
-                                
+
                                 <img src="/images/profile.jpg" alt="Avatar"
                                     class="w-32 h-32 rounded-full object-cover mx-auto  mb-3">
                                 <div class="bg-orange-500 text-white text-sm font-medium py-1 px-3 rounded">
@@ -393,8 +393,28 @@
 
         <script>
 
+           
 
-            const buttons = document.querySelectorAll('.toggle-btn');
+
+
+             // Handle multiple accordions dynamically
+            document.querySelectorAll(".accordion-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const menu = document.getElementById(targetId);
+                    const arrow = btn.querySelector(".accordion-arrow");
+
+                    // Toggle menu
+                    menu.classList.toggle("hidden");
+                    arrow.classList.toggle("rotate-180");
+                });
+            });
+
+
+ 
+
+
+const buttons = document.querySelectorAll('.toggle-btn');
 
             buttons.forEach((button) => {
                 button.addEventListener('click', (e) => {

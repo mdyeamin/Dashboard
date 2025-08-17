@@ -425,7 +425,23 @@
     <script>
 
 
-        const buttons = document.querySelectorAll('.toggle-btn');
+         // Handle multiple accordions dynamically
+            document.querySelectorAll(".accordion-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const menu = document.getElementById(targetId);
+                    const arrow = btn.querySelector(".accordion-arrow");
+
+                    // Toggle menu
+                    menu.classList.toggle("hidden");
+                    arrow.classList.toggle("rotate-180");
+                });
+            });
+
+
+
+
+const buttons = document.querySelectorAll('.toggle-btn');
 
         buttons.forEach((button) => {
             button.addEventListener('click', (e) => {
