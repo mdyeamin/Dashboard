@@ -200,7 +200,7 @@
 
 
 
-                
+
             </nav>
         </div>
 
@@ -222,17 +222,33 @@
 
                     <!-- Class Schedule Upload Card -->
                     <div class="bg-white rounded-xl shadow-md">
-                        <div
-                            class="bg-yellow-400 text-white font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
+                        <!-- Header -->
+                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
                             <i class="fa-solid fa-upload"></i>
                             Class Schedule Upload
                         </div>
+
+                        <!-- Body -->
                         <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">File</label>
-                            <input type="file"
-                                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
+
+                            <!-- Custom File Input -->
+                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
+                                <!-- Browse Button -->
+                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
+                                    Browse
+                                </label>
+                                <!-- Hidden File Input -->
+                                <input id="fileUpload" type="file" class="hidden"
+                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
+                                <!-- Fake Text Input to show file name -->
+                                <input id="fileName" type="text" placeholder="No file chosen"
+                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                            </div>
+
+                            <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md transition">
+                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
                                 Upload
                             </button>
                         </div>
@@ -240,68 +256,133 @@
 
                     <!-- Quiz Result Upload Card -->
                     <div class="bg-white rounded-xl shadow-md">
-                        <div
-                            class="bg-yellow-400 text-white font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
+                        <!-- Header -->
+                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
                             <i class="fa-solid fa-upload"></i>
                             Quiz Result Upload
                         </div>
+
+                        <!-- Body -->
                         <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">File</label>
-                            <input type="file"
-                                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
+
+                            <!-- Custom File Input -->
+                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
+                                <!-- Browse Button -->
+                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
+                                    Browse
+                                </label>
+                                <!-- Hidden File Input -->
+                                <input id="fileUpload" type="file" class="hidden"
+                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
+                                <!-- Fake Text Input to show file name -->
+                                <input id="fileName" type="text" placeholder="No file chosen"
+                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                            </div>
+
+                            <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md transition">
+                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
                                 Upload
                             </button>
                         </div>
                     </div>
+
                     <!-- Home-Work Result Upload Card -->
                     <div class="bg-white rounded-xl shadow-md">
-                        <div
-                            class="bg-yellow-400 text-white font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
+                        <!-- Header -->
+                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
                             <i class="fa-solid fa-upload"></i>
                             Home-Work Result Upload
                         </div>
+
+                        <!-- Body -->
                         <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">File</label>
-                            <input type="file"
-                                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
+
+                            <!-- Custom File Input -->
+                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
+                                <!-- Browse Button -->
+                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
+                                    Browse
+                                </label>
+                                <!-- Hidden File Input -->
+                                <input id="fileUpload" type="file" class="hidden"
+                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
+                                <!-- Fake Text Input to show file name -->
+                                <input id="fileName" type="text" placeholder="No file chosen"
+                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                            </div>
+
+                            <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md transition">
+                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
                                 Upload
                             </button>
                         </div>
                     </div>
                     <!-- Exam Result Upload Card -->
                     <div class="bg-white rounded-xl shadow-md">
-                        <div
-                            class="bg-yellow-400 text-white font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
-                           <i class="fa-solid fa-upload"></i>
+                        <!-- Header -->
+                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
+                            <i class="fa-solid fa-upload"></i>
                             Exam Result Upload
                         </div>
+
+                        <!-- Body -->
                         <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">File</label>
-                            <input type="file"
-                                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
+
+                            <!-- Custom File Input -->
+                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
+                                <!-- Browse Button -->
+                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
+                                    Browse
+                                </label>
+                                <!-- Hidden File Input -->
+                                <input id="fileUpload" type="file" class="hidden"
+                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
+                                <!-- Fake Text Input to show file name -->
+                                <input id="fileName" type="text" placeholder="No file chosen"
+                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                            </div>
+
+                            <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md transition">
+                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
                                 Upload
                             </button>
                         </div>
                     </div>
                     <!-- Bootcamp Upload Card -->
                     <div class="bg-white rounded-xl shadow-md">
-                        <div
-                            class="bg-yellow-400 text-white font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
+                        <!-- Header -->
+                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
                             <i class="fa-solid fa-upload"></i>
                             Bootcamp Result Upload
                         </div>
+
+                        <!-- Body -->
                         <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">File</label>
-                            <input type="file"
-                                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
+
+                            <!-- Custom File Input -->
+                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
+                                <!-- Browse Button -->
+                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
+                                    Browse
+                                </label>
+                                <!-- Hidden File Input -->
+                                <input id="fileUpload" type="file" class="hidden"
+                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
+                                <!-- Fake Text Input to show file name -->
+                                <input id="fileName" type="text" placeholder="No file chosen"
+                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                            </div>
+
+                            <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md transition">
+                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
                                 Upload
                             </button>
                         </div>
