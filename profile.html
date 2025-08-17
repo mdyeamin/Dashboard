@@ -288,138 +288,143 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div x-data="{ tab: 'profile' }" class="flex flex-col lg:flex-row gap-6 w-full px-4 lg:px-8 py-6">
+                <div class=" bg-white p-4 rounded-lg">
+                    <div x-data="{ tab: 'profile' }" class="flex flex-col lg:flex-row gap-6 w-full px-4 lg:px-8 py-6">
 
-                    <!-- Left: Profile or Payment Info Section -->
-                    <div class="w-full lg:w-3/4 bg-white border border-gray-300 rounded shadow-sm">
-                        <!-- Top Buttons -->
-                        <div class="flex w-full">
-                            <button @click="tab = 'profile'"
-                                :class="tab === 'profile' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'"
-                                class="w-1/2 text-center py-2 font-semibold border-r border-gray-300 transition duration-200">
-                                Profile
-                            </button>
-                            <button @click="tab = 'payment'"
-                                :class="tab === 'payment' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'"
-                                class="w-1/2 text-center py-2 font-semibold transition duration-200">
-                                Payment Info
-                            </button>
-                        </div>
-
-                        <!-- Profile Content -->
-                        <div x-show="tab === 'profile'" class="p-4 border-t border-gray-300">
-                            <div class="mb-4">
-                                <button class="bg-red-400 hover:bg-red-500 text-white text-sm px-4 py-2 rounded">⬇
-                                    Download Information</button>
-                            </div>
-                            <div class="bg-white border border-gray-300 rounded shadow-sm p-4 mt-6">
-                                <table class="w-full text-sm text-left text-gray-800">
-                                    <tbody class="divide-y divide-gray-200">
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Full name:</strong> Yeamin</td>
-                                            <td class="py-2 px-4"><strong>Email:</strong> demo@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Student ID:</strong> EIT2023AU0116</td>
-                                            <td class="py-2 px-4"><strong>Highest Education:</strong> None</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Phone:</strong> 123-456-789</td>
-                                            <td class="py-2 px-4"><strong>Address:</strong> BD</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Profession:</strong> None</td>
-                                            <td class="py-2 px-4"><strong>Immigration Status:</strong> Permanent
-                                                Resident</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Country of origin:</strong> —</td>
-                                            <td class="py-2 px-4"><strong>Date of Birth:</strong> Dec. 23, 2022</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Previous Exposure:</strong> No</td>
-                                            <td class="py-2 px-4"><strong>Emergency Contact:</strong> 01999230669</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Gender:</strong> None</td>
-                                            <td class="py-2 px-4"><strong>Arrival Date:</strong> Dec. 23, 2022</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Education Group:</strong> None</td>
-                                            <td class="py-2 px-4"><strong>Know Us:</strong> Social</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Primary language:</strong> None</td>
-                                            <td class="py-2 px-4"><strong>Enrolled Course:</strong> —</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4"><strong>Signature:</strong> Yeamin</td>
-                                            <td class="py-2 px-4"><strong>Discount:</strong> None</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <!-- Left: Profile or Payment Info Section -->
+                        <div class="w-full lg:w-3/4 bg-white border border-gray-300 rounded shadow-sm">
+                            <!-- Top Buttons -->
+                            <div class="flex w-full">
+                                <button @click="tab = 'profile'"
+                                    :class="tab === 'profile' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'"
+                                    class="w-1/2 text-center py-2 font-semibold border-r border-gray-300 transition duration-200">
+                                    Profile
+                                </button>
+                                <button @click="tab = 'payment'"
+                                    :class="tab === 'payment' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'"
+                                    class="w-1/2 text-center py-2 font-semibold transition duration-200">
+                                    Payment Info
+                                </button>
                             </div>
 
-                        </div>
-
-                        <!-- Payment Info Content -->
-                        <div x-show="tab === 'payment'" class="p-4 border-t border-gray-300">
-                            <div class="bg-white border border-gray-300 rounded shadow-sm p-4 mt-6">
-                                <!-- Top Right Button -->
-                                <div class="flex justify-end mb-4">
+                            <!-- Profile Content -->
+                            <div x-show="tab === 'profile'" class="p-4 border-t border-gray-300">
+                                <div class="mb-4">
                                     <button class="bg-red-400 hover:bg-red-500 text-white text-sm px-4 py-2 rounded">⬇
-                                    Download Invoice</button>
+                                        Download Information</button>
                                 </div>
-
-                                <!-- Heading -->
-                                <h2 class="text-lg font-semibold text-gray-800 mb-4">Payment Details</h2>
-
-                                <!-- Payment Table -->
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full text-sm text-left text-gray-800">
-                                        <thead class="bg-gray-100 border-b border-gray-300">
+                                <div class="bg-white border border-gray-300 rounded shadow-sm p-4 mt-6">
+                                    <table class="w-full text-sm text-left text-gray-800">
+                                        <tbody class="divide-y divide-gray-200">
                                             <tr>
-                                                <th class="px-4 py-2">Date</th>
-                                                <th class="px-4 py-2">Amount</th>
-                                                <th class="px-4 py-2">Installment</th>
-                                                <th class="px-4 py-2">Payment Method</th>
-                                                <th class="px-4 py-2">Status</th>
+                                                <td class="py-2 px-4"><strong>Full name:</strong> Yeamin</td>
+                                                <td class="py-2 px-4"><strong>Email:</strong> demo@gmail.com</td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="border-t border-gray-200">
-                                                <td colspan="5" class="text-center px-4 py-4 text-gray-500">
-                                                    No payment transactions found
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Student ID:</strong> EIT2023AU0116</td>
+                                                <td class="py-2 px-4"><strong>Highest Education:</strong> None</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Phone:</strong> 123-456-789</td>
+                                                <td class="py-2 px-4"><strong>Address:</strong> BD</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Profession:</strong> None</td>
+                                                <td class="py-2 px-4"><strong>Immigration Status:</strong> Permanent
+                                                    Resident</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Country of origin:</strong> —</td>
+                                                <td class="py-2 px-4"><strong>Date of Birth:</strong> Dec. 23, 2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Previous Exposure:</strong> No</td>
+                                                <td class="py-2 px-4"><strong>Emergency Contact:</strong> 01999230669
                                                 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Gender:</strong> None</td>
+                                                <td class="py-2 px-4"><strong>Arrival Date:</strong> Dec. 23, 2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Education Group:</strong> None</td>
+                                                <td class="py-2 px-4"><strong>Know Us:</strong> Social</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Primary language:</strong> None</td>
+                                                <td class="py-2 px-4"><strong>Enrolled Course:</strong> —</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 px-4"><strong>Signature:</strong> Yeamin</td>
+                                                <td class="py-2 px-4"><strong>Discount:</strong> None</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
+
                             </div>
 
+                            <!-- Payment Info Content -->
+                            <div x-show="tab === 'payment'" class="p-4 border-t border-gray-300">
+                                <div class="bg-white border border-gray-300 rounded shadow-sm p-4 mt-6">
+                                    <!-- Top Right Button -->
+                                    <div class="flex justify-end mb-4">
+                                        <button
+                                            class="bg-red-400 hover:bg-red-500 text-white text-sm px-4 py-2 rounded">⬇
+                                            Download Invoice</button>
+                                    </div>
+
+                                    <!-- Heading -->
+                                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Payment Details</h2>
+
+                                    <!-- Payment Table -->
+                                    <div class="overflow-x-auto">
+                                        <table class="min-w-full text-sm text-left text-gray-800">
+                                            <thead class="bg-gray-100 border-b border-gray-300">
+                                                <tr>
+                                                    <th class="px-4 py-2">Date</th>
+                                                    <th class="px-4 py-2">Amount</th>
+                                                    <th class="px-4 py-2">Installment</th>
+                                                    <th class="px-4 py-2">Payment Method</th>
+                                                    <th class="px-4 py-2">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-t border-gray-200">
+                                                    <td colspan="5" class="text-center px-4 py-4 text-gray-500">
+                                                        No payment transactions found
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
 
 
 
+
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Right: Avatar -->
-                    <div class="w-full lg:w-1/4">
-                        <div class="bg-white border border-gray-300 rounded shadow-sm p-4 text-center">
-                            <div class="text-gray-600 font-semibold mb-2 flex items-center justify-center gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Avatar
-                            </div>
-                            <img src="/images/profile.jpg" alt="Avatar"
-                                class="w-32 h-32 rounded object-cover mx-auto border border-gray-300 mb-3">
-                            <div class="bg-orange-500 text-white text-sm font-medium py-1 px-3 rounded">EIT2023AU0116
+                        <!-- Right: Avatar -->
+                        <div class="w-full lg:w-1/4">
+                            <div class="bg-white border border-gray-300 rounded shadow-sm p-4 text-center">
+                                <div class="text-gray-600 font-semibold mb-2 flex items-center justify-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Avatar
+                                </div>
+                                <img src="/images/profile.jpg" alt="Avatar"
+                                    class="w-32 h-32 rounded object-cover mx-auto border border-gray-300 mb-3">
+                                <div class="bg-orange-500 text-white text-sm font-medium py-1 px-3 rounded">
+                                    EIT2023AU0116
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
 
             </div>
