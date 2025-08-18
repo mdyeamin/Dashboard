@@ -200,7 +200,7 @@
 
 
 
-                
+
             </nav>
         </div>
 
@@ -215,7 +215,61 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <h1 class="text-3xl font-bold mb-4">Class Notes</h1>
+                <div class="bg-white p-4 rounded-lg">
+                    <h1 class="text-3xl font-bold mb-4">Class Notes</h1>
+
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+
+                        <!-- Module Card -->
+                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
+                            <h3 class="font-bold text-lg text-left">Module</h3>
+                            <p class="text-sm text-gray-700 text-left">Module Topic</p>
+                            <p class="text-sm text-gray-500 mb-3 text-left">Module List. Create, Update</p>
+                            <button
+                                class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
+                                Click to View
+                            </button>
+                        </div>
+
+                        <!-- Sub Module Card -->
+                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
+                            <h3 class="font-bold text-lg text-left">Sub Module</h3>
+                            <p class="text-sm text-gray-700 text-left">All Sub Module</p>
+                            <p class="text-sm text-gray-500 mb-3 text-left">Sub Module List. Create, Update</p>
+                            <button
+                                class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
+                                Click to View
+                            </button>
+                        </div>
+
+                        <!-- Topic Card -->
+                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
+                            <h3 class="font-bold text-lg text-left">Topic</h3>
+                            <p class="text-sm text-gray-700 text-left">All Topic</p>
+                            <p class="text-sm text-gray-500 mb-3 text-left">Topic List, Create, Update</p>
+                            <button
+                                class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
+                                Click to View
+                            </button>
+                        </div>
+
+                        <!-- Class Note Card -->
+                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
+                            <h3 class="font-bold text-lg text-left">Class Note</h3>
+                            <p class="text-sm text-gray-700 text-left">All Class Note</p>
+                            <p class="text-sm text-gray-500 mb-3 text-left">Class Note List, Create, Update</p>
+                            <button
+                                class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
+                                Click to View
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
 
 
 
@@ -229,23 +283,23 @@
     <script>
 
 
-         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
 
 
 
-const buttons = document.querySelectorAll('.toggle-btn');
+        const buttons = document.querySelectorAll('.toggle-btn');
 
         buttons.forEach((button) => {
             button.addEventListener('click', (e) => {

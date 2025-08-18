@@ -215,7 +215,308 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <h1 class="text-3xl font-bold mb-4">Class recording</h1>
+<div class="bg-white p-4 rounded-lg ">
+                    <h1 class="text-2xl font-bold">Class recording</h1>
+
+
+                    <div class="p-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+
+                            <!-- Teacher Name -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Teacher Name</label>
+                                <input type="text" placeholder="Enter..."
+                                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm" />
+                            </div>
+
+                            <!-- Batch -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Batch</label>
+                                <select
+                                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm">
+                                    <option>Select</option>
+                                    <option>Batch 1</option>
+                                    <option>Batch 2</option>
+                                </select>
+                            </div>
+
+                            <!-- Excel Button -->
+                            <div>
+                                <button
+                                    class="flex items-center justify-center w-full border border-green-500 text-green-600 font-medium text-sm px-4 py-2 rounded-md hover:bg-green-50 transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                                    </svg>
+                                    Excel
+                                </button>
+                            </div>
+
+                            <!-- Create Class Button -->
+                            <div>
+                                <button
+                                    class="flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-medium text-sm px-5 py-2 rounded-md transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    Create Class
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- show & search -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 my-10">
+                        <!-- Show entries dropdown -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <p>Show:</p>
+                            <div class="relative inline-block w-20">
+                                <select
+                                    class="block w-full border border-gray-300 px-4 py-2 pr-10 rounded-md text-gray-700 focus:outline-none focus:ring-2 appearance-none bg-white">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p>entries</p>
+                        </div>
+
+                        <!-- Search box -->
+                        <div class="w-full md:w-auto flex">
+                            <input type="text" placeholder="Search here..."
+                                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-yellow-500" />
+                            <button
+                                class="px-4 py-2 bg-black text-yellow font-semibold rounded-r-md focus:outline-none focus:ring-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
+                        <thead class="bg-yellow-300">
+                            <tr class="text-sm font-semibold">
+                                <th class="px-4 py-2">SL</th>
+                                <th class="px-4 py-2">Batch</th>
+                                <th class="px-4 py-2">Teacher Name</th>
+                                <th class="px-4 py-2">Title</th>
+                                <th class="px-4 py-2">Date</th>
+                                <th class="px-4 py-2">Start Time</th>
+                                <th class="px-4 py-2">End Time</th>
+
+                                <th class="px-4 py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Upcomming</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2"> 12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Copy</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Delete</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Copy</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Upcomming</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Delete</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Copy</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Upcomming</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="px-4 py-2">01</td>
+                                <td class="px-4 py-2">2025QA01</td>
+                                <td class="px-4 py-2">Tofayel Kabir</td>
+                                <td class="px-4 py-2">interview Full aysha 02</td>
+                                <td class="px-4 py-2">12 May 2025</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+                                <td class="px-4 py-2"> 20:30:00</td>
+
+                                <td class="px-4 py-2">
+                                    <button
+                                        class="bg-blue-600 border text-white px-3 py-1 rounded text-sm">Delete</button>
+
+                                </td>
+                                <tr />
+                        </tbody>
+
+
+                    </table>
+
+
+                    <!-- Pagination -->
+                    <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
+                        <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
+                        <div class="flex gap-2">
+                            <button class="px-2 py-1 ">← Previous </button>
+                            <button class="px-2 py-1 border rounded">1</button>
+                            <button class="px-2 py-1 border rounded">2</button>
+                            <button class="px-2 py-1 border rounded">3</button>
+                            <button class="px-2 py-1 ">-- 100</button>
+                            <button class="px-2 py-1 ">Next →</button>
+                        </div>
+                    </div>
+                </div>
 
 
 
