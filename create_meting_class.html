@@ -179,7 +179,7 @@
                             Class Notes (SU)
                         </a>
                         <a href="class_schedule.html" class="flex items-center py-1">
-                            
+
                             <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Schedule
                         </a>
@@ -201,7 +201,7 @@
 
 
 
-                
+
             </nav>
         </div>
 
@@ -216,24 +216,99 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="p-6">
-                    <h2 class="text-2xl font-semibold mb-4">Young Coders Batches</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white shadow rounded-xl p-4 hover:shadow-md transition">
-                            <h3 class="text-lg font-bold mb-2">Young Coders</h3>
-                            <p class="text-center">2023YC02</p>
-                            <a href="section-list_32.html"><button
-                                    class="bg-yellow text-black rounded px-4 py-2 mt-2 hover:bg-yellow-500 transition w-full">
-                                    View Course
-                                </button></a>
-                        </div>
-                        
+                <div class="bg-white p-4 rounded-lg ">
+                    <h1 class="text-2xl font-bold">Meeting List</h1>
 
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Create Class</h2>
+
+                        <form class="space-y-5">
+                            <!-- Teacher & Batch -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Teacher *</label>
+                                    <select
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Batch *</label>
+                                    <select
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Title -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Title *</label>
+                                <input type="text" placeholder="Type..."
+                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                            </div>
+
+                            <!-- Date & Notification -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Date *</label>
+                                    <input type="date"
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Do you want to add this class
+                                        for student notification?</label>
+                                    <select
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Description</label>
+                                <textarea rows="3"
+                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none"></textarea>
+                            </div>
+
+                            <!-- End Time & Start Time -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">End Time</label>
+                                    <input type="time"
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Start Time</label>
+                                    <input type="time"
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <!-- Meeting URL -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Meeting URL *</label>
+                                <input type="text"
+                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex space-x-3 pt-2">
+                                <button type="submit"
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-5 py-2 rounded-lg transition">
+                                    Create Class
+                                </button>
+                                <button type="button"
+                                    class="border border-gray-300 hover:bg-gray-100 px-5 py-2 rounded-lg transition">
+                                    Cancel
+                                </button>
+                            </div>
+                        </form>
                     </div>
+
+
                 </div>
-
-
-
 
             </div>
         </div>
@@ -242,23 +317,23 @@
     <script>
 
 
-         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
 
 
 
-const buttons = document.querySelectorAll('.toggle-btn');
+        const buttons = document.querySelectorAll('.toggle-btn');
 
         buttons.forEach((button) => {
             button.addEventListener('click', (e) => {
