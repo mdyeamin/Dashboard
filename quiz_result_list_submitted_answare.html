@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontawesome cdn  -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+        @theme {
+        /* --color-clifford: #da373d; */
+        --color-primary-bg: #efeeee ;
+        --color-light-gray: #da373d;
+        --color-dark-gray: #132022;
+        --color-yellow: #fbcd13
+      }
+    </style>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Enthrall</title>
+</head>
+
+<body class="bg-primary-bg max-w-6xl mx-auto">
+    <header class="bg-white h-16 my-3 rounded-2xl px-5">
+        <div class="h-full flex justify-between items-center ">
+            <img class="w-40" src="images/logo.png" alt="">
+            <div class="flex items-center gap-5">
+                <i class="fa-solid fa-bell text-lg"></i>
+                <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+            </div>
+        </div>
+    </header>
+
+    </head>
+
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div id="sidebar"
+            class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
+
+            <nav class="space-y-2">
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="index.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/dashboardIcon.png" alt="">
+                        <span>Dashboard</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="profile.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/profileIcon.png" alt="">
+                        <span>Profile</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="payment.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/paymentIcon.png" alt="">
+                        <span>Payment</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="admin_approve.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/adminApproveIcon.png" alt="">
+                        <span>Admin Approve</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="staff.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
+                        <span>Staff</span>
+                    </a>
+                </button>
+
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="create_question.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createQuestionIcon.png" alt="">
+                        <span>Create Question</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="create.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+                        <span>Create</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="create_course.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/create_course.png" alt="">
+                        <span>Create Course</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="students_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+                        <span>Student List</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="application_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/applicationListIcon.png" alt="">
+                        <span>Application List</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="file_upload.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/file_uploadIcon.png" alt="">
+                        <span>File Upload</span>
+                    </a>
+                </button>
+                <!-- Tasks  -->
+                <div class="w-full">
+                    <button
+                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent hover:bg-gray-100 text-black border border-transparent hover:border-gray-200 transition"
+                        data-target="menu-1">
+                        <div class="flex items-center">
+                            <img class="mr-2 w-4" src="images/tasksIcon.png" alt="">
+                            <span>Tasks</span>
+                        </div>
+                        <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="menu-1" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/quizGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Quiz
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/assignmentGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Assignment
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/coddingChallengeGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            C-Challenge
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/examGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Exam
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/bootcampGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Bootcamp
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/automationGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Automation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Materials  -->
+                <div class="w-full">
+                    <button
+                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent hover:bg-gray-100 text-black border border-transparent hover:border-gray-200 transition"
+                        data-target="menu-2">
+                        <div class="flex items-center">
+                            <img class="mr-2 w-4" src="images/tasksIcon.png" alt="">
+                            <span>Materials</span>
+                        </div>
+                        <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="menu-2" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Class Notes (SU)
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Class Schedule
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Join
+                            The Class
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Class Recording
+                        </a>
+                        <a href="#" class="flex items-center py-1">
+                            <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Reference Videos
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+
+            </nav>
+        </div>
+
+        <!-- Overlay for mobile -->
+        <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+        <!-- Main content -->
+        <div class="flex-1 p-4 ">
+            <!-- Mobile toggle button -->
+            <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
+                Menu</button>
+
+            <!-- Dynamic Content (right side content)-->
+            <div id="main-content">
+                <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
+                    <div class="p-6">
+
+                        <!-- Header -->
+                        <h2 class="text-xl font-bold mb-4">Type Test &gt; Submitted Answer</h2>
+
+                        <!-- Info Table -->
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full border border-gray-200 rounded-lg overflow-hidden">
+                                <thead>
+                                    <tr class="bg-yellow-400 text-black text-sm font-semibold">
+                                        <th class="px-4 py-2 text-left">Student</th>
+                                        <th class="px-4 py-2 text-left">Batch</th>
+                                        <th class="px-4 py-2 text-left">Home Work</th>
+                                        <th class="px-4 py-2 text-left">Topic</th>
+                                        <th class="px-4 py-2 text-left">Marks</th>
+                                        <th class="px-4 py-2 text-left">Submission Time</th>
+                                        <th class="px-4 py-2 text-left">Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-sm text-gray-800 bg-white">
+                                        <td class="px-4 py-2">EIT</td>
+                                        <td class="px-4 py-2">28404Q</td>
+                                        <td class="px-4 py-2">Test Work</td>
+                                        <td class="px-4 py-2">Test</td>
+                                        <td class="px-4 py-2">0.00</td>
+                                        <td class="px-4 py-2">01, June 25, 2:40 a.m.</td>
+                                        <td class="px-4 py-2">eit2025qa01@gmail.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Info Text -->
+                        <p class="mt-6 text-gray-700">
+                            Your selected answers are below. Here, your correct answers are
+                            <span class="text-green-600 font-semibold">green</span> in color,
+                            Correct but you failed to recognize are
+                            <span class="text-yellow-500 font-semibold">yellow</span> in color and
+                            finally wrong answers are in
+                            <span class="text-red-600 font-semibold">red</span>.
+                        </p>
+
+                        <!-- Questions -->
+                        <div class="mt-6 space-y-6">
+                            <!-- Question 1 -->
+                            <div>
+                                <p class="font-medium text-gray-800 mb-2">
+                                    1. What is the command to commit a repository with the message “1st commit”?
+                                </p>
+                                <input type="text" class="w-full border rounded-md px-4 py-2 text-sm" />
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div>
+                                <p class="font-medium text-gray-800 mb-2">
+                                    2. What is the command to commit a repository with the message “1st commit”?
+                                </p>
+                                <input type="text" class="w-full border rounded-md px-4 py-2 text-sm" />
+                            </div>
+
+                            <!-- Question 3 -->
+                            <div>
+                                <p class="font-medium text-gray-800 mb-2">
+                                    3. What is the command to commit a repository with the message “1st commit”?
+                                </p>
+                                <input type="text" class="w-full border rounded-md px-4 py-2 text-sm" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+
+
+        const buttons = document.querySelectorAll('.toggle-btn');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                resetButtons();
+                button.classList.remove('bg-gray-100', 'hover:bg-gray-100', 'text-black');
+                button.classList.add('bg-yellow', 'hover:bg-yellow', 'text-dark-gray');
+            });
+        });
+
+        // document.addEventListener('click', () => {
+        //   resetButtons();
+        // });
+
+        function resetButtons() {
+            buttons.forEach((btn) => {
+                btn.classList.remove('bg-yellow', 'hover:bg-yellow', 'text-white');
+                btn.classList.add('bg-gray-100', 'hover:bg-gray-100', 'text-black');
+            });
+        }
+
+
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+        // dashboard content
+
+    </script>
+
+
+</body>
+
+</body>
+
+</html>
