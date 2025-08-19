@@ -136,24 +136,24 @@
                         </svg>
                     </button>
                     <div id="menu-1" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
-                        <a href="#" class="flex items-center py-1">
+                        <a href="quiz_list(SU).html" class="flex items-center py-1">
                             <img src="images/quizGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Quiz
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="assignment(SU).html" class="flex items-center py-1">
                             <img src="images/assignmentGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Assignment
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="challenge(SU).html" class="flex items-center py-1">
                             <img src="images/coddingChallengeGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             C-Challenge
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="exam(SU).html" class="flex items-center py-1">
                             <img src="images/examGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Exam
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="bootcamp(SU).html" class="flex items-center py-1">
                             <img src="images/bootcampGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Bootcamp
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="automation(SU).html" class="flex items-center py-1">
                             <img src="images/automationGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Automation
                         </a>
@@ -175,23 +175,23 @@
                         </svg>
                     </button>
                     <div id="menu-2" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
-                        <a href="#" class="flex items-center py-1">
+                        <a href="class_notes(SU).html" class="flex items-center py-1">
                             <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Notes (SU)
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="" class="flex items-center py-1">
                             <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Schedule
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="join_the_class.html" class="flex items-center py-1">
                             <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Join
                             The Class
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="class_recording.html" class="flex items-center py-1">
                             <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Recording
                         </a>
-                        <a href="#" class="flex items-center py-1">
+                        <a href="others.html" class="flex items-center py-1">
                             <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Reference Videos
                         </a>
@@ -201,7 +201,7 @@
 
 
 
-                
+
             </nav>
         </div>
 
@@ -385,23 +385,23 @@
     <script>
 
 
-         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
 
 
 
-const buttons = document.querySelectorAll('.toggle-btn');
+        const buttons = document.querySelectorAll('.toggle-btn');
 
         buttons.forEach((button) => {
             button.addEventListener('click', (e) => {
