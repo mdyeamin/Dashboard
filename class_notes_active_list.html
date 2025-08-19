@@ -17,6 +17,7 @@
         --color-yellow: #fbcd13
       }
     </style>
+
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -178,7 +179,8 @@
                             <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Notes (SU)
                         </a>
-                        <a href="" class="flex items-center py-1">
+                        <a href="class_schedule.html" class="flex items-center py-1">
+                            
                             <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Schedule
                         </a>
@@ -215,72 +217,61 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="bg-white p-4 rounded-lg">
-                    <h1 class="text-3xl font-bold mb-4">Class Notes</h1>
+                <div class=" space-y-6 w-full bg-white rounded-lg p-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Active Batch List</h2>
 
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-
-                        <!-- Module Card -->
-                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
-                            <h3 class="font-bold text-lg text-left">Module</h3>
-                            <p class="text-sm text-gray-700 text-left">Module Topic</p>
-                            <p class="text-sm text-gray-500 mb-3 text-left">Module List. Create, Update</p>
-                            <a href="module_list.html">
+                            <!-- Batch Card -->
+                            <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-base font-semibold text-gray-900">
+                                        Software Test Automation Engineering (Java)
+                                    </h3>
+                                    <p class="text-sm text-gray-700 mt-1">QA Java – Rec Btch</p>
+                                    <p class="text-xs text-gray-500 mt-1">QAJVREC</p>
+                                </div>
                                 <button
-                                    class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
-                                    Click to View
+                                    class="mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded-lg transition">
+                                    View Details
                                 </button>
-                            </a>
-                        </div>
+                            </div>
 
-                        <!-- Sub Module Card -->
-                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
-                            <h3 class="font-bold text-lg text-left">Sub Module</h3>
-                            <p class="text-sm text-gray-700 text-left">All Sub Module</p>
-                            <p class="text-sm text-gray-500 mb-3 text-left">Sub Module List. Create, Update</p>
-                            <a href="sub_module_list.html">
+                            <!-- Batch Card -->
+                            <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-base font-semibold text-gray-900">
+                                        Software Test Automation Engineering (Java)
+                                    </h3>
+                                    <p class="text-sm text-gray-700 mt-1">QA Java – Rec Btch</p>
+                                    <p class="text-xs text-gray-500 mt-1">QAJVREC</p>
+                                </div>
                                 <button
-                                    class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
-                                    Click to View
+                                    class="mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded-lg transition">
+                                    View Details
                                 </button>
-                            </a>
-                        </div>
+                            </div>
 
-                        <!-- Topic Card -->
-                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
-                            <h3 class="font-bold text-lg text-left">Topic</h3>
-                            <p class="text-sm text-gray-700 text-left">All Topic</p>
-                            <p class="text-sm text-gray-500 mb-3 text-left">Topic List, Create, Update</p>
-                            <a href="sub_module_list.html">
+                            <!-- Batch Card -->
+                            <div class="bg-white  rounded-lg shadow-sm p-5 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-base font-semibold text-gray-900">
+                                        Software Test Automation Engineering (Java)
+                                    </h3>
+                                    <p class="text-sm text-gray-700 mt-1">QA Java – Rec Btch</p>
+                                    <p class="text-xs text-gray-500 mt-1">QAJVREC</p>
+                                </div>
                                 <button
-                                    class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
-                                    Click to View
+                                    class="mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded-lg transition">
+                                    View Details
                                 </button>
-                            </a>
-                        </div>
+                            </div>
 
-                        <!-- Class Note Card -->
-                        <div class="border border-gray-200 rounded-lg p-4 shadow-sm bg-white flex flex-col">
-                            <h3 class="font-bold text-lg text-left">Class Note</h3>
-                            <p class="text-sm text-gray-700 text-left">All Class Note</p>
-                            <p class="text-sm text-gray-500 mb-3 text-left">Class Note List, Create, Update</p>
-                            <a href="class_notes_active_list.html">
-                                <button
-                                    class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-3 py-1 rounded self-start">
-                                    Click to View
-                                </button>
-                            </a>
                         </div>
-
                     </div>
 
-
-
                 </div>
-
-
-
 
 
 
