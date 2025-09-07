@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontawesome cdn  -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+        @theme {
+        /* --color-clifford: #da373d; */
+        --color-primary-bg: #efeeee ;
+        --color-light-gray: #da373d;
+        --color-dark-gray: #132022;
+        --color-yellow: #fbcd13
+      }
+    </style>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Enthrall</title>
+</head>
+
+<body class="bg-primary-bg max-w-6xl mx-auto">
+    <header class="bg-white h-16 my-3 rounded-2xl px-5">
+        <div class="h-full flex justify-between items-center ">
+            <img class="w-40" src="images/logo.png" alt="">
+            <div class="flex items-center gap-5">
+                <i class="fa-solid fa-bell text-lg"></i>
+                <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+            </div>
+        </div>
+    </header>
+
+    </head>
+
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div id="sidebar"
+            class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
+
+            <nav class="space-y-2">
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="index.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/dashboardIcon.png" alt="">
+                        <span>Dashboard</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="profile.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/profileIcon.png" alt="">
+                        <span>Profile</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="payment.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/paymentIcon.png" alt="">
+                        <span>Payment</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="admin_approve.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/adminApproveIcon.png" alt="">
+                        <span>Admin Approve</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="staff.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
+                        <span>Staff</span>
+                    </a>
+                </button>
+
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="create_question.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createQuestionIcon.png" alt="">
+                        <span>Create Question</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="create.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+                        <span>Create</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="create_course.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/create_course.png" alt="">
+                        <span>Create Course</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="students_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+                        <span>Student List</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="application_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/applicationListIcon.png" alt="">
+                        <span>Application List</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    <a href="file_upload.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/file_uploadIcon.png" alt="">
+                        <span>File Upload</span>
+                    </a>
+                </button>
+                <!-- Tasks  -->
+                <div class="w-full">
+                    <button
+                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent hover:bg-gray-100 text-black border border-transparent hover:border-gray-200 transition"
+                        data-target="menu-1">
+                        <div class="flex items-center">
+                            <img class="mr-2 w-4" src="images/tasksIcon.png" alt="">
+                            <span>Tasks</span>
+                        </div>
+                        <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="menu-1" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
+                        <a href="quiz_list(SU).html" class="flex items-center py-1">
+                            <img src="images/quizGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Quiz
+                        </a>
+                        <a href="assignment(SU).html" class="flex items-center py-1">
+                            <img src="images/assignmentGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Assignment
+                        </a>
+                        <a href="challenge(SU).html" class="flex items-center py-1">
+                            <img src="images/coddingChallengeGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            C-Challenge
+                        </a>
+                        <a href="exam(SU).html" class="flex items-center py-1">
+                            <img src="images/examGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Exam
+                        </a>
+                        <a href="bootcamp(SU).html" class="flex items-center py-1">
+                            <img src="images/bootcampGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Bootcamp
+                        </a>
+                        <a href="automation(SU).html" class="flex items-center py-1">
+                            <img src="images/automationGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Automation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Materials  -->
+                <div class="w-full">
+                    <button
+                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent hover:bg-gray-100 text-black border border-transparent hover:border-gray-200 transition"
+                        data-target="menu-2">
+                        <div class="flex items-center">
+                            <img class="mr-2 w-4" src="images/tasksIcon.png" alt="">
+                            <span>Materials</span>
+                        </div>
+                        <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="menu-2" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
+                        <a href="class_notes(SU).html" class="flex items-center py-1">
+                            <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Class Notes (SU)
+                        </a>
+                        <a href="class_schedule.html" class="flex items-center py-1">
+
+                            <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Class Schedule
+                        </a>
+                        <a href="join_the_class.html" class="flex items-center py-1">
+                            <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Join
+                            The Class
+                        </a>
+                        <a href="class_recording.html" class="flex items-center py-1">
+                            <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Class Recording
+                        </a>
+                        <a href="others.html" class="flex items-center py-1">
+                            <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
+                            Reference Videos
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+
+            </nav>
+        </div>
+
+        <!-- Overlay for mobile -->
+        <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+        <!-- Main content -->
+        <div class="flex-1 p-4 ">
+            <!-- Mobile toggle button -->
+            <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
+                Menu</button>
+
+            <!-- Dynamic Content (right side content)-->
+            <div id="main-content">
+                <div class="bg-white p-4 rounded-lg space-y-6 w-full">
+                    <div class="flex flex-col justify-between items-start gap-5 mb-4">
+                        <h2 class="text-2xl font-semibold">Submitted Answer</h2>
+
+                    </div>
+
+                    <div class=" mx-auto p-6">
+                        <!-- Quiz Info -->
+                        <h2 class="text-lg font-semibold mb-4">Quiz Info</h2>
+
+                        <!-- Quiz Title -->
+                        <div class="mb-4">
+                            <label class="block font-medium">Quiz Title</label>
+                            <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                        </div>
+
+                        <!-- Quiz Name & Batch -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block font-medium">Quiz Name</label>
+                                <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                            </div>
+                            <div>
+                                <label class="block font-medium">Batch</label>
+                                <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                            </div>
+                        </div>
+
+                        <!-- Start & End Date -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block font-medium">Start Date *</label>
+                                <input type="date" class="w-full border rounded p-2">
+                            </div>
+                            <div>
+                                <label class="block font-medium">End Date</label>
+                                <input type="date" class="w-full border rounded p-2">
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-6">
+                            <label class="block font-medium">Description</label>
+                            <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                        </div>
+
+                        <!-- Info Text -->
+                        <p class="font-medium text-2xl mb-4">
+                            Your selected answers are below. Correct answers are <span
+                                class="text-green-600">green</span>,
+                            wrong answers are <span class="text-red-600">red</span>, and missed correct answers are
+                            <span class="text-yellow-500">yellow</span>.
+                        </p>
+
+                        <!-- Questions -->
+                        <div class="space-y-6">
+                            <!-- Question 1 -->
+                            <div>
+                                <h3 class="font-semibold mb-2">1. This is test question</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <!-- Option A (Red, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-red-600">
+                                        <span class="text-black">Test answer one</span>
+                                    </label>
+
+                                    <!-- Option B (Green, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-green-600">
+                                        <span class="text-black">Test answer two</span>
+                                    </label>
+
+                                    <!-- Option C (Red, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-red-600">
+                                        <span class="text-black">Test answer three</span>
+                                    </label>
+
+                                    <!-- Option D (Green, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-green-600">
+                                        <span class="text-black">Test answer four</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div>
+                                <h3 class="font-semibold mb-2">2. This is test question</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <!-- Option A (Red, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-red-600">
+                                        <span class="text-black">Test answer one</span>
+                                    </label>
+
+                                    <!-- Option B (Green, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-green-600">
+                                        <span class="text-black">Test answer two</span>
+                                    </label>
+
+                                    <!-- Option C (Red, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-red-600">
+                                        <span class="text-black">Test answer three</span>
+                                    </label>
+
+                                    <!-- Option D (Green, Checked) -->
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" checked class="w-5 h-5 accent-green-600">
+                                        <span class="text-black">Test answer four</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+
+
+        const buttons = document.querySelectorAll('.toggle-btn');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                resetButtons();
+                button.classList.remove('bg-gray-100', 'hover:bg-gray-100', 'text-black');
+                button.classList.add('bg-yellow', 'hover:bg-yellow', 'text-dark-gray');
+            });
+        });
+
+        // document.addEventListener('click', () => {
+        //   resetButtons();
+        // });
+
+        function resetButtons() {
+            buttons.forEach((btn) => {
+                btn.classList.remove('bg-yellow', 'hover:bg-yellow', 'text-white');
+                btn.classList.add('bg-gray-100', 'hover:bg-gray-100', 'text-black');
+            });
+        }
+
+
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+        // dashboard content
+
+
+
+
+        // add question
+        document.addEventListener("DOMContentLoaded", () => {
+            const availableTable = document.querySelector("#availableTable tbody");
+            const selectedTable = document.querySelector("#selectedTable tbody");
+
+            // when checkbox clicked
+            availableTable.addEventListener("change", (e) => {
+                if (e.target.classList.contains("move-to-selected") && e.target.checked) {
+                    const row = e.target.closest("tr");
+                    row.querySelector("td").innerHTML = "✓"; // replace checkbox with tick
+                    selectedTable.appendChild(row); // move row
+                }
+            });
+        }); 
+    </script>
+
+
+</body>
+
+</body>
+
+</html>
