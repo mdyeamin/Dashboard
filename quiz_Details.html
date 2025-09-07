@@ -218,91 +218,92 @@
             <div id="main-content">
                 <div class="bg-white p-4 rounded-lg space-y-6 w-full">
                     <div class="flex flex-col justify-between items-start gap-5 mb-4">
-                        <h2 class="text-2xl font-semibold">Choice Your Question</h2>
+                        <h2 class="text-2xl font-semibold">Quiz Details</h2>
 
                     </div>
 
+                    <div class="max-w-5xl mx-auto p-6">
+                        <!-- Quiz Info -->
+                        <div class="space-y-4 mb-10">
+                            <div>
+                                <label class="block font-medium">Quiz Title</label>
+                                <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                            </div>
 
-                    <div class="p-6">
-                        <!-- First Filters -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                            <select class="border p-2 rounded">
-                                <option>Section</option>
-                            </select>
-                            <select class="border p-2 rounded">
-                                <option>Question Type</option>
-                            </select>
-                            <input type="text" placeholder="Search..." class="border p-2 rounded">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-medium">Quiz Name</label>
+                                    <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                                </div>
+                                <div>
+                                    <label class="block font-medium">Batch</label>
+                                    <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-medium">Start Date *</label>
+                                    <input type="date" class="w-full border rounded p-2">
+                                </div>
+                                <div>
+                                    <label class="block font-medium">End Date *</label>
+                                    <input type="date" class="w-full border rounded p-2">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block font-medium">Description</label>
+                                <input type="text" class="w-full border rounded p-2" placeholder="Enter...">
+                            </div>
                         </div>
 
-                        <!-- Please Select a Question -->
-                        <h2 class="font-semibold mb-2">Please Select a Question</h2>
-                        <table id="availableTable" class="w-full  mb-6">
-                            <thead class="bg-yellow rounded-lg text-left">
-                                <tr>
-                                    <th class="p-2"><input type="checkbox" id="selectAllAvailable"></th>
-                                    <th class="p-2">Question</th>
-                                    <th class="p-2">Question Type</th>
-                                    <th class="p-2">Topic</th>
-                                    <th class="p-2">Mark</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="p-2"><input type="checkbox" class="move-to-selected"></td>
-                                    <td class="p-2">This is test question final</td>
-                                    <td class="p-2">Checkboxes</td>
-                                    <td class="p-2">This is test topic</td>
-                                    <td class="p-2">5.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-2"><input type="checkbox" class="move-to-selected"></td>
-                                    <td class="p-2">Another question</td>
-                                    <td class="p-2">Checkboxes</td>
-                                    <td class="p-2">Topic 2</td>
-                                    <td class="p-2">10.00</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Question and Answer -->
+                        <div class="mt-10">
+                            <h2 class="text-xl font-semibold mb-4">Question And Answer</h2>
 
-                        <!-- Second Filters -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                            <select class="border p-2 rounded">
-                                <option>Section</option>
-                            </select>
-                            <select class="border p-2 rounded">
-                                <option>Question Type</option>
-                            </select>
-                            <input type="text" placeholder="Search..." class="border p-2 rounded">
+                            <!-- Question Header -->
+                            <div class="flex justify-between bg-yellow-400 text-black font-semibold px-4 py-2 rounded">
+                                <span>Total Question: 06</span>
+                                <span>Total Mark: 30.00</span>
+                            </div>
+
+                            <!-- Single Question -->
+                            <div class="mt-6  rounded-lg p-4 space-y-4">
+                                <!-- Question title with actions -->
+                                <div class="flex justify-between items-center">
+                                    <h3 class="font-semibold">1. This is test question</h3>
+                                    <div class="flex gap-3 text-gray-600">
+                                        <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button><i class="fa-regular fa-copy"></i></button>
+                                        <button><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                </div>
+
+                                <!-- Options -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <label class="flex items-center gap-2 border rounded p-2">
+                                        <input type="radio" name="q1" class="accent-yellow-500">
+                                        <input type="text" value="Option A" class="flex-1 outline-none">
+                                    </label>
+
+                                    <label class="flex items-center gap-2 border rounded p-2">
+                                        <input type="radio" name="q1" class="accent-yellow-500">
+                                        <input type="text" value="Option B" class="flex-1 outline-none">
+                                    </label>
+
+                                    <label class="flex items-center gap-2 border rounded p-2">
+                                        <input type="radio" name="q1" class="accent-yellow-500">
+                                        <input type="text" value="Option C" class="flex-1 outline-none">
+                                    </label>
+
+                                    <label class="flex items-center gap-2 border rounded p-2">
+                                        <input type="radio" name="q1" class="accent-yellow-500">
+                                        <input type="text" value="Option D" class="flex-1 outline-none">
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- Has been Selected -->
-                        <h2 class="font-semibold mb-2">Has been Selected</h2>
-                        <table id="selectedTable" class="w-full rounded-lg mb-6">
-                            <thead class="bg-yellow text-left">
-                                <tr>
-                                    <th class="p-2"><input type="checkbox"></th>
-                                    <th class="p-2">Question</th>
-                                    <th class="p-2">Question Type</th>
-                                    <th class="p-2">Topic</th>
-                                    <th class="p-2">Mark</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Selected rows will appear here -->
-                            </tbody>
-                        </table>
-
-                        <!-- Buttons -->
-                        <div class="flex gap-4">
-                            <button class="bg-yellow-400 px-3 py-1 rounded font-semibold text-sm">
-                                Add Question
-                            </button>
-                            <button class="border px-3 py-1 hover:bg-yellow font-semibold rounded text-sm">
-                                Complete Quiz Creation
-                            </button>
-                        </div>
-
                     </div>
 
 
