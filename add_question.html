@@ -17,7 +17,6 @@
         --color-yellow: #fbcd13
       }
     </style>
-
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -180,7 +179,7 @@
                             Class Notes (SU)
                         </a>
                         <a href="class_schedule.html" class="flex items-center py-1">
-                            
+
                             <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Schedule
                         </a>
@@ -217,63 +216,97 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class=" space-y-6 w-full bg-white rounded-lg p-4">
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
-                        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Active Batch List</h2>
+                <div class="bg-white p-4 rounded-lg space-y-6 w-full">
+                    <div class="flex flex-col justify-between items-start gap-5 mb-4">
+                        <h2 class="text-2xl font-semibold">Choice Your Question</h2>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
 
-                            <!-- Batch Card -->
-                            <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-base font-semibold text-gray-900">
-                                        Software Test Automation Engineering (Java)
-                                    </h3>
-                                    <p class="text-sm text-gray-700 mt-1">QA Java – Rec Btch</p>
-                                    <p class="text-xs text-gray-500 mt-1">QAJVREC</p>
-                                </div>
-                                <a class="mt-4 bg-yellow-400 hover:bg-yellow-500 text-black text-center font-semibold py-2 rounded-lg transition" href="create_class_note.html">
-                                    <button
-                                    class="">
-                                    View Details
-                                </button>
-                                </a>
-                            </div>
 
-                            <!-- Batch Card -->
-                            <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-base font-semibold text-gray-900">
-                                        Software Test Automation Engineering (Java)
-                                    </h3>
-                                    <p class="text-sm text-gray-700 mt-1">QA Java – Rec Btch</p>
-                                    <p class="text-xs text-gray-500 mt-1">QAJVREC</p>
-                                </div>
-                                <button
-                                    class="mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded-lg transition">
-                                    View Details
-                                </button>
-                            </div>
+                    <div class="p-6">
+                        <!-- First Filters -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                            <select class="border p-2 rounded">
+                                <option>Section</option>
+                            </select>
+                            <select class="border p-2 rounded">
+                                <option>Question Type</option>
+                            </select>
+                            <input type="text" placeholder="Search..." class="border p-2 rounded">
+                        </div>
 
-                            <!-- Batch Card -->
-                            <div class="bg-white  rounded-lg shadow-sm p-5 flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-base font-semibold text-gray-900">
-                                        Software Test Automation Engineering (Java)
-                                    </h3>
-                                    <p class="text-sm text-gray-700 mt-1">QA Java – Rec Btch</p>
-                                    <p class="text-xs text-gray-500 mt-1">QAJVREC</p>
-                                </div>
-                                <button
-                                    class="mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded-lg transition">
-                                    View Details
-                                </button>
-                            </div>
+                        <!-- Please Select a Question -->
+                        <h2 class="font-bold mb-2">Please Select a Question</h2>
+                        <table id="availableTable" class="w-full  mb-6">
+                            <thead class="bg-yellow-400 rounded-lg text-left">
+                                <tr>
+                                    <th class="p-2"><input type="checkbox" id="selectAllAvailable"></th>
+                                    <th class="p-2">Question</th>
+                                    <th class="p-2">Question Type</th>
+                                    <th class="p-2">Topic</th>
+                                    <th class="p-2">Mark</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2"><input type="checkbox" class="move-to-selected"></td>
+                                    <td class="p-2">This is test question final</td>
+                                    <td class="p-2">Checkboxes</td>
+                                    <td class="p-2">This is test topic</td>
+                                    <td class="p-2">5.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2"><input type="checkbox" class="move-to-selected"></td>
+                                    <td class="p-2">Another question</td>
+                                    <td class="p-2">Checkboxes</td>
+                                    <td class="p-2">Topic 2</td>
+                                    <td class="p-2">10.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
+                        <!-- Second Filters -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                            <select class="border p-2 rounded">
+                                <option>Section</option>
+                            </select>
+                            <select class="border p-2 rounded">
+                                <option>Question Type</option>
+                            </select>
+                            <input type="text" placeholder="Search..." class="border p-2 rounded">
+                        </div>
+
+                        <!-- Has been Selected -->
+                        <h2 class="font-bold mb-2">Has been Selected</h2>
+                        <table id="selectedTable" class="w-full rounded-lg mb-6">
+                            <thead class="bg-yellow-400 text-left">
+                                <tr>
+                                    <th class="p-2"><input type="checkbox" ></th>
+                                    <th class="p-2">Question</th>
+                                    <th class="p-2">Question Type</th>
+                                    <th class="p-2">Topic</th>
+                                    <th class="p-2">Mark</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Selected rows will appear here -->
+                            </tbody>
+                        </table>
+
+                        <!-- Buttons -->
+                        <div class="flex gap-4">
+                            <button class="bg-yellow-400 px-4 py-2 rounded text-white">Add Question</button>
+                            <button class="border px-4 py-2 rounded">Complete Quiz Creation</button>
                         </div>
                     </div>
 
+
+
+
+
                 </div>
+
+
 
 
 
@@ -333,6 +366,23 @@
         }
         // dashboard content
 
+
+
+
+        // add question
+        document.addEventListener("DOMContentLoaded", () => {
+            const availableTable = document.querySelector("#availableTable tbody");
+            const selectedTable = document.querySelector("#selectedTable tbody");
+
+            // when checkbox clicked
+            availableTable.addEventListener("change", (e) => {
+                if (e.target.classList.contains("move-to-selected") && e.target.checked) {
+                    const row = e.target.closest("tr");
+                    row.querySelector("td").innerHTML = "✓"; // replace checkbox with tick
+                    selectedTable.appendChild(row); // move row
+                }
+            });
+        }); 
     </script>
 
 
