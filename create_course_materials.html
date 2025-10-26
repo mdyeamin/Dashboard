@@ -21,7 +21,6 @@
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Enthrall</title>
-
 </head>
 
 <body class="bg-primary-bg max-w-6xl mx-auto">
@@ -37,7 +36,7 @@
 
     </head>
 
-    <div class="min-h-screen flex ">
+    <div class="min-h-screen flex">
         <!-- Sidebar -->
         <div id="sidebar"
             class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
@@ -69,13 +68,6 @@
                     <a href="admin_approve.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/adminApproveIcon.png" alt="">
                         <span>Admin Approve</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
-                    <a href="create_course_materials.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Create Course Materials">Create Course Materials</span>
                     </a>
                 </button>
                 <button
@@ -222,240 +214,223 @@
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
 
-            <!-- Dynamic Content -->
+            <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="bg-white p-4 rounded-lg">
-                    <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <h2 class="text-3xl font-semibold mb-6">Create Course Materials</h2>
 
-                        <!-- Mentors -->
-                        <div class="flex items-center p-4 bg-blue-50 border border-blue-300 rounded-lg">
+                    <!-- Create Course -->
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-semibold">Create Course</h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                            <!-- Milestone -->
                             <div
-                                class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full text-xl">
-                                <i class="fa-regular fa-user"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm text-blue-700 font-medium">Mentors</p>
-                                <p class="text-2xl font-bold text-blue-700">11</p>
-                            </div>
-                        </div>
-
-                        <!-- Applications -->
-                        <div class="flex items-center p-4 bg-green-50 border border-green-300 rounded-lg">
-                            <div
-                                class="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full text-xl">
-                                <i class="fa-regular fa-user"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm text-green-700 font-medium">Application</p>
-                                <p class="text-2xl font-bold text-green-700">581</p>
-                            </div>
-                        </div>
-
-                        <!-- Courses -->
-                        <div class="flex items-center p-4 bg-blue-50 border border-blue-300 rounded-lg">
-                            <div
-                                class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full text-xl">
-                                <i class="fa-regular fa-user"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm text-blue-700 font-medium">Courses</p>
-                                <p class="text-2xl font-bold text-blue-700">10</p>
-                            </div>
-                        </div>
-
-                        <!-- Students -->
-                        <div class="flex items-center p-4 bg-green-50 border border-green-300 rounded-lg">
-                            <div
-                                class="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full text-xl">
-                                <i class="fa-regular fa-user"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm text-green-700 font-medium">Students</p>
-                                <p class="text-2xl font-bold text-green-700">489</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- classes  -->
-                <div class="  bg-white p-4 rounded-lg mt-5">
-
-                    <div class="p-4">
-                        <!-- Button Grid -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Quiz</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Exam</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Homework</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Bootcamp</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Class
-                                Notes</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Class
-                                Video</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Set
-                                Up &amp; Others</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Interview</button>
-                        </div>
-
-                        <!-- Honor Board -->
-                        <div class="mt-3">
-                            <button
-                                class="bg-yellow-400 hover:bg-yellow-500 py-3 w-full rounded-lg text-xl font-medium transition">
-                                Honor Board
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class=" space-y-6 w-full bg-white rounded-lg p-4">
-
-
-
-
-                        <div class="flex flex-col gap-1 w-4/12">
-                            <!-- Label -->
-                            <label for="batchLevel" class="font-medium text-gray-700">Batch </label>
-
-                            <!-- Select Box -->
-                            <select id="batchLevel"
-                                class="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition">
-                                <option value="">Select Batch Level</option>
-                                <option value="beginner">Beginner</option>
-                                <option value="intermediate">Intermediate</option>
-                                <option value="advanced">Advanced</option>
-                            </select>
-                        </div>
-
-
-
-
-
-
-                        <!-- show & search -->
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 my-10">
-                            <!-- Show entries dropdown -->
-                            <div class="flex flex-wrap items-center gap-2">
-                                <p>Show:</p>
-                                <div class="relative inline-block w-20">
-                                    <select
-                                        class="block w-full border border-gray-300 px-4 py-2 pr-10 rounded-md text-gray-700 focus:outline-none focus:ring-2 appearance-none bg-white">
-                                        <option>10</option>
-                                        <option>20</option>
-                                        <option>50</option>
-                                        <option>100</option>
-                                    </select>
-                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                        <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Milestone</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Milestone...</p>
                                     </div>
                                 </div>
-                                <p>entries</p>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
                             </div>
 
-                            <!-- Search box -->
-                            <div class="w-full md:w-auto flex">
-                                <input type="text" placeholder="Search here..."
-                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-yellow-500" />
+                            <!-- Modules -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Modules</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Modules...</p>
+                                    </div>
+                                </div>
                                 <button
-                                    class="px-4 py-2 bg-black text-yellow font-semibold rounded-r-md focus:outline-none focus:ring-2">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
+
+                            <!-- Topic -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Topic</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Topic...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
+
+                            <!-- Import -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Import</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Import...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
+
+                            <!-- See Full Overview -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">See Full Overview</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">See Full Overview...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
                                 </button>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="overflow-x-auto bg-white shadow rounded">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-yellow">
-                                    <tr>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">SL</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Name</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Student ID</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Quiz %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">HW %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Exam %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Bootcamp %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Coding
-                                            challenge %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Weighted Grade
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-gray-200 text-sm">
-                                    <!-- Row 1 -->
-                                    <tr>
-                                        <td class="px-4 py-3 align-top">1</td>
-                                        <td class="px-4 py-3 align-top">Name</td>
-                                        <td class="px-4 py-3 align-top">00000000</td>
-                                        <td class="px-4 py-3 align-top">55%</td>
-                                        <td class="px-4 py-3 align-top">59%</td>
-                                        <td class="px-4 py-3 align-top">80%</td>
-                                        <td class="px-4 py-3 align-top">10%</td>
-                                        <td class="px-4 py-3 align-top">99%</td>
-                                        <td class="px-4 py-3 align-top">89%</td>
-                                    </tr>
+                    <!-- Create One -->
+                    <div class="mt-10 space-y-6">
+                        <h3 class="text-xl font-semibold">Create One</h3>
 
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                            <!-- Question -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Question</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Question...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
 
-                                    <!-- Row 2 -->
-                                    <tr>
-                                        <td class="px-4 py-3 align-top">1</td>
-                                        <td class="px-4 py-3 align-top">Name</td>
-                                        <td class="px-4 py-3 align-top">00000000</td>
-                                        <td class="px-4 py-3 align-top">55%</td>
-                                        <td class="px-4 py-3 align-top">59%</td>
-                                        <td class="px-4 py-3 align-top">80%</td>
-                                        <td class="px-4 py-3 align-top">10%</td>
-                                        <td class="px-4 py-3 align-top">99%</td>
-                                        <td class="px-4 py-3 align-top">89%</td>
-                                    </tr>
-                                    <!-- Row 3 -->
-                                    <tr>
-                                        <td class="px-4 py-3 align-top">1</td>
-                                        <td class="px-4 py-3 align-top">Name</td>
-                                        <td class="px-4 py-3 align-top">00000000</td>
-                                        <td class="px-4 py-3 align-top">55%</td>
-                                        <td class="px-4 py-3 align-top">59%</td>
-                                        <td class="px-4 py-3 align-top">80%</td>
-                                        <td class="px-4 py-3 align-top">10%</td>
-                                        <td class="px-4 py-3 align-top">99%</td>
-                                        <td class="px-4 py-3 align-top">89%</td>
-                                    </tr>
+                            <!-- Quiz -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Quiz</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Quiz...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
 
+                            <!-- Assignment -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Assignment</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Assignment...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
 
+                            <!-- Exam -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Exam</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Exam...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
 
+                            <!-- Coding Challenge -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Coding Challenge</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Coding Challenge...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
 
+                            <!-- Bootcamp -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Bootcamp</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Bootcamp...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
+                            </div>
 
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Pagination -->
-                        <div
-                            class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
-                            <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
-                            <div class="flex gap-2">
-                                <button class="px-2 py-1 border rounded">1</button>
-                                <button class="px-2 py-1 border rounded">2</button>
-                                <button class="px-2 py-1 border rounded">3</button>
-                                <button class="px-2 py-1 border rounded">Next →</button>
+                            <!-- Class Notes -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
+                                    <div>
+                                        <h4 class="text-base font-semibold">Class Notes</h4>
+                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Class Notes...</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-[#fbcd13] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
+                                    Create
+                                </button>
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
+
+
+
+
+
+
 
             </div>
         </div>
@@ -514,22 +489,6 @@
         // dashboard content
 
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </body>
