@@ -217,83 +217,92 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
-                    <h2 class="text-2xl font-semibold">Class Note Create</h2>
+                <div class="max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow space-y-8">
+                    <!-- Title -->
+                    <h2 class="text-3xl font-bold">Class Note Create</h2>
 
-                    <div class="p-4">
-                        <form class="space-y-6">
-                            <!-- Line 1: Import, Showing Position, Module -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                <div>
-                                    <label class="block font-medium">Import *</label>
-                                    <select class="w-full border rounded p-2">
-                                        <option>Quiz</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block font-medium">Showing Position *</label>
-                                    <input type="text" class="w-full border rounded p-2" placeholder="Type position...">
-                                </div>
-                                <div>
-                                    <label class="block font-medium">Module *</label>
-                                    <select class="w-full border rounded p-2">
-                                        <option>Module 1</option>
-                                        <option>Module 2</option>
-                                    </select>
-                                </div>
+                    <!-- Form Start -->
+                    <form class="space-y-8">
+                        <!-- Row 1: Import / Showing Position / Module -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block font-semibold mb-2">Import</label>
+                                <select
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <option>Select</option>
+                                </select>
                             </div>
-
-                            <!-- Line 2: Sub Module Name, Start Date -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block font-medium">Sub Module Name *</label>
-                                    <select class="w-full border rounded p-2">
-                                        <option>Sub Module A</option>
-                                        <option>Sub Module B</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block font-medium">Start Date *</label>
-                                    <input type="date" class="w-full border rounded p-2">
-                                </div>
+                            <div>
+                                <label class="block font-semibold mb-2">Showing Position</label>
+                                <input type="text" placeholder="Type..."
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
                             </div>
-
-                            <!-- Line 3: End Date, Topic Name, Is Download -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                <div>
-                                    <label class="block font-medium">End Date *</label>
-                                    <input type="date" class="w-full border rounded p-2">
-                                </div>
-                                <div>
-                                    <label class="block font-medium">Topic Name *</label>
-                                    <input type="text" class="w-full border rounded p-2" placeholder="Type topic...">
-                                </div>
-                                <div>
-                                    <label class="block font-medium">Is Download *</label>
-                                    <select class="w-full border rounded p-2">
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                    </select>
-                                </div>
+                            <div>
+                                <label class="block font-semibold mb-2">Module</label>
+                                <select
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <option>Select</option>
+                                </select>
                             </div>
+                        </div>
 
-                            <!-- Buttons -->
-                            <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                                <button type="submit"
-                                    class="bg-yellow hover:bg-yellow-500 text-white font-semibold py-2 px-12 rounded-lg">
-                                    Submit
-                                </button>
-                                <button type="button"
-                                    class="hover:bg-gray-300 border border-gray-300 text-gray-800 font-semibold py-2 px-12 rounded-lg">
-                                    Cancel
-                                </button>
+                        <!-- Row 2: Sub Module / Start Date -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block font-semibold mb-2">Sub Module Name *</label>
+                                <select
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <option>Select</option>
+                                </select>
                             </div>
-                        </form>
+                            <div>
+                                <label class="block font-semibold mb-2">Start Date *</label>
+                                <select
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    </div>
+                        <!-- Row 3: End Date / Topic Name / Is Download -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block font-semibold mb-2">End Date *</label>
+                                <select
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-semibold mb-2">Topic Name</label>
+                                <select
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-semibold mb-2">Is Download</label>
+                                <select
+                                    class="border w-full rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
 
-
+                        <!-- Buttons -->
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            <button type="submit"
+                                class="bg-yellow hover:bg-yellow-400 text-black font-semibold px-10 py-2 rounded-lg transition">
+                                Create
+                            </button>
+                            <button type="button"
+                                class="border border-gray-300 hover:bg-black text-black hover:text-yellow font-medium px-10 py-2 rounded-lg transition">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
                 </div>
+
             </div>
         </div>
     </div>
