@@ -14,7 +14,7 @@
         --color-primary-bg: #efeeee ;
         --color-light-gray: #da373d;
         --color-dark-gray: #132022;
-        --color-yellow: #fbcd13
+        --color-yellow: #FBCD0D
       }
     </style>
     <!-- fontawesome -->
@@ -75,7 +75,8 @@
                     class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
                     <a href="create_course_materials.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/createIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Create Course Materials">Create Course Materials</span>
+                        <span class="text-nowrap truncate" title="Create Course Materials">Create Course
+                            Materials</span>
                     </a>
                 </button>
                 <button
@@ -284,32 +285,68 @@
 
                     <div class="p-4">
                         <!-- Button Grid -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Quiz</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Exam</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Homework</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Bootcamp</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Class
-                                Notes</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Class
-                                Video</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Set
-                                Up &amp; Others</button>
-                            <button
-                                class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-gray-200 transition">Interview</button>
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+                            <a href="quiz_list(SU).html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Quiz
+                                </button>
+                            </a>
+
+                            <a href="exam(SU).html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Exam
+                                </button>
+                            </a>
+
+                            <a href="assignment(SU).html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Assignment
+                                </button>
+                            </a>
+
+                            <a href="bootcamp.html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Bootcamp
+                                </button>
+                            </a>
+
+                            <a href="class_notes.html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Class Notes
+                                </button>
+                            </a>
+
+                            <a href="class_video.html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Class Video
+                                </button>
+                            </a>
+
+                            <a href="setup_others.html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Set Up &amp; Others
+                                </button>
+                            </a>
+
+                            <a href="interview.html">
+                                <button
+                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    Interview
+                                </button>
+                            </a>
                         </div>
+
 
                         <!-- Honor Board -->
                         <div class="mt-3">
-                            <button
-                                class="bg-yellow-400 hover:bg-yellow-500 py-3 w-full rounded-lg text-xl font-medium transition">
+                            <button class="bg-yellow-400 py-3 w-full rounded-lg text-xl font-medium transition">
                                 Honor Board
                             </button>
                         </div>
@@ -324,14 +361,18 @@
                             <!-- Label -->
                             <label for="batchLevel" class="font-medium text-gray-700">Batch </label>
 
-                            <!-- Select Box -->
-                            <select id="batchLevel"
-                                class="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition">
-                                <option value="">Select Batch Level</option>
-                                <option value="beginner">Beginner</option>
-                                <option value="intermediate">Intermediate</option>
-                                <option value="advanced">Advanced</option>
-                            </select>
+                            <div class="flex flex-col w-full sm:w-2/6">
+                                
+
+                                <div class="flex">
+                                    <input type="text" id="studentName" placeholder="Enter..."
+                                        class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+                                    <button
+                                        class="bg-yellow text-black font-semibold px-4 py-2 rounded-r-lg transition">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -346,7 +387,7 @@
                                 <p>Show:</p>
                                 <div class="relative inline-block w-20">
                                     <select
-                                        class="block w-full border border-gray-300 px-4 py-2 pr-10 rounded-md text-gray-700 focus:outline-none focus:ring-2 appearance-none bg-white">
+                                        class="block w-full border border-gray-300 px-4 py-2 pr-10 rounded-lg text-gray-700 focus:outline-none focus:ring-2 appearance-none bg-white">
                                         <option>10</option>
                                         <option>20</option>
                                         <option>50</option>
@@ -366,9 +407,9 @@
                             <!-- Search box -->
                             <div class="w-full md:w-auto flex">
                                 <input type="text" placeholder="Search here..."
-                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-yellow-500" />
+                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:border-yellow-500" />
                                 <button
-                                    class="px-4 py-2 bg-black text-yellow font-semibold rounded-r-md focus:outline-none focus:ring-2">
+                                    class="px-4 py-2 bg-black text-yellow font-semibold rounded-r-lg focus:outline-none focus:ring-2">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
                             </div>

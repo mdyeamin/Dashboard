@@ -17,6 +17,7 @@
         --color-yellow: #FBCD0D
       }
     </style>
+
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -41,7 +42,7 @@
         <div id="sidebar"
             class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
 
-           <nav class="space-y-2">
+            <nav class="space-y-2">
                 <button
                     class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
                     <a href="index.html" class="flex items-center justify-start w-full">
@@ -179,7 +180,7 @@
                             Class Notes (SU)
                         </a>
                         <a href="class_schedule.html" class="flex items-center py-1">
-                            
+
                             <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Schedule
                         </a>
@@ -201,7 +202,7 @@
 
 
 
-                
+
             </nav>
         </div>
 
@@ -216,202 +217,135 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div>
-            <h1 class="text-2xl font-bold">Schedule</h1>
+                <div class="">
+                    <!-- Question Card 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <!-- Quiz Header -->
+                        <div class="flex justify-between items-center my-4 flex-wrap gap-3">
+                            <h1 class="text-2xl sm:text-3xl font-bold mb-5">Quiz Details</h1>
+                        </div>
 
-          <div class="flex gap-5 my-3 items-center justify-center">
-              <form class=" rounded-xl shadow-md w-6/12 bg-white  ">
-                <select id="option" name="option" class="w-full p-2 rounded-md focus:outline-none">
-                  <option value="">Select Your Course</option>
-                  <option value="one">Option One</option>
-                  <option value="two">Option Two</option>
-                  <option value="three">Option Three</option>
-                </select>
-              </form>
+                        <!-- Quiz Info Title -->
+                        <div class="flex justify-between items-center my-4 flex-wrap gap-3">
+                            <h1 class="text-2xl sm:text-xl font-bold mb-5">Quiz Info</h1>
+                        </div>
 
-              <form class="bg-white rounded-xl shadow-md w-6/12">
-                      <div class="flex">
-                          <input type="text" id="search" name="search" placeholder="Type to search..."
-                              class="flex-grow p-2 focus:outline-none ">
-                          <button type="submit" class="bg-yellow-400 text-black px-4 rounded-r-md hover:bg-yellow-500"><i
-                                  class="fa-solid fa-magnifying-glass"></i></button>
-                      </div>
+                        <!-- Quiz Info -->
+                        <div class="border border-gray-300 rounded-md px-3 py-2 mb-2 text-base sm:text-lg">
+                            <span class="font-semibold">Student Name:</span> Md. Hasibul Hasan
+                        </div>
+                        <div class="border border-gray-300 rounded-md px-3 py-2 mb-2 text-base sm:text-lg">
+                            <span class="font-semibold">Assignment Name:</span> Quiz Java Methods
+                        </div>
+                        <div class="border border-gray-300 rounded-md px-3 py-2 mb-2 text-base sm:text-lg">
+                            <span class="font-semibold">Submission Time:</span> Oct. 20, 2025, 2:24 p.m.
+                        </div>
+                        <div class="border border-gray-300 rounded-md px-3 py-2 mb-2 text-base sm:text-lg">
+                            <span class="font-semibold">Marks:</span> 00.00
+                        </div>
+                        <div class="border border-gray-300 rounded-md px-3 py-2 mb-6 text-base sm:text-lg">
+                            <span class="font-semibold">Email:</span> hasanmmbs@gmail.com
+                        </div>
 
-                  </form>
-
-            </div>
-
-            <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
-              <thead class="bg-yellow-300">
-                <tr class="text-sm font-semibold">
-                  <th class="px-4 py-2">SL</th>
-                  <th class="px-4 py-2">schedule Name</th>
-                  <th class="px-4 py-2">Batch</th>
-                  <th class="px-4 py-2">Starting Date</th>
-                  <th class="px-4 py-2">Submission Date</th>
-                  <th class="px-4 py-2">Score</th>
-                  <th class="px-4 py-2">Percentage</th>
-                  <th class="px-4 py-2">Action</th>
-                </tr>
-              </thead>
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
+                        <p class="text-gray-700 text-base sm:text-xl md:text-2xl mb-6">
+                            Your selected answers are below. Correct answers are
+                            <span class="font-semibold">green</span>, wrong answers are
+                            <span class="font-semibold">red</span>, and missed correct answers are
+                            <span class="font-semibold">yellow</span>.
+                        </p>
 
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
+                        <!-- ========================= Question 1 ========================= -->
+                        <div class="mb-6">
+                            <h2 class="font-semibold mb-2 text-lg sm:text-xl">
+                                1. What is the Outcome of this O2? You can use IDE to find it
+                            </h2>
 
+                            <!-- Options -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" checked class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option A</label>
+                                </div>
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option B</label>
+                                </div>
 
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option C</label>
+                                </div>
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option D</label>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- ========================= Question 2 ========================= -->
+                        <div class="mb-6">
+                            <h2 class="font-semibold mb-2 text-lg sm:text-xl">
+                                2. What is the possible outcome from this image O3?
+                            </h2>
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
+                            <!-- Options -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option A</label>
+                                </div>
 
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option B</label>
+                                </div>
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" checked class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option C</label>
+                                </div>
 
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option D</label>
+                                </div>
+                            </div>
+                        </div>
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
+                        <!-- ========================= Question 3 ========================= -->
+                        <div class="mb-6">
+                            <h2 class="font-semibold mb-2 text-lg sm:text-xl">
+                                3. What is the Outcome of this O5? You can use IDE to find it
+                            </h2>
 
+                            <!-- Options -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option A</label>
+                                </div>
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" checked class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option B</label>
+                                </div>
 
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option C</label>
+                                </div>
 
-              <tbody class="text-sm divide-y">
-                <tr>
-                  <td class="px-4 py-2">01</td>
-                  <td class="px-4 py-2">type test</td>
-                  <td class="px-4 py-2">2025QA01</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">12 May 2025</td>
-                  <td class="px-4 py-2">07/10</td>
-                  <td class="px-4 py-2">70%</td>
-                  <td class="px-4 py-2">
-                    <button class="bg-yellow-400 px-3 py-1 rounded text-sm">Strt Quiz</button>
-                  </td>
-                <tr/> 
-              </tbody>
-              
-
-            </table>
-          </div>
-
-
-               
-
-
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" class="accent-green-600 w-4 h-4">
+                                    <label class="flex-1 border rounded-lg p-2 cursor-pointer">Option D</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -420,23 +354,23 @@
     <script>
 
 
-         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
 
 
 
-const buttons = document.querySelectorAll('.toggle-btn');
+        const buttons = document.querySelectorAll('.toggle-btn');
 
         buttons.forEach((button) => {
             button.addEventListener('click', (e) => {
