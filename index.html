@@ -11,7 +11,8 @@
     <style type="text/tailwindcss">
         @theme {
         /* --color-clifford: #da373d; */
-        --color-primary-bg: #efeeee ;
+        --color-primary-bg: #efeeee;
+        --color-secondary-bg: #FAF9F9;
         --color-light-gray: #da373d;
         --color-dark-gray: #132022;
         --color-yellow: #FBCD0D
@@ -24,8 +25,8 @@
 
 </head>
 
-<body class="bg-primary-bg max-w-6xl mx-auto">
-    <header class="bg-white h-16 my-3 rounded-2xl px-5">
+<body class="bg-primary-bg max-w-7xl mx-auto">
+    <header class="bg-white h-16 my-4 rounded-2xl px-5">
         <div class="h-full flex justify-between items-center ">
             <img class="w-40" src="images/logo.png" alt="">
             <div class="flex items-center gap-5">
@@ -218,16 +219,16 @@
         <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
 
         <!-- Main content -->
-        <div class="flex-1 p-4 ">
+        <div class="flex-1 px-4 ">
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
 
             <!-- Dynamic Content -->
             <div id="main-content">
-                <div class="bg-white p-4 rounded-lg">
+                <div class="bg-white p-4 rounded-2xl">
                     <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
                         <!-- Mentors -->
                         <div class="flex items-center p-4 bg-blue-50 border border-blue-300 rounded-lg">
@@ -281,63 +282,63 @@
                 </div>
 
                 <!-- classes  -->
-                <div class="  bg-white p-4 rounded-lg mt-5">
+                <div class="  bg-white p-4 rounded-2xl mt-4">
 
-                    <div class="p-4">
+                    <div class="">
                         <!-- Button Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
                             <a href="quiz_list(SU).html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Quiz
                                 </button>
                             </a>
 
                             <a href="exam(SU).html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Exam
                                 </button>
                             </a>
 
                             <a href="assignment(SU).html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Assignment
                                 </button>
                             </a>
 
                             <a href="bootcamp(SU).html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Bootcamp
                                 </button>
                             </a>
 
                             <a href="class_notes(SU).html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Class Notes
                                 </button>
                             </a>
 
                             <a href="class_video.html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Class Video
                                 </button>
                             </a>
 
                             <a href="setup_others.html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Set Up &amp; Others
                                 </button>
                             </a>
 
                             <a href="interview.html">
                                 <button
-                                    class="bg-gray-100 py-3 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                    class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                     Interview
                                 </button>
                             </a>
@@ -345,32 +346,30 @@
 
 
                         <!-- Honor Board -->
-                        <div class="mt-3">
-                            <button class="bg-yellow-400 py-3 w-full rounded-lg text-xl font-medium transition">
+                        <div class="mt-4">
+                            <button
+                                class="bg-yellow cursor-pointer py-4 w-full rounded-lg text-xl font-medium transition">
                                 Honor Board
                             </button>
                         </div>
                     </div>
 
-                    <div class=" space-y-6 w-full bg-white rounded-lg p-4">
-
-
-
-
-                        <div class="flex flex-col gap-1 w-4/12">
+                    <div class="w-full">
+                        <div class="flex flex-col gap-2 w-4/12 my-6">
                             <!-- Label -->
-                            <label for="batchLevel" class="font-medium text-gray-700">Batch </label>
+                            <label for="batchLevel" class="font-medium">Batch </label>
 
                             <div class="flex flex-col w-full sm:w-2/6">
-                                
+
 
                                 <div class="flex">
                                     <input type="text" id="studentName" placeholder="Enter..."
-                                        class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+                                        class="flex-1 px-4 py-2 border border-gray-300 rounded-xl  focus:outline-none" />
                                     <button
-                                        class="bg-yellow text-black font-semibold px-4 py-2 rounded-r-lg transition">
+                                        class="bg-yellow text-black cursor-pointer font-semibold px-6 py-2 rounded-xl ml-2 transition">
                                         Search
                                     </button>
+
                                 </div>
                             </div>
                         </div>
@@ -381,13 +380,13 @@
 
 
                         <!-- show & search -->
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 my-10">
+                        <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
                             <!-- Show entries dropdown -->
                             <div class="flex flex-wrap items-center gap-2">
                                 <p>Show:</p>
                                 <div class="relative inline-block w-20">
                                     <select
-                                        class="block w-full border border-gray-300 px-4 py-2 pr-10 rounded-lg text-gray-700 focus:outline-none focus:ring-2 appearance-none bg-white">
+                                        class="block w-full border cursor-pointer border-gray-300 px-4 py-2 pr-10 rounded-xl  focus:outline-none appearance-none bg-white">
                                         <option>10</option>
                                         <option>20</option>
                                         <option>50</option>
@@ -407,69 +406,69 @@
                             <!-- Search box -->
                             <div class="w-full md:w-auto flex">
                                 <input type="text" placeholder="Search here..."
-                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:border-yellow-500" />
+                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-xl focus:outline-none" />
                                 <button
-                                    class="px-4 py-2 bg-black text-yellow font-semibold rounded-r-lg focus:outline-none focus:ring-2">
+                                    class="px-4 py-2 bg-black text-yellow cursor-pointer font-semibold rounded-r-xl focus:outline-none focus:ring-2">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
                             </div>
                         </div>
 
-                        <div class="overflow-x-auto bg-white shadow rounded">
-                            <table class="min-w-full divide-y divide-gray-200">
+                        <div class="overflow-x-auto bg-white rounded-lg">
+                            <table class="min-w-full">
                                 <thead class="bg-yellow">
                                     <tr>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">SL</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Name</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Student ID</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Quiz %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">HW %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Exam %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Bootcamp %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Coding
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">SL</th>
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">Name</th>
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">Student ID</th>
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">Quiz %</th>
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">HW %</th>
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">Exam %</th>
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">Bootcamp %</th>
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">Coding
                                             challenge %</th>
-                                        <th class=" px-2 py-3 text-left text-sm font-bold text-gray-700">Weighted Grade
+                                        <th class=" px-2 py-3 text-left text-sm font-bold">Weighted Grade
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y divide-gray-200 text-sm">
+                                <tbody class="divide-y divide-black text-sm">
                                     <!-- Row 1 -->
                                     <tr>
-                                        <td class="px-4 py-3 align-top">1</td>
-                                        <td class="px-4 py-3 align-top">Name</td>
-                                        <td class="px-4 py-3 align-top">00000000</td>
-                                        <td class="px-4 py-3 align-top">55%</td>
-                                        <td class="px-4 py-3 align-top">59%</td>
-                                        <td class="px-4 py-3 align-top">80%</td>
-                                        <td class="px-4 py-3 align-top">10%</td>
-                                        <td class="px-4 py-3 align-top">99%</td>
-                                        <td class="px-4 py-3 align-top">89%</td>
+                                        <td class="px-2 py-3 align-top">1</td>
+                                        <td class="px-2 py-3 align-top">Name</td>
+                                        <td class="px-2 py-3 align-top">00000000</td>
+                                        <td class="px-2 py-3 align-top">55%</td>
+                                        <td class="px-2 py-3 align-top">59%</td>
+                                        <td class="px-2 py-3 align-top">80%</td>
+                                        <td class="px-2 py-3 align-top">10%</td>
+                                        <td class="px-2 py-3 align-top">99%</td>
+                                        <td class="px-2 py-3 align-top">89%</td>
                                     </tr>
 
 
                                     <!-- Row 2 -->
                                     <tr>
-                                        <td class="px-4 py-3 align-top">1</td>
-                                        <td class="px-4 py-3 align-top">Name</td>
-                                        <td class="px-4 py-3 align-top">00000000</td>
-                                        <td class="px-4 py-3 align-top">55%</td>
-                                        <td class="px-4 py-3 align-top">59%</td>
-                                        <td class="px-4 py-3 align-top">80%</td>
-                                        <td class="px-4 py-3 align-top">10%</td>
-                                        <td class="px-4 py-3 align-top">99%</td>
-                                        <td class="px-4 py-3 align-top">89%</td>
+                                        <td class="px-2 py-3 align-top">1</td>
+                                        <td class="px-2 py-3 align-top">Name</td>
+                                        <td class="px-2 py-3 align-top">00000000</td>
+                                        <td class="px-2 py-3 align-top">55%</td>
+                                        <td class="px-2 py-3 align-top">59%</td>
+                                        <td class="px-2 py-3 align-top">80%</td>
+                                        <td class="px-2 py-3 align-top">10%</td>
+                                        <td class="px-2 py-3 align-top">99%</td>
+                                        <td class="px-2 py-3 align-top">89%</td>
                                     </tr>
                                     <!-- Row 3 -->
                                     <tr>
-                                        <td class="px-4 py-3 align-top">1</td>
-                                        <td class="px-4 py-3 align-top">Name</td>
-                                        <td class="px-4 py-3 align-top">00000000</td>
-                                        <td class="px-4 py-3 align-top">55%</td>
-                                        <td class="px-4 py-3 align-top">59%</td>
-                                        <td class="px-4 py-3 align-top">80%</td>
-                                        <td class="px-4 py-3 align-top">10%</td>
-                                        <td class="px-4 py-3 align-top">99%</td>
-                                        <td class="px-4 py-3 align-top">89%</td>
+                                        <td class="px-2 py-3 align-top">1</td>
+                                        <td class="px-2 py-3 align-top">Name</td>
+                                        <td class="px-2 py-3 align-top">00000000</td>
+                                        <td class="px-2 py-3 align-top">55%</td>
+                                        <td class="px-2 py-3 align-top">59%</td>
+                                        <td class="px-2 py-3 align-top">80%</td>
+                                        <td class="px-2 py-3 align-top">10%</td>
+                                        <td class="px-2 py-3 align-top">99%</td>
+                                        <td class="px-2 py-3 align-top">89%</td>
                                     </tr>
 
 
@@ -484,13 +483,33 @@
                         <div
                             class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
                             <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
-                            <div class="flex gap-2">
-                                <button class="px-2 py-1 border rounded">1</button>
-                                <button class="px-2 py-1 border rounded">2</button>
-                                <button class="px-2 py-1 border rounded">3</button>
-                                <button class="px-2 py-1 border rounded">Next →</button>
+
+                            <div class="flex items-center gap-3 text-blue-600 font-medium">
+                                <!-- Previous -->
+                                <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                    Previous
+                                </button>
+
+                                <!-- Page Numbers -->
+                                <div class="flex items-center gap-2">
+                                    <button class="bg-blue-600 text-white px-3 py-1 rounded-lg cursor-pointer">1</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
+                                    <span class="text-blue-600">—</span>
+                                    <span class="text-blue-600 cursor-pointer">100</span>
+                                </div>
+
+                                <!-- Next -->
+                                <button class="flex items-center gap-1 cursor-pointer text-blue-600">
+                                    Next
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
+
                     </div>
 
 

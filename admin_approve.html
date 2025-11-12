@@ -14,7 +14,8 @@
     <style type="text/tailwindcss">
         @theme {
         /* --color-clifford: #da373d; */
-        --color-primary-bg: #efeeee ;
+        --color-primary-bg: #efeeee;
+        --color-secondary-bg: #FAF9F9;
         --color-light-gray: #da373d;
         --color-dark-gray: #132022;
         --color-yellow: #FBCD0D
@@ -26,8 +27,8 @@
     <title>Enthrall</title>
 </head>
 
-<body class="bg-primary-bg max-w-6xl mx-auto">
-    <header class="bg-white h-16 my-3 rounded-2xl px-5">
+<body class="bg-primary-bg max-w-7xl mx-auto">
+    <header class="bg-white h-16 my-4 rounded-2xl px-5">
         <div class="h-full flex justify-between items-center ">
             <img class="w-40" src="images/logo.png" alt="">
             <div class="flex items-center gap-5">
@@ -212,7 +213,7 @@
         <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
 
         <!-- Main content -->
-        <div class="flex-1 p-4 ">
+        <div class="flex-1 px-4 ">
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>

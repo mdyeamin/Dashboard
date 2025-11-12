@@ -27,7 +27,7 @@
 </head>
 
 <body class="bg-primary-bg max-w-7xl mx-auto">
-    <header class="bg-white h-16 my-3 rounded-2xl px-5">
+    <header class="bg-white h-16 my-4 rounded-2xl px-5">
         <div class="h-full flex justify-between items-center ">
             <img class="w-40" src="images/logo.png" alt="">
             <div class="flex items-center gap-5">
@@ -274,7 +274,7 @@
         <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
 
         <!-- Main content -->
-        <div class="flex-1 p-4 ">
+        <div class="flex-1 px-4 ">
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
@@ -287,12 +287,12 @@
                         <!-- Top Tabs: Profile & Payment -->
                         <div class="bg-white p-4 rounded-lg flex gap-4 w-full mb-6">
                             <button @click="tab = 'profile'"
-                                :class="tab === 'profile' ? 'bg-black text-yellow' : 'bg-gray-100 text-gray-800 hover:bg-black hover:text-yellow'"
+                                :class="tab === 'profile' ? 'bg-black text-yellow border-none': 'bg-gray-100 text-gray-800 hover:bg-black hover:text-yellow'"
                                 class="px-4 cursor-pointer md:px-20 border text-center py-2 font-semibold transition duration-200 rounded-lg">
                                 Profile Info
                             </button>
                             <button @click="tab = 'payment'"
-                                :class="tab === 'payment' ? 'bg-black text-yellow' : 'bg-gray-100 text-gray-800 hover:bg-black hover:text-yellow'"
+                                :class="tab === 'payment' ? 'bg-black text-yellow border-none': 'bg-gray-100 text-gray-800 hover:bg-black hover:text-yellow'"
                                 class="px-4 cursor-pointer md:px-20 border text-center py-2 font-semibold transition duration-200 rounded-lg">
                                 Payment Info
                             </button>

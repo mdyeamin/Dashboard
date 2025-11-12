@@ -23,8 +23,8 @@
   <title>Enthrall</title>
 </head>
 
-<body class="bg-primary-bg max-w-6xl mx-auto">
-  <header class="bg-white h-16 my-3 rounded-2xl px-5">
+<body class="bg-primary-bg max-w-7xl mx-auto">
+  <header class="bg-white h-16 my-4 rounded-2xl px-5">
     <div class="h-full flex justify-between items-center ">
       <img class="w-40" src="images/logo.png" alt="">
       <div class="flex items-center gap-5">
@@ -208,7 +208,7 @@
     <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
 
     <!-- Main content -->
-    <div class="flex-1 p-4 ">
+    <div class="flex-1 px-4 ">
       <!-- Mobile toggle button -->
       <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
         Menu</button>
@@ -366,17 +366,35 @@
           </table>
 
           <!-- Pagination -->
-          <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
-            <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
-            <div class="flex gap-2">
-              <button class="px-2 py-1 ">← Previous </button>
-              <button class="px-2 py-1 border rounded">1</button>
-              <button class="px-2 py-1 border rounded">2</button>
-              <button class="px-2 py-1 border rounded">3</button>
-              <button class="px-2 py-1 ">-- 100</button>
-              <button class="px-2 py-1 ">Next →</button>
-            </div>
-          </div>
+          <div
+                            class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
+                            <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
+
+                            <div class="flex items-center gap-3 text-blue-600 font-medium">
+                                <!-- Previous -->
+                                <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                    Previous
+                                </button>
+
+                                <!-- Page Numbers -->
+                                <div class="flex items-center gap-2">
+                                    <button class="bg-blue-600 text-white px-3 py-1 rounded-lg cursor-pointer">1</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
+                                    <span class="text-blue-600">—</span>
+                                    <span class="text-blue-600 cursor-pointer">100</span>
+                                </div>
+
+                                <!-- Next -->
+                                <button class="flex items-center gap-1 cursor-pointer text-blue-600">
+                                    Next
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
 
         </div>
 
