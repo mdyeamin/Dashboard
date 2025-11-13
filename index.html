@@ -514,33 +514,102 @@
         }
 
 
-        // Active link highlight for sidebar
-        const sideLinks = document.querySelectorAll('.toggle-btn a');
-        const currentPage = window.location.pathname.split('/').pop(); // বর্তমান ফাইল নাম
+        // Handle multiple accordions dynamically
+            document.querySelectorAll(".accordion-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const menu = document.getElementById(targetId);
+                    const arrow = btn.querySelector(".accordion-arrow");
 
-        sideLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (!href) return;
+                    // Toggle menu
+                    menu.classList.toggle("hidden");
+                    arrow.classList.toggle("rotate-180");
+                });
+            });
 
-            const fileName = href.split('/').pop();
-
-            // Active match → bg-yellow + text-black
-            if (fileName === currentPage) {
-                link.parentElement.classList.add('bg-yellow', 'text-black');
-                link.parentElement.classList.remove('bg-white');
-            } else {
-                link.parentElement.classList.remove('bg-yellow', 'text-black');
-                link.parentElement.classList.add('bg-white');
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('overlay');
+                sidebar.classList.toggle('hidden');
+                overlay.classList.toggle('hidden');
             }
-        });
 
-        // Default highlight for dashboard
-        if (!currentPage || currentPage === 'index.html') {
-            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-            if (dashboard) {
-                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
+
+            // Handle accordions
+            document.querySelectorAll(".accordion-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const menu = document.getElementById(targetId);
+                    const arrow = btn.querySelector(".accordion-arrow");
+
+                    menu.classList.toggle("hidden");
+                    arrow.classList.toggle("rotate-180");
+                });
+            });
+
+
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('overlay');
+                sidebar.classList.toggle('hidden');
+                overlay.classList.toggle('hidden');
             }
-        }
+
+
+            // ===============================
+            // ACTIVE LINK HIGHLIGHT (UPDATED)
+            // ===============================
+
+            // 1️⃣ Main menu buttons
+            const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+            // 2️⃣ Materials submenu links
+            const subLinks = document.querySelectorAll('#menu-2 a');
+
+            const currentPage = window.location.pathname.split('/').pop();
+
+
+            // MAIN SIDEBAR BUTTON ACTIVE
+            mainLinks.forEach(link => {
+                const fileName = link.getAttribute('href').split('/').pop();
+                const parentBtn = link.parentElement;
+
+                if (fileName === currentPage) {
+                    parentBtn.classList.add('bg-yellow', 'text-black');
+                } else {
+                    parentBtn.classList.remove('bg-yellow', 'text-black');
+                }
+            });
+
+
+            // SUBMENU ACTIVE (Materials)
+            subLinks.forEach(link => {
+                const fileName = link.getAttribute('href').split('/').pop();
+
+                if (fileName === currentPage) {
+                    // Highlight submenu item
+                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+
+                    // Open accordion automatically
+                    const menu = document.getElementById("menu-2");
+                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                    const arrow = accordionBtn.querySelector('.accordion-arrow');
+
+                    menu.classList.remove("hidden");
+                    arrow.classList.add("rotate-180");
+                } else {
+                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+                }
+            });
+
+
+            // Default Dashboard highlight
+            if (!currentPage || currentPage === "index.html") {
+                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+                if (dashboard) {
+                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
+                }
+            }
 
     </script>
 

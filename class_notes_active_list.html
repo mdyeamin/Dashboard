@@ -274,41 +274,110 @@
             });
         });
 
-
-
-
-        const buttons = document.querySelectorAll('.toggle-btn');
-
-        buttons.forEach((button) => {
-            button.addEventListener('click', (e) => {
-                e.stopPropagation();
-                resetButtons();
-                button.classList.remove('bg-gray-100', 'hover:bg-gray-100', 'text-black');
-                button.classList.add('bg-yellow', 'hover:bg-yellow', 'text-dark-gray');
-            });
-        });
-
-        // document.addEventListener('click', () => {
-        //   resetButtons();
-        // });
-
-        function resetButtons() {
-            buttons.forEach((btn) => {
-                btn.classList.remove('bg-yellow', 'hover:bg-yellow', 'text-white');
-                btn.classList.add('bg-gray-100', 'hover:bg-gray-100', 'text-black');
-            });
-        }
-
-
-
-
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('overlay');
             sidebar.classList.toggle('hidden');
             overlay.classList.toggle('hidden');
         }
-        // dashboard content
+
+
+        // Handle multiple accordions dynamically
+            document.querySelectorAll(".accordion-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const menu = document.getElementById(targetId);
+                    const arrow = btn.querySelector(".accordion-arrow");
+
+                    // Toggle menu
+                    menu.classList.toggle("hidden");
+                    arrow.classList.toggle("rotate-180");
+                });
+            });
+
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('overlay');
+                sidebar.classList.toggle('hidden');
+                overlay.classList.toggle('hidden');
+            }
+
+
+            // Handle accordions
+            document.querySelectorAll(".accordion-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const menu = document.getElementById(targetId);
+                    const arrow = btn.querySelector(".accordion-arrow");
+
+                    menu.classList.toggle("hidden");
+                    arrow.classList.toggle("rotate-180");
+                });
+            });
+
+
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('overlay');
+                sidebar.classList.toggle('hidden');
+                overlay.classList.toggle('hidden');
+            }
+
+
+            // ===============================
+            // ACTIVE LINK HIGHLIGHT (UPDATED)
+            // ===============================
+
+            // 1️⃣ Main menu buttons
+            const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+            // 2️⃣ Materials submenu links
+            const subLinks = document.querySelectorAll('#menu-2 a');
+
+            const currentPage = window.location.pathname.split('/').pop();
+
+
+            // MAIN SIDEBAR BUTTON ACTIVE
+            mainLinks.forEach(link => {
+                const fileName = link.getAttribute('href').split('/').pop();
+                const parentBtn = link.parentElement;
+
+                if (fileName === currentPage) {
+                    parentBtn.classList.add('bg-yellow', 'text-black');
+                } else {
+                    parentBtn.classList.remove('bg-yellow', 'text-black');
+                }
+            });
+
+
+            // SUBMENU ACTIVE (Materials)
+            subLinks.forEach(link => {
+                const fileName = link.getAttribute('href').split('/').pop();
+
+                if (fileName === currentPage) {
+                    // Highlight submenu item
+                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+
+                    // Open accordion automatically
+                    const menu = document.getElementById("menu-2");
+                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                    const arrow = accordionBtn.querySelector('.accordion-arrow');
+
+                    menu.classList.remove("hidden");
+                    arrow.classList.add("rotate-180");
+                } else {
+                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+                }
+            });
+
+
+            // Default Dashboard highlight
+            if (!currentPage || currentPage === "index.html") {
+                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+                if (dashboard) {
+                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
+                }
+            }
 
     </script>
 
