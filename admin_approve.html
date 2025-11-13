@@ -16,6 +16,7 @@
         /* --color-clifford: #da373d; */
         --color-primary-bg: #efeeee;
         --color-secondary-bg: #FAF9F9;
+        --color-primary-red:#E9481A;
         --color-light-gray: #da373d;
         --color-dark-gray: #132022;
         --color-yellow: #FBCD0D
@@ -183,7 +184,7 @@
                             Class Notes (SU)
                         </a>
                         <a href="class_schedule.html" class="flex items-center py-1">
-                            
+
                             <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
                             Class Schedule
                         </a>
@@ -205,7 +206,7 @@
 
 
 
-                
+
             </nav>
         </div>
 
@@ -221,20 +222,22 @@
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
                 <div class="  min-h-screen">
-                    <div class="bg-white p-6 rounded shadow-md max-w-7xl mx-auto">
+                    <div class="bg-white p-4 rounded-xl max-w-7xl mx-auto">
                         <div class="flex items-center justify-between mb-4">
-                            <h2 class="text-2xl md:text-4xl font-semibold text-gray-800">Payment Approval</h2>
+                            <h2 class="text-2xl md:text-4xl font-semibold ">Payment Approval</h2>
 
                         </div>
 
                         <!-- show & search -->
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 my-10">
+
+                        <!-- show & search -->
+                        <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
                             <!-- Show entries dropdown -->
                             <div class="flex flex-wrap items-center gap-2">
                                 <p>Show:</p>
                                 <div class="relative inline-block w-20">
                                     <select
-                                        class="block w-full border border-gray-300 px-4 py-2 pr-10 rounded-md text-gray-700 focus:outline-none focus:ring-2 appearance-none bg-white">
+                                        class="block w-full border cursor-pointer border-gray-300 px-4 py-2 pr-10 rounded-xl  focus:outline-none appearance-none bg-white">
                                         <option>10</option>
                                         <option>20</option>
                                         <option>50</option>
@@ -254,31 +257,31 @@
                             <!-- Search box -->
                             <div class="w-full md:w-auto flex">
                                 <input type="text" placeholder="Search here..."
-                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-yellow-500" />
+                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-xl focus:outline-none" />
                                 <button
-                                    class="px-4 py-2 bg-black text-yellow font-semibold rounded-r-md focus:outline-none focus:ring-2">
+                                    class="px-4 py-2 bg-black text-yellow cursor-pointer font-semibold rounded-r-xl focus:outline-none focus:ring-2">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
                             </div>
                         </div>
 
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full border border-gray-300 text-sm text-gray-700">
-                                <thead class=" font-semibold bg-yellow text-gray-800">
+                        <div class="overflow-x-auto rounded-lg">
+                            <table class="min-w-full text-sm">
+                                <thead class="font-semibold bg-yellow text-left">
                                     <tr>
-                                        <th class="px-1 py-3 border border-gray-300">User</th>
-                                        <th class="px-1 py-3 border border-gray-300">Amount</th>
-                                        <th class="px-1 py-3 border border-gray-300">Installment</th>
-                                        <th class="px-1 py-3 border border-gray-300">Method</th>
-                                        <th class="px-1 py-3 border border-gray-300">Created At</th>
-                                        <th class="px-1 py-3 border border-gray-300">Receipt</th>
-                                        <th class="px-1 py-3 border border-gray-300">Notes</th>
-                                        <th class="px-1 py-3 border border-gray-300">Action</th>
+                                        <th class="px-2 py-4">User</th>
+                                        <th class="px-2 py-4">Amount</th>
+                                        <th class="px-2 py-4">Installment</th>
+                                        <th class="px-2 py-4">Method</th>
+                                        <th class="px-2 py-4">Created At</th>
+                                        <th class="px-2 py-4">Receipt</th>
+                                        <th class="px-2 py-4">Notes</th>
+                                        <th class="px-2 py-4">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
+                                <tbody class="bg-white divide-y text-left divide-balck">
                                     <tr>
-                                        <td class="px-1 py-3 border border-gray-300 ">
+                                        <td class="px-2 py-4 ">
                                             <div class="flex items-center space-x-3">
 
                                                 <div class="leading-tight">
@@ -288,23 +291,23 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">$500</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">2nd Installment</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">Paypal</td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
+                                        <td class="px-2 py-4">$500</td>
+                                        <td class="px-2 py-4">2nd Installment</td>
+                                        <td class="px-2 py-4">Paypal</td>
+                                        <td class="px-2 py-4">
                                             <div class="">Jul 02, 2025</div>
                                             <div class="text-xs text-gray-500">00:49</div>
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
+                                        <td class="px-2 py-4">
                                             <button
                                                 class="border border-blue-500 text-blue-500 text-xs px-0.5  py-1 rounded-md hover:bg-blue-500 hover:text-white transition duration-200 shadow-sm">
                                                 View Receipt
                                             </button>
 
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">N/A</td>
-                                        <td class="px-1 py-3 text-center">
-                                            <div class="flex items-center justify-center space-x-2">
+                                        <td class="px-2 py-4">N/A</td>
+                                        <td class="px-2 py-4">
+                                            <div class="flex items-center justify-start space-x-2">
                                                 <button
                                                     class="bg-yellow hover:bg-yellow-400 font-semibold white px-3 py-1 rounded-lg text-xs sm:text-sm transition">
                                                     Approve
@@ -318,7 +321,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="px-1 py-3 border border-gray-300 ">
+                                        <td class="px-2 py-4 ">
                                             <div class="flex items-center space-x-3">
 
                                                 <div class="leading-tight">
@@ -328,23 +331,23 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">$500</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">2nd Installment</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">Paypal</td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
+                                        <td class="px-2 py-4">$500</td>
+                                        <td class="px-2 py-4">2nd Installment</td>
+                                        <td class="px-2 py-4">Paypal</td>
+                                        <td class="px-2 py-4">
                                             <div class="">Jul 02, 2025</div>
                                             <div class="text-xs text-gray-500">00:49</div>
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
+                                        <td class="px-2 py-4">
                                             <button
                                                 class="border border-blue-500 text-blue-500 text-xs px-0.5  py-1 rounded-md hover:bg-blue-500 hover:text-white transition duration-200 shadow-sm">
                                                 View Receipt
                                             </button>
 
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">N/A</td>
-                                        <td class="px-1 py-3 text-center">
-                                            <div class="flex items-center justify-center space-x-2">
+                                        <td class="px-2 py-4">N/A</td>
+                                        <td class="px-2 py-4">
+                                            <div class="flex items-center justify-start space-x-2">
                                                 <button
                                                     class="bg-yellow hover:bg-yellow-400 font-semibold white px-3 py-1 rounded-lg text-xs sm:text-sm transition">
                                                     Approve
@@ -358,7 +361,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="px-1 py-3 border border-gray-300 ">
+                                        <td class="px-2 py-4 ">
                                             <div class="flex items-center space-x-3">
 
                                                 <div class="leading-tight">
@@ -368,23 +371,23 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">$500</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">2nd Installment</td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">Paypal</td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
+                                        <td class="px-2 py-4">$500</td>
+                                        <td class="px-2 py-4">2nd Installment</td>
+                                        <td class="px-2 py-4">Paypal</td>
+                                        <td class="px-2 py-4">
                                             <div class="">Jul 02, 2025</div>
                                             <div class="text-xs text-gray-500">00:49</div>
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300 text-center">
+                                        <td class="px-2 py-4">
                                             <button
                                                 class="border border-blue-500 text-blue-500 text-xs px-0.5  py-1 rounded-md hover:bg-blue-500 hover:text-white transition duration-200 shadow-sm">
                                                 View Receipt
                                             </button>
 
                                         </td>
-                                        <td class="px-1 py-3 border border-gray-300  text-center">N/A</td>
-                                        <td class="px-1 py-3 text-center">
-                                            <div class="flex items-center justify-center space-x-2">
+                                        <td class="px-2 py-4">N/A</td>
+                                        <td class="px-2 py-4">
+                                            <div class="flex items-center justify-start space-x-2">
                                                 <button
                                                     class="bg-yellow hover:bg-yellow-400 font-semibold white px-3 py-1 rounded-lg text-xs sm:text-sm transition">
                                                     Approve
@@ -407,13 +410,31 @@
                         <div
                             class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
                             <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
-                            <div class="flex gap-2">
-                                <button class="px-2 py-1 ">← Previous </button>
-                                <button class="px-2 py-1 border rounded">1</button>
-                                <button class="px-2 py-1 border rounded">2</button>
-                                <button class="px-2 py-1 border rounded">3</button>
-                                <button class="px-2 py-1 ">-- 100</button>
-                                <button class="px-2 py-1 ">Next →</button>
+
+                            <div class="flex items-center gap-3 text-blue-600 font-medium">
+                                <!-- Previous -->
+                                <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                    Previous
+                                </button>
+
+                                <!-- Page Numbers -->
+                                <div class="flex items-center gap-2">
+                                    <button
+                                        class="bg-blue-600 text-white px-3 py-1 rounded-lg cursor-pointer">1</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
+                                    <span class="text-blue-600">—</span>
+                                    <span class="text-blue-600 cursor-pointer">100</span>
+                                </div>
+
+                                <!-- Next -->
+                                <button class="flex items-center gap-1 cursor-pointer text-blue-600">
+                                    Next
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
 
@@ -428,23 +449,23 @@
     <script>
 
 
-         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
 
 
 
-const buttons = document.querySelectorAll('.toggle-btn');
+        const buttons = document.querySelectorAll('.toggle-btn');
 
         buttons.forEach((button) => {
             button.addEventListener('click', (e) => {

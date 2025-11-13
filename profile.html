@@ -14,10 +14,12 @@
     <style type="text/tailwindcss">
         @theme {
         /* --color-clifford: #da373d; */
-        --color-primary-bg: #efeeee ;
+        --color-primary-bg: #efeeee;
+        --color-secondary-bg: #FAF9F9;
+        --color-primary-red:#E9481A;
         --color-light-gray: #da373d;
         --color-dark-gray: #132022;
-        --color-yellow: #fbcd13
+        --color-yellow: #FBCD0D
       }
     </style>
     <!-- fontawesome -->
@@ -282,10 +284,10 @@
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
                 <div class="  rounded-lg">
-                    <div x-data="{ tab: 'profile' }" class="w-full px-4 lg:px-8 py-6">
+                    <div x-data="{ tab: 'profile' }" class="w-full  ">
 
                         <!-- Top Tabs: Profile & Payment -->
-                        <div class="bg-white p-4 rounded-lg flex gap-4 w-full mb-6">
+                        <div class="bg-white py-4 px-8 rounded-xl flex gap-4 w-full mb-4">
                             <button @click="tab = 'profile'"
                                 :class="tab === 'profile' ? 'bg-black text-yellow border-none': 'bg-gray-100 text-gray-800 hover:bg-black hover:text-yellow'"
                                 class="px-4 cursor-pointer md:px-20 border text-center py-2 font-semibold transition duration-200 rounded-lg">
@@ -299,7 +301,7 @@
                         </div>
 
 
-                        <div class="bg-white p-4 rounded-lg flex flex-col lg:flex-row gap-6 w-full">
+                        <div class="bg-white p-4 rounded-xl flex flex-col lg:flex-row gap-6 w-full">
 
                             <!-- Left Section -->
                             <div class="w-full lg:w-3/4">
@@ -309,7 +311,7 @@
                                         <h3 class="text-2xl">Personal Details</h3>
                                         <div class="flex gap-3">
                                             <button
-                                                class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg cursor-pointer flex items-center gap-2">
+                                                class="bg-primary-bg text-gray-700 px-4 py-2 rounded-lg cursor-pointer flex items-center gap-2">
                                                 Download <i class="fas fa-download"></i>
                                             </button>
                                             <a href="profile_update.html">
@@ -323,45 +325,45 @@
 
                                     <div class="bg-white rounded-xl">
                                         <div class="grid grid-cols-1 text-sm sm:grid-cols-2 gap-3">
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Full
+                                            <div class="px-3 py-2 rounded-lg border">Full
                                                 Name: Md. Hasibul Hasan</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Email:
+                                            <div class="px-3 py-2 rounded-lg border">Email:
                                                 onlyhasan56@gmail.com</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Students
+                                            <div class="px-3 py-2 rounded-lg border">Students
                                                 ID: 000056</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Higher
+                                            <div class="px-3 py-2 rounded-lg border">Higher
                                                 Education: None</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Phone:
+                                            <div class="px-3 py-2 rounded-lg border">Phone:
                                                 01641973817</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Address:
+                                            <div class="px-3 py-2 rounded-lg border">Address:
                                                 None</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">
+                                            <div class="px-3 py-2 rounded-lg border">
                                                 Profession: Student</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">
+                                            <div class="px-3 py-2 rounded-lg border">
                                                 Immigration Status: Citizen</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Country
+                                            <div class="px-3 py-2 rounded-lg border">Country
                                                 of Origin: United States of America</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Date of
+                                            <div class="px-3 py-2 rounded-lg border">Date of
                                                 Birth: Jan 01, 2000</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Previous
+                                            <div class="px-3 py-2 rounded-lg border">Previous
                                                 Exposure: None</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">
+                                            <div class="px-3 py-2 rounded-lg border">
                                                 Emergency Contact: 01641973817</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Gender:
+                                            <div class="px-3 py-2 rounded-lg border">Gender:
                                                 None</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Arrival
+                                            <div class="px-3 py-2 rounded-lg border">Arrival
                                                 Date: Jan 01, 2000</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">
+                                            <div class="px-3 py-2 rounded-lg border">
                                                 Education Group: None</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Know Us:
+                                            <div class="px-3 py-2 rounded-lg border">Know Us:
                                                 Facebook</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Primary
+                                            <div class="px-3 py-2 rounded-lg border">Primary
                                                 language: None</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">Enrolled
+                                            <div class="px-3 py-2 rounded-lg border">Enrolled
                                                 Course: Software Test</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">
+                                            <div class="px-3 py-2 rounded-lg border">
                                                 Signature: Hasibul Hasan</div>
-                                            <div class="px-3 py-2 rounded-lg border border-gray-300 bg-gray-50">
+                                            <div class="px-3 py-2 rounded-lg border">
                                                 Discount: None</div>
                                         </div>
                                     </div>
@@ -373,7 +375,7 @@
                                         <div class="mb-4 flex justify-between items-center">
                                             <h3 class="text-2xl">Payment Details</h3>
                                             <button
-                                                class="bg-gray-100 cursor-pointer text-gray-700 px-4 py-2 rounded-lg flex items-center gap-2">
+                                                class="bg-primary-bg cursor-pointer text-gray-700 px-4 py-2 rounded-lg flex items-center gap-2">
                                                 Download <i class="fas fa-download"></i>
                                             </button>
                                         </div>
@@ -382,36 +384,36 @@
                                             <table class="w-full border-collapse">
                                                 <thead>
                                                     <tr class="bg-yellow text-black rounded-lg">
-                                                        <th class="px-1 py-3 text-left font-semibold rounded-l-lg">Date
+                                                        <th class="px-2 py-4 text-left font-semibold rounded-l-lg">Date
                                                         </th>
-                                                        <th class="px-1 py-3 text-left font-semibold">Amount</th>
-                                                        <th class="px-1 py-3 text-left font-semibold">Installment</th>
-                                                        <th class="px-1 py-3 text-left font-semibold">Method</th>
-                                                        <th class="px-1 py-3 text-left font-semibold rounded-r-lg">
+                                                        <th class="px-2 py-4 text-left font-semibold">Amount</th>
+                                                        <th class="px-2 py-4 text-left font-semibold">Installment</th>
+                                                        <th class="px-2 py-4 text-left font-semibold">Method</th>
+                                                        <th class="px-2 py-4 text-left font-semibold rounded-r-lg">
                                                             Status</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="divide-y divide-gray-300">
                                                     <tr>
-                                                        <td class="px-1 py-3">May 01, 25</td>
-                                                        <td class="px-1 py-3">$ 5,000</td>
-                                                        <td class="px-1 py-3">Installment</td>
-                                                        <td class="px-1 py-3">Paypal</td>
-                                                        <td class="px-1 py-3">Approved</td>
+                                                        <td class="px-2 py-4">May 01, 25</td>
+                                                        <td class="px-2 py-4">$ 5,000</td>
+                                                        <td class="px-2 py-4">Installment</td>
+                                                        <td class="px-2 py-4">Paypal</td>
+                                                        <td class="px-2 py-4">Approved</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="px-1 py-3">May 01, 25</td>
-                                                        <td class="px-1 py-3">$ 5,000</td>
-                                                        <td class="px-1 py-3">Installment</td>
-                                                        <td class="px-1 py-3">Paypal</td>
-                                                        <td class="px-1 py-3">Approved</td>
+                                                        <td class="px-2 py-4">May 01, 25</td>
+                                                        <td class="px-2 py-4">$ 5,000</td>
+                                                        <td class="px-2 py-4">Installment</td>
+                                                        <td class="px-2 py-4">Paypal</td>
+                                                        <td class="px-2 py-4">Approved</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="px-1 py-3">May 01, 25</td>
-                                                        <td class="px-1 py-3">$ 5,000</td>
-                                                        <td class="px-1 py-3">Installment</td>
-                                                        <td class="px-1 py-3">Paypal</td>
-                                                        <td class="px-1 py-3">Approved</td>
+                                                        <td class="px-2 py-4">May 01, 25</td>
+                                                        <td class="px-2 py-4">$ 5,000</td>
+                                                        <td class="px-2 py-4">Installment</td>
+                                                        <td class="px-2 py-4">Paypal</td>
+                                                        <td class="px-2 py-4">Approved</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -425,7 +427,7 @@
                                 <div class="bg-white rounded p-4 text-center">
                                     <img src="/images/profile.jpg" alt="Avatar"
                                         class="w-32 h-32 rounded-full object-cover mx-auto mb-3">
-                                    <div class="bg-orange-500 text-white text-sm font-medium py-1 px-3 rounded">
+                                    <div class="bg-primary-red text-white text-base font-medium py-2 px-3 rounded-lg">
                                         EIT2023AU0116
                                     </div>
                                 </div>
