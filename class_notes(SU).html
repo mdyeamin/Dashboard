@@ -40,135 +40,108 @@
 
     <div class="min-h-screen flex">
         <!-- Sidebar -->
-        <div id="sidebar"
-            class="bg-white w-48 p-4 space-y-3 shadow-md md:block hidden fixed md:relative z-10 h-full rounded-2xl">
+        <div id="sidebar" class="bg-white w-52 p-4 space-y-3 md:block hidden fixed md:relative z-10 h-full rounded-2xl">
 
             <nav class="space-y-2">
                 <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="index.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/dashboardIcon.png" alt="">
-                        <span>Dashboard</span>
+                        <span class="text-nowrap truncate" title="Dashboard">Dashboard</span>
                     </a>
                 </button>
                 <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="profile.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/profileIcon.png" alt="">
-                        <span>Profile</span>
+                        <span class="text-nowrap truncate" title="Profile">Profile</span>
                     </a>
                 </button>
                 <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="payment.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/paymentIcon.png" alt="">
-                        <span>Payment</span>
+                        <span class="text-nowrap truncate" title="Payment">Payment</span>
                     </a>
                 </button>
                 <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="admin_approve.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/adminApproveIcon.png" alt="">
-                        <span>Admin Approve</span>
+                        <span class="text-nowrap truncate" title="Admin Approve">Admin Approve</span>
                     </a>
                 </button>
                 <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="staff.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
-                        <span>Staff</span>
+                        <span class="text-nowrap truncate" title="Staff">Staff</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="create_previous.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Create (Previous)">Create (Previous)</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="create_course_materials.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Create Course Materials">Create Course
+                            Materials</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="view_course_materials.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="View Course Materials">View Course
+                            Materials</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="students_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Student List">Student List</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="s_attendance_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="S Attendance List">S Attendance List</span>
                     </a>
                 </button>
 
+
+
                 <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
-                    <a href="create_question.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/createQuestionIcon.png" alt="">
-                        <span>Create Question</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
-                    <a href="create.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
-                        <span>Create</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
-                    <a href="create_course.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/create_course.png" alt="">
-                        <span>Create Course</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
-                    <a href="students_list.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
-                        <span>Student List</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="application_list.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/applicationListIcon.png" alt="">
-                        <span>Application List</span>
+                        <span class="text-nowrap truncate" title="S Attendance List">Application List</span>
                     </a>
                 </button>
                 <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium hover:bg-gray-100 text-black">
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="file_upload.html" class="flex items-center justify-start w-full">
                         <img class="mr-2 w-4" src="images/file_uploadIcon.png" alt="">
-                        <span>File Upload</span>
+                        <span class="text-nowrap truncate" title="File Upload">File Upload</span>
                     </a>
                 </button>
-                <!-- Tasks  -->
-                <div class="w-full">
-                    <button
-                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent hover:bg-gray-100 text-black border border-transparent hover:border-gray-200 transition"
-                        data-target="menu-1">
-                        <div class="flex items-center">
-                            <img class="mr-2 w-4" src="images/tasksIcon.png" alt="">
-                            <span>Tasks</span>
-                        </div>
-                        <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="menu-1" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
-                        <a href="quiz_list(SU).html" class="flex items-center py-1">
-                            <img src="images/quizGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Quiz
-                        </a>
-                        <a href="assignment(SU).html" class="flex items-center py-1">
-                            <img src="images/assignmentGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
-                            Assignment
-                        </a>
-                        <a href="challenge(SU).html" class="flex items-center py-1">
-                            <img src="images/coddingChallengeGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
-                            C-Challenge
-                        </a>
-                        <a href="exam(SU).html" class="flex items-center py-1">
-                            <img src="images/examGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Exam
-                        </a>
-                        <a href="bootcamp(SU).html" class="flex items-center py-1">
-                            <img src="images/bootcampGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Bootcamp
-                        </a>
-                        <a href="automation(SU).html" class="flex items-center py-1">
-                            <img src="images/automationGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
-                            Automation
-                        </a>
-                    </div>
-                </div>
+
 
                 <!-- Materials  -->
                 <div class="w-full">
                     <button
-                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent hover:bg-gray-100 text-black border border-transparent hover:border-gray-200 transition"
+                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent text-black border border-transparent hover:border-gray-200 transition"
                         data-target="menu-2">
                         <div class="flex items-center">
                             <img class="mr-2 w-4" src="images/tasksIcon.png" alt="">
-                            <span>Materials</span>
+                            <span class="text-nowrap truncate" title="Materials">Materials</span>
                         </div>
                         <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
@@ -177,25 +150,27 @@
                     </button>
                     <div id="menu-2" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
                         <a href="class_notes(SU).html" class="flex items-center py-1">
-                            <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
-                            Class Notes (SU)
+                            <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            <span class="text-nowrap truncate" title="Class Notes (SU)">Class Notes (SU)</span>
                         </a>
                         <a href="class_schedule.html" class="flex items-center py-1">
-                            
-                            <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
-                            Class Schedule
+
+                            <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            <span class="text-nowrap truncate" title="Class Schedule">Class Schedule</span>
                         </a>
                         <a href="join_the_class.html" class="flex items-center py-1">
-                            <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt=""> Join
-                            The Class
+                            <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            Join
+                            <span class="text-nowrap truncate" title="The Class">The Class</span>
                         </a>
                         <a href="class_recording.html" class="flex items-center py-1">
-                            <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
-                            Class Recording
+                            <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            <span class="text-nowrap truncate" title="Class Recording">Class Recording</span>
                         </a>
-                        <a href="others.html" class="flex items-center py-1">
-                            <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-[#888f90]" alt="">
-                            Reference Videos
+                        <a href="others.html" class="flex items-center py-1 ">
+                            <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg"
+                                alt="">
+                            <span class="text-nowrap truncate" title="Reference Videos"> Reference Videos</span>
                         </a>
 
                     </div>
