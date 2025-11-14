@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontawesome cdn  -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+        @theme {
+        /* --color-clifford: #da373d; */
+        --color-primary-bg: #efeeee;
+        --color-secondary-bg: #FAF9F9;
+        --color-primary-red:#E9481A;
+        --color-light-gray: #da373d;
+        --color-dark-gray: #132022;
+        --color-yellow: #FBCD0D
+      }
+    </style>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Enthrall</title>
+
+</head>
+
+<body class="bg-primary-bg max-w-7xl mx-auto">
+    <header class="bg-white h-16 my-4 rounded-2xl px-5">
+        <div class="h-full flex justify-between items-center ">
+            <img class="w-40" src="images/logo.png" alt="">
+            <div class="flex items-center gap-5">
+                <i class="fa-solid fa-bell text-lg"></i>
+                <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+            </div>
+        </div>
+    </header>
+
+    </head>
+
+    <div class="min-h-screen flex ">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-white w-52 p-4 space-y-3 md:block hidden fixed md:relative z-10 h-full rounded-2xl">
+
+            <nav class="space-y-2">
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="index.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/dashboardIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Dashboard">Dashboard</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="profile.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/profileIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Profile">Profile</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="payment.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/paymentIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Payment">Payment</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="admin_approve.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/adminApproveIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Admin Approve">Admin Approve</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="staff.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Staff">Staff</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="create_previous.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Create (Previous)">Create (Previous)</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="create_course_materials.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Create Course Materials">Create Course
+                            Materials</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="view_course_materials.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/viewIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="View Course Materials">View Course
+                            Materials</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="students_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="Student List">Student List</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="s_attendance_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="S Attendance List">S Attendance List</span>
+                    </a>
+                </button>
+
+
+
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="application_list.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/applicationListIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="S Attendance List">Application List</span>
+                    </a>
+                </button>
+                <button
+                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+                    <a href="file_upload.html" class="flex items-center justify-start w-full">
+                        <img class="mr-2 w-4" src="images/file_uploadIcon.png" alt="">
+                        <span class="text-nowrap truncate" title="File Upload">File Upload</span>
+                    </a>
+                </button>
+
+
+                <!-- Materials  -->
+                <div class="w-full">
+                    <button
+                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent text-black border border-transparent hover:border-gray-200 transition"
+                        data-target="menu-2">
+                        <div class="flex items-center">
+                            <img class="mr-2 w-4" src="images/materialsIcon.png" alt="">
+                            <span class="text-nowrap truncate" title="Materials">Materials</span>
+                        </div>
+                        <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="menu-2" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
+                        <a href="class_notes(SU).html" class="flex items-center py-1">
+                            <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            <span class="text-nowrap truncate" title="Class Notes (SU)">Class Notes (SU)</span>
+                        </a>
+                        <a href="class_schedule.html" class="flex items-center py-1">
+
+                            <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            <span class="text-nowrap truncate" title="Class Schedule">Class Schedule</span>
+                        </a>
+                        <a href="join_the_class.html" class="flex items-center py-1">
+                            <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            Join
+                            <span class="text-nowrap truncate" title="The Class">The Class</span>
+                        </a>
+                        <a href="class_recording.html" class="flex items-center py-1">
+                            <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+                            <span class="text-nowrap truncate" title="Class Recording">Class Recording</span>
+                        </a>
+                        <a href="others.html" class="flex items-center py-1 ">
+                            <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg"
+                                alt="">
+                            <span class="text-nowrap truncate" title="Reference Videos"> Reference Videos</span>
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+
+            </nav>
+        </div>
+
+        <!-- Overlay for mobile -->
+        <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+        <!-- Main content -->
+        <div class="flex-1 px-4 ">
+            <!-- Mobile toggle button -->
+            <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
+                Menu</button>
+            <!-- back button  -->
+            <!-- Back Button + Breadcrumb Section -->
+            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+                    <span
+                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
+
+                        <i class=" fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="font-medium mr-2 text-gray-800">Back</span>
+                </button>
+
+                <!-- Breadcrumb -->
+                <nav class="text-gray-500 text-sm">
+                    <span>Home</span> /
+                    <span>Dashboard</span> /
+                    <span>View Course Materials</span> /
+                    <span class="text-black font-semibold">Course Details</span>
+                </nav>
+            </div>
+            <!-- Dynamic Content -->
+            <div id="main-content">
+
+                <div class="bg-white p-6 rounded-xl space-y-6">
+
+                    <h1 class="text-3xl font-semibold mb-4">Business Analyst Bootcamp Batches</h1>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- BA September 2023 -->
+                        <div
+                            class="bg-white shadow border border-primary-bg rounded-xl p-4 transition flex flex-col justify-between h-full">
+
+                            <div class="flex items-center justify-start gap-2">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full shrink-0">
+                                    <img class="w-6 h-6 object-contain" src="images/course.png" alt="">
+                                </div>
+
+                                <div>
+                                    <h3 class="text-base font-semibold mb-1">BA September 2023</h3>
+                                    <p class="text-sm text-gray-500">2023BA03</p>
+                                </div>
+                            </div>
+
+                            <button
+                                class="bg-yellow cursor-pointer text-black font-semibold rounded-xl px-4 py-1 hover:bg-yellow-500 transition w-full mt-4">
+                                View Details
+                            </button>
+                        </div>
+
+                        <!-- BA June 2023 -->
+                        <div
+                            class="bg-white shadow border border-primary-bg rounded-xl p-4 transition flex flex-col justify-between h-full">
+
+                            <div class="flex items-center justify-start gap-2">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full shrink-0">
+                                    <img class="w-6 h-6 object-contain" src="images/course.png" alt="">
+                                </div>
+
+                                <div>
+                                    <h3 class="text-base font-semibold mb-1">BA June 2023</h3>
+                                    <p class="text-sm text-gray-500">2023BA02</p>
+                                </div>
+                            </div>
+
+                            <button
+                                class="bg-yellow cursor-pointer text-black font-semibold rounded-xl px-4 py-1 hover:bg-yellow-500 transition w-full mt-4">
+                                View Details
+                            </button>
+                        </div>
+
+                        <!-- BA Feb 2023 -->
+                        <div
+                            class="bg-white shadow border border-primary-bg rounded-xl p-4 transition flex flex-col justify-between h-full">
+
+                            <div class="flex items-center justify-start gap-2">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full shrink-0">
+                                    <img class="w-6 h-6 object-contain" src="images/course.png" alt="">
+                                </div>
+
+                                <div>
+                                    <h3 class="text-base font-semibold mb-1">BA Feb 2023</h3>
+                                    <p class="text-sm text-gray-500">2023BA01</p>
+                                </div>
+                            </div>
+
+                            <button
+                                class="bg-yellow cursor-pointer text-black font-semibold rounded-xl px-4 py-1 hover:bg-yellow-500 transition w-full mt-4">
+                                View Details
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
+            }
+        });
+
+
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
+
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+            }
+        });
+
+
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</body>
+
+</html>
