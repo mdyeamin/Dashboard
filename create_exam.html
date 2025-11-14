@@ -191,7 +191,6 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
-
             <!-- back button  -->
             <!-- Back Button + Breadcrumb Section -->
             <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
@@ -211,174 +210,158 @@
                     <span>Home</span> /
                     <span>Dashboard</span> /
                     <span>View Course Materials</span> /
-                    <span class="text-black font-semibold">Quiz Result List</span>
+                    <span class="text-black font-semibold">Coding Challenge Create</span>
                 </nav>
             </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
-                    <h2 class="text-2xl md:text-4xl font-semibold">Quiz Result List</h2>
+                <div class=" space-y-6 w-full bg-white p-4 rounded-xl">
+                    <h2 class="text-2xl md:text-4xl font-semibold">Exam Create</h2>
 
-                    <div class="flex items-center justify-between">
-                        <!-- বাম পাশে লেখা -->
-                        <div>
-                            <p class="text-xl font-medium">
-                                test quiz > Hey, 2025 Dev Live Evening July. All Student's
-                            </p>
-                        </div>
+                    <div class="">
+                        <form class="space-y-6">
 
-                        <!-- ডান পাশে আইকন -->
-                        <div class="flex gap-2">
-
-                            <a href="quiz_result_list_submitted_answare.html">
-                                <i
-                                    class="fa-solid fa-download bg-[#46B669] p-3 rounded-lg text-sm text-white cursor-pointer"></i>
-                            </a>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <!-- show & search -->
-                    <!-- show & search -->
-                        <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
-                            <!-- Show entries dropdown -->
-                            <div class="flex flex-wrap items-center gap-2">
-                                <p>Show:</p>
-                                <div class="relative inline-block w-20">
-                                    <select
-                                        class="block w-full border cursor-pointer border-gray-300 px-4 py-2 pr-10 rounded-xl  focus:outline-none appearance-none bg-white">
-                                        <option>10</option>
-                                        <option>20</option>
-                                        <option>50</option>
-                                        <option>100</option>
+                            <!-- 1st Row -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Batch</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
                                     </select>
-                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                        <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </div>
                                 </div>
-                                <p>entries</p>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Import</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Batch Topic *</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
                             </div>
 
-                            <!-- Search box -->
-                            <div class="w-full md:w-auto flex">
-                                <input type="text" placeholder="Search here..."
-                                    class="flex-grow px-4 py-2 border border-gray-300 rounded-l-xl focus:outline-none" />
+                            <!-- Title -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Title *</label>
+                                <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm"
+                                    placeholder="Enter...">
+                            </div>
+
+                            <!-- Dates -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Start Date *</label>
+                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Submission Date *</label>
+                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">End Date *</label>
+                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                </div>
+                            </div>
+
+                            <!-- Short + Color -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Short</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm"
+                                        placeholder="Enter...">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Color</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm"
+                                        placeholder="Enter...">
+                                </div>
+                            </div>
+
+                            <!-- Total Marks + Weighted Value + Reset -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Total Marks *</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm"
+                                        placeholder="Enter...">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Weighted Value</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm"
+                                        placeholder="Enter...">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Allow Reset</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Random + Show Answer -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Random</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Show Answer</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Allow Download Answer -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Allow to download the answer.</label>
+                                <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+
+                            <!-- Description -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Description</label>
+                                <textarea class="w-full border border-gray-300 rounded-lg p-3 text-sm h-28"
+                                    placeholder="Enter..."></textarea>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4 pt-4">
                                 <button
-                                    class="px-4 py-2 bg-black text-yellow cursor-pointer font-semibold rounded-r-xl focus:outline-none focus:ring-2">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    class="bg-yellow hover:bg-yellow-500 font-semibold py-2 px-10 rounded-lg transition-all duration-300">
+                                    Submit
+                                </button>
+
+                                <button
+                                    class="border hover:bg-black hover:text-yellow border-gray-300 text-gray-800 font-semibold py-2 px-10 rounded-lg transition-all duration-300">
+                                    Cancel
                                 </button>
                             </div>
-                        </div>
 
+                        </form>
 
-                    <div class="overflow-x-auto bg-white ">
-                        <table class="min-w-full divide-y divide-gray-200 bg-white">
-                            <thead class="bg-yellow">
-                                <tr>
-                                    <th class="py-3 text-center text-sm font-semibold rounded-tl-xl rounded-bl-xl">
-                                        Student</th>
-                                    <th class="py-3 text-center text-sm font-semibold">Submission Date</th>
-                                    <th class="py-3 text-center text-sm font-semibold">Score</th>
-                                    <th class="py-3 text-center text-sm font-semibold">Out Of</th>
-                                    <th class="py-3 text-center text-sm font-semibold">GPA</th>
-                                    <th class="py-3 text-center text-sm font-semibold">Percentage</th>
-                                    <th class="py-3 text-center text-sm font-semibold rounded-tr-xl rounded-br-xl">
-                                        Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody class="divide-y divide-gray-200 text-sm">
-                                <!-- Row 1 -->
-                                <tr>
-                                    <td class="py-3 text-center font-medium">EIT</td>
-                                    <td class="py-3 text-center">April 10, 2025, 2:40 a.m.</td>
-                                    <td class="py-3 text-center">0.00</td>
-                                    <td class="py-3 text-center">10.00</td>
-                                    <td class="py-3 text-center">0.00</td>
-                                    <td class="py-3 text-center">0.00%</td>
-                                    <td class="py-3 text-center">
-                                        <a href="quiz_detail_view.html">
-                                            <button
-                                                class="bg-yellow px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-yellow-400 transition">
-                                                View
-                                            </button>
-                                        </a>
-                                        <button
-                                            class="bg-transparent border px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-black hover:text-yellow transition">
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <!-- Row 2 -->
-                                <tr>
-                                    <td class="py-3 text-center font-medium">EIT</td>
-                                    <td class="py-3 text-center">April 10, 2025, 2:40 a.m.</td>
-                                    <td class="py-3 text-center">0.00</td>
-                                    <td class="py-3 text-center">10.00</td>
-                                    <td class="py-3 text-center">0.00</td>
-                                    <td class="py-3 text-center">0.00%</td>
-                                    <td class="py-3 text-center">
-                                        <a href="quiz_detail_view.html">
-                                            <button
-                                                class="bg-yellow px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-yellow-400 transition">
-                                                View
-                                            </button>
-                                        </a>
-                                        <button
-                                            class="bg-transparent border px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-black hover:text-yellow transition">
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
 
 
 
                     </div>
 
-                    <!-- Pagination -->
-                    <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
-                        <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
 
-                        <div class="flex items-center gap-3 text-blue-600 font-medium">
-                            <!-- Previous -->
-                            <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
-                                <i class="fa-solid fa-arrow-left"></i>
-                                Previous
-                            </button>
-
-                            <!-- Page Numbers -->
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="border border-blue-600 text-white bg-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
-                                <button
-                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
-                                <button
-                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">4</button>
-                                <span class="text-blue-600">—</span>
-                                <span class="text-blue-600 cursor-pointer">100</span>
-                            </div>
-
-                            <!-- Next -->
-                            <button class="flex items-center gap-1 cursor-pointer text-blue-600">
-                                Next
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>

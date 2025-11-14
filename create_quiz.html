@@ -191,7 +191,28 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
+            <!-- back button  -->
+            <!-- Back Button + Breadcrumb Section -->
+            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+                    <span
+                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
 
+                        <i class=" fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="font-medium mr-2 text-gray-800">Back</span>
+                </button>
+
+                <!-- Breadcrumb -->
+                <nav class="text-gray-500 text-sm">
+                    <span>Home</span> /
+                    <span>Dashboard</span> /
+                    <span>View Course Materials</span> /
+                    <span class="text-black font-semibold">Course Details</span>
+                </nav>
+            </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
                 <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
@@ -209,7 +230,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block font-medium mb-2">Import *</label>
+                                    <label class="block font-medium mb-2">Import </label>
                                     <select class="w-full border border-gray-300 rounded-lg p-2">
                                         <option>Quiz</option>
                                     </select>
@@ -320,12 +341,11 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4 mt-4">
-                                <button
-                                    class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-1 px-12 rounded-lg">
+                                <button class="bg-yellow hover:bg-yellow-500 font-semibold py-1 px-12 rounded-lg">
                                     Submit
                                 </button>
                                 <button
-                                    class="hover:bg-gray-300 border border-gray-300 text-gray-800 font-semibold py-1 px-12 rounded-lg">
+                                    class="hover:bg-black border hover:text-yellow transition-all duration text-gray-800 font-semibold py-1 px-12 rounded-lg">
                                     Cancel
                                 </button>
                             </div>
@@ -365,101 +385,101 @@
 
 
         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
             }
+        }
 
     </script>
 

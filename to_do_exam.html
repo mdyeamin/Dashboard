@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- fontawesome cdn  -->
-    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
-    <!-- custom css -->
-    <style type="text/tailwindcss">
-        @theme {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- fontawesome cdn  -->
+  <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+  <!-- custom css -->
+  <style type="text/tailwindcss">
+    @theme {
         /* --color-clifford: #da373d; */
         --color-primary-bg: #efeeee;
         --color-secondary-bg: #FAF9F9;
@@ -19,538 +19,443 @@
         --color-yellow: #FBCD0D
       }
     </style>
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Enthrall</title>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Enthrall</title>
 </head>
 
 <body class="bg-primary-bg max-w-7xl mx-auto">
-    <header class="bg-white h-16 my-4 rounded-2xl px-5">
-        <div class="h-full flex justify-between items-center ">
-            <img class="w-40" src="images/logo.png" alt="">
-            <div class="flex items-center gap-5">
-                <i class="fa-solid fa-bell text-lg"></i>
-                <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+  <header class="bg-white h-16 my-4 rounded-2xl px-5">
+    <div class="h-full flex justify-between items-center ">
+      <img class="w-40" src="images/logo.png" alt="">
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-bell text-lg"></i>
+        <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+      </div>
+    </div>
+  </header>
+
+  </head>
+
+  <div class="min-h-screen flex">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-white w-52 p-4 space-y-3 md:block hidden fixed md:relative z-10 h-full rounded-2xl">
+
+      <nav class="space-y-2">
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="index.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/dashboardIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Dashboard">Dashboard</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="profile.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/profileIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Profile">Profile</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="payment.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/paymentIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Payment">Payment</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="admin_approve.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/adminApproveIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Admin Approve">Admin Approve</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="staff.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Staff">Staff</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="create_previous.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Create (Previous)">Create (Previous)</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="create_course_materials.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Create Course Materials">Create Course
+              Materials</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="view_course_materials.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/viewIcon.png" alt="">
+            <span class="text-nowrap truncate" title="View Course Materials">View Course
+              Materials</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="students_list.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+            <span class="text-nowrap truncate" title="Student List">Student List</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="s_attendance_list.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
+            <span class="text-nowrap truncate" title="S Attendance List">S Attendance List</span>
+          </a>
+        </button>
+
+
+
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="application_list.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/applicationListIcon.png" alt="">
+            <span class="text-nowrap truncate" title="S Attendance List">Application List</span>
+          </a>
+        </button>
+        <button
+          class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
+          <a href="file_upload.html" class="flex items-center justify-start w-full">
+            <img class="mr-2 w-4" src="images/file_uploadIcon.png" alt="">
+            <span class="text-nowrap truncate" title="File Upload">File Upload</span>
+          </a>
+        </button>
+
+
+        <!-- Materials  -->
+        <div class="w-full">
+          <button
+            class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent text-black border border-transparent hover:border-gray-200 transition"
+            data-target="menu-2">
+            <div class="flex items-center">
+              <img class="mr-2 w-4" src="images/materialsIcon.png" alt="">
+              <span class="text-nowrap truncate" title="Materials">Materials</span>
             </div>
-        </div>
-    </header>
+            <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="menu-2" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
+            <a href="class_notes(SU).html" class="flex items-center py-1">
+              <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+              <span class="text-nowrap truncate" title="Class Notes (SU)">Class Notes (SU)</span>
+            </a>
+            <a href="class_schedule.html" class="flex items-center py-1">
 
-    </head>
+              <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+              <span class="text-nowrap truncate" title="Class Schedule">Class Schedule</span>
+            </a>
+            <a href="join_the_class.html" class="flex items-center py-1">
+              <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+              Join
+              <span class="text-nowrap truncate" title="The Class">The Class</span>
+            </a>
+            <a href="class_recording.html" class="flex items-center py-1">
+              <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+              <span class="text-nowrap truncate" title="Class Recording">Class Recording</span>
+            </a>
+            <a href="others.html" class="flex items-center py-1 ">
+              <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
+              <span class="text-nowrap truncate" title="Reference Videos"> Reference Videos</span>
+            </a>
 
-    <div class="min-h-screen flex">
-        <!-- Sidebar -->
-        <div id="sidebar" class="bg-white w-52 p-4 space-y-3 md:block hidden fixed md:relative z-10 h-full rounded-2xl">
-
-            <nav class="space-y-2">
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="index.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/dashboardIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Dashboard">Dashboard</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="profile.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/profileIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Profile">Profile</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="payment.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/paymentIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Payment">Payment</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="admin_approve.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/adminApproveIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Admin Approve">Admin Approve</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="staff.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Staff">Staff</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="create_previous.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Create (Previous)">Create (Previous)</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="create_course_materials.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Create Course Materials">Create Course
-                            Materials</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="view_course_materials.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/viewIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="View Course Materials">View Course
-                            Materials</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="students_list.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="Student List">Student List</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="s_attendance_list.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/StudentListIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="S Attendance List">S Attendance List</span>
-                    </a>
-                </button>
-
-
-
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="application_list.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/applicationListIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="S Attendance List">Application List</span>
-                    </a>
-                </button>
-                <button
-                    class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
-                    <a href="file_upload.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/file_uploadIcon.png" alt="">
-                        <span class="text-nowrap truncate" title="File Upload">File Upload</span>
-                    </a>
-                </button>
-
-
-                <!-- Materials  -->
-                <div class="w-full">
-                    <button
-                        class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent text-black border border-transparent hover:border-gray-200 transition"
-                        data-target="menu-2">
-                        <div class="flex items-center">
-                            <img class="mr-2 w-4" src="images/materialsIcon.png" alt="">
-                            <span class="text-nowrap truncate" title="Materials">Materials</span>
-                        </div>
-                        <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="menu-2" class="accordion-menu hidden pl-8 mt-1 space-y-1 text-sm">
-                        <a href="class_notes(SU).html" class="flex items-center py-1">
-                            <img src="images/classNotes(SU)GhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
-                            <span class="text-nowrap truncate" title="Class Notes (SU)">Class Notes (SU)</span>
-                        </a>
-                        <a href="class_schedule.html" class="flex items-center py-1">
-
-                            <img src="images/classScheduleGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
-                            <span class="text-nowrap truncate" title="Class Schedule">Class Schedule</span>
-                        </a>
-                        <a href="join_the_class.html" class="flex items-center py-1">
-                            <img src="images/joinTheClassGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
-                            Join
-                            <span class="text-nowrap truncate" title="The Class">The Class</span>
-                        </a>
-                        <a href="class_recording.html" class="flex items-center py-1">
-                            <img src="images/classRecordingGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg" alt="">
-                            <span class="text-nowrap truncate" title="Class Recording">Class Recording</span>
-                        </a>
-                        <a href="others.html" class="flex items-center py-1 ">
-                            <img src="images/referenceVideosGhostIcon.png" class="w-4 h-4 mr-2 text-secondary-bg"
-                                alt="">
-                            <span class="text-nowrap truncate" title="Reference Videos"> Reference Videos</span>
-                        </a>
-
-                    </div>
-                </div>
-
-
-
-
-            </nav>
+          </div>
         </div>
 
-        <!-- Overlay for mobile -->
-        <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
-
-        <!-- Main content -->
-        <div class="flex-1 px-4 ">
-            <!-- Mobile toggle button -->
-            <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
-                Menu</button>
-
-            <!-- Dynamic Content (right side content)-->
-            <div id="main-content">
-                <div class="p-6 space-y-6 w-full">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-2xl md:text-4xl font-semibold">exam List</h2>
-                        <button class="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded font-semibold text-sm">
-                            + Create Quiz
-                        </button>
-                    </div>
-
-                    <div class="overflow-x-auto bg-white shadow rounded">
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-100">
-                                <tr>
-                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">SL
-                                    </th>
-                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Batch
-                                    </th>
-                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Topic
-                                    </th>
-                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Exam
-                                        Name</th>
-                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Start
-                                        Date</th>
-                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">End
-                                        Date</th>
-                                    <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">
-                                        Submission Date</th>
-                                    <th class="px-4 py-3 text-center text-xs font-semibold text-gray-700 uppercase">
-                                        Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200 text-sm">
-                                <!-- Row 1 -->
-                                <tr>
-                                    <td class="px-4 py-3">1</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_Control_Statement</td>
-                                    <td class="px-4 py-3">03/02/2024<br>13:30</td>
-                                    <td class="px-4 py-3">12/30/2025<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2025</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- Row 2 -->
-                                <tr>
-                                    <td class="px-4 py-3">2</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">SQL</td>
-                                    <td class="px-4 py-3">Quiz_YC_SQL04</td>
-                                    <td class="px-4 py-3">01/07/2024<br>10:00</td>
-                                    <td class="px-4 py-3">12/31/2025<br>10:00</td>
-                                    <td class="px-4 py-3">12/31/2025</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- Row 3 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- Row 4 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- Row 5 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- Row 6 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- Row 7 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- Row 8 -->
-                                <tr>
-                                    <td class="px-4 py-3">3</td>
-                                    <td class="px-4 py-3">Young Coders</td>
-                                    <td class="px-4 py-3">Java</td>
-                                    <td class="px-4 py-3">Quiz_YC_Java04</td>
-                                    <td class="px-4 py-3">01/06/2024<br>22:00</td>
-                                    <td class="px-4 py-3">12/30/2026<br>23:59</td>
-                                    <td class="px-4 py-3">12/30/2026</td>
-                                    <td class="px-2 py-3 flex justify-center ">
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/edit.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/copy.png" alt="">
-                                        </button>
-                                        <button class=" px-2 py-1 rounded">
-                                            <img class="w-4" src="images/delete.png" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
 
 
 
-
-
-            </div>
-        </div>
+      </nav>
     </div>
 
-    <script>
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+    <!-- Main content -->
+    <div class="flex-1 px-4 ">
+      <!-- Mobile toggle button -->
+      <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
+        Menu</button>
+      <!-- back button  -->
+      <!-- Back Button + Breadcrumb Section -->
+      <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+        <!-- Back Button -->
+        <button onclick="window.history.back()" class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+          <span
+            class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
+
+            <i class=" fa-solid fa-angle-left"></i>
+          </span>
+          <span class="font-medium mr-2 text-gray-800">Back</span>
+        </button>
+
+        <!-- Breadcrumb -->
+        <nav class="text-gray-500 text-sm">
+          <span>Home</span> /
+          <span>Dashboard</span> /
+          <span>View Course Materials</span> /
+          <span class="text-black font-semibold">Exam</span>
+        </nav>
+      </div>
+      <!-- Dynamic Content (right side content)-->
+      <div id="main-content">
+        <div class="bg-white p-4 rounded-xl">
+
+          <div class="flex flex-col justify-between items-start gap-10 mb-4">
+            <h2 class="text-2xl md:text-4xl font-semibold">Exam List</h2>
+            <a href="create_exam.html">
+              <button class="bg-[#46B669] hover:bg-[#389154] text-white px-24 py-2 rounded-lg font-semibold text-sm">
+                + Create Exam
+              </button>
+            </a>
+          </div>
 
 
-        // Handle multiple accordions dynamically
-        document.querySelectorAll(".accordion-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const targetId = btn.getAttribute("data-target");
-                const menu = document.getElementById(targetId);
-                const arrow = btn.querySelector(".accordion-arrow");
 
-                // Toggle menu
-                menu.classList.toggle("hidden");
-                arrow.classList.toggle("rotate-180");
-            });
-        });
+          <!-- show & search -->
+          <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
+            <!-- Show entries dropdown -->
+            <div class="flex flex-wrap items-center gap-2">
+              <p>Show:</p>
+              <div class="relative inline-block w-20">
+                <select
+                  class="block w-full border cursor-pointer border-gray-300 px-4 py-2 pr-10 rounded-xl  focus:outline-none appearance-none bg-white">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>50</option>
+                  <option>100</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <p>entries</p>
+            </div>
 
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-            sidebar.classList.toggle('hidden');
-            overlay.classList.toggle('hidden');
-        }
-
-
-        // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
-
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
-
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
-            }
+            <!-- Search box -->
+            <div class="w-full md:w-auto flex">
+              <input type="text" placeholder="Search here..."
+                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-xl focus:outline-none" />
+              <button
+                class="px-4 py-2 bg-black text-yellow cursor-pointer font-semibold rounded-r-xl focus:outline-none focus:ring-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+          <table class="w-full mt-4 text-left">
+            <thead class="bg-yellow">
+              <tr class="text-sm font-semibold">
+                <th class="px-2 py-4 rounded-tl-xl rounded-bl-xl">SL</th>
+                <th class="px-2 py-4">Batch</th>
+                <th class="px-2 py-4">Batch Topic </th>
+                <th class="px-2 py-4">Exam Name</th>
+                <th class="px-2 py-4">Start Date</th>
+                <th class="px-2 py-4">End Date</th>
+                <th class="px-2 py-4">Submission Date</th>
+                <th class="px-2 py-4 rounded-tr-xl rounded-br-xl">Action</th>
+              </tr>
+            </thead>
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            <tbody class="text-sm divide-y">
+              <!-- <tr>
+                <td class="px-2 py-4">01</td>
+                <td class="px-2 py-4">Python_User_Defined_Function_With_Parameter202</td>
+                <td class="px-2 py-4">2025QA01</td>
+                <td class="px-2 py-4">12 May 2025</td>
 
+                <td class="px-2 py-4">
+                  <button class="bg-yellow border px-3 py-1 rounded text-sm">Result</button>
+                  <button class="bg-transparent  border  px-3 py-1 rounded text-sm">Delete</button>
+                </td>
+              </tr> -->
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
-            }
-
-
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
+             
 
 
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
 
 
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
 
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
+            </tbody>
 
 
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
-            }
+          </table>
 
-    </script>
+          <!-- Pagination -->
+          <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
+            <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
+
+            <div class="flex items-center gap-3 text-blue-600 font-medium">
+              <!-- Previous -->
+              <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
+                <i class="fa-solid fa-arrow-left"></i>
+                Previous
+              </button>
+
+              <!-- Page Numbers -->
+              <div class="flex items-center gap-2">
+                <button
+                  class="border border-blue-600 text-white bg-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
+                <button
+                  class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
+                <button
+                  class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">4</button>
+                <span class="text-blue-600">—</span>
+                <span class="text-blue-600 cursor-pointer">100</span>
+              </div>
+
+              <!-- Next -->
+              <button class="flex items-center gap-1 cursor-pointer text-blue-600">
+                Next
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+
+    // Handle multiple accordions dynamically
+    document.querySelectorAll(".accordion-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        const menu = document.getElementById(targetId);
+        const arrow = btn.querySelector(".accordion-arrow");
+
+        // Toggle menu
+        menu.classList.toggle("hidden");
+        arrow.classList.toggle("rotate-180");
+      });
+    });
+
+
+
+
+    // Handle multiple accordions dynamically
+    document.querySelectorAll(".accordion-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        const menu = document.getElementById(targetId);
+        const arrow = btn.querySelector(".accordion-arrow");
+
+        // Toggle menu
+        menu.classList.toggle("hidden");
+        arrow.classList.toggle("rotate-180");
+      });
+    });
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('hidden');
+      overlay.classList.toggle('hidden');
+    }
+
+
+    // Handle accordions
+    document.querySelectorAll(".accordion-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        const menu = document.getElementById(targetId);
+        const arrow = btn.querySelector(".accordion-arrow");
+
+        menu.classList.toggle("hidden");
+        arrow.classList.toggle("rotate-180");
+      });
+    });
+
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('hidden');
+      overlay.classList.toggle('hidden');
+    }
+
+
+    // ===============================
+    // ACTIVE LINK HIGHLIGHT (UPDATED)
+    // ===============================
+
+    // 1️⃣ Main menu buttons
+    const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+    // 2️⃣ Materials submenu links
+    const subLinks = document.querySelectorAll('#menu-2 a');
+
+    const currentPage = window.location.pathname.split('/').pop();
+
+
+    // MAIN SIDEBAR BUTTON ACTIVE
+    mainLinks.forEach(link => {
+      const fileName = link.getAttribute('href').split('/').pop();
+      const parentBtn = link.parentElement;
+
+      if (fileName === currentPage) {
+        parentBtn.classList.add('bg-yellow', 'text-black');
+      } else {
+        parentBtn.classList.remove('bg-yellow', 'text-black');
+      }
+    });
+
+
+    // SUBMENU ACTIVE (Materials)
+    subLinks.forEach(link => {
+      const fileName = link.getAttribute('href').split('/').pop();
+
+      if (fileName === currentPage) {
+        // Highlight submenu item
+        link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+
+        // Open accordion automatically
+        const menu = document.getElementById("menu-2");
+        const accordionBtn = document.querySelector('[data-target="menu-2"]');
+        const arrow = accordionBtn.querySelector('.accordion-arrow');
+
+        menu.classList.remove("hidden");
+        arrow.classList.add("rotate-180");
+      } else {
+        link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+      }
+    });
+
+
+    // Default Dashboard highlight
+    if (!currentPage || currentPage === "index.html") {
+      const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+      if (dashboard) {
+        dashboard.parentElement.classList.add('bg-yellow', 'text-black');
+      }
+    }
+
+  </script>
 
 
 </body>

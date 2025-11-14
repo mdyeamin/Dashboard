@@ -191,10 +191,31 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
+<!-- back button  -->
+            <!-- Back Button + Breadcrumb Section -->
+            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+                    <span
+                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
 
+                        <i class=" fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="font-medium mr-2 text-gray-800">Back</span>
+                </button>
+
+                <!-- Breadcrumb -->
+                <nav class="text-gray-500 text-sm">
+                    <span>Home</span> /
+                    <span>Dashboard</span> /
+                    <span>View Course Materials</span> /
+                    <span class="text-black font-semibold">Assignment Create</span>
+                </nav>
+            </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
+                <div class=" space-y-6 w-full bg-white p-4 rounded-xl">
                     <h2 class="text-2xl md:text-4xl font-semibold">Assignment Create</h2>
 
                     <div class="p-4">
@@ -321,11 +342,11 @@
                             <!-- Buttons -->
                             <div class="flex gap-4 mt-4">
                                 <button
-                                    class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-1 px-12 rounded-lg">
+                                    class="bg-yellow hover:bg-yellow-500 transition-all duration-300 font-semibold py-1 px-12 rounded-lg">
                                     Submit
                                 </button>
                                 <button
-                                    class="hover:bg-gray-300 border border-gray-300 text-gray-800 font-semibold py-1 px-12 rounded-lg">
+                                    class="hover:bg-black hover:text-yellow transition-all duration-300 border border-gray-300 text-gray-800 font-semibold py-1 px-12 rounded-lg">
                                     Cancel
                                 </button>
                             </div>

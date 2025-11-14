@@ -191,32 +191,55 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
+            <!-- back button  -->
+            <!-- Back Button + Breadcrumb Section -->
+            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+                    <span
+                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
 
+                        <i class=" fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="font-medium mr-2 text-gray-800">Back</span>
+                </button>
+
+                <!-- Breadcrumb -->
+                <nav class="text-gray-500 text-sm">
+                    <span>Home</span> /
+                    <span>Dashboard</span> /
+                    <span>View Course Materials</span> /
+                    <span class="text-black font-semibold">Coding Challenge Create</span>
+                </nav>
+            </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class=" space-y-6 w-full bg-white p-4 rounded-lg">
+                <div class=" space-y-6 w-full bg-white p-4 rounded-xl">
                     <h2 class="text-2xl md:text-4xl font-semibold">Coding Challenge Create</h2>
 
                     <div class="p-4">
-                        <form class="space-y-4">
+                        <form class="space-y-6">
 
                             <!-- 1st line: 3 inputs -->
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div>
-                                    <label class="block font-medium mb-2">Batch</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
+                                    <label class="block text-sm font-semibold mb-1">Batch</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                         <option>Select</option>
                                     </select>
                                 </div>
+
                                 <div>
-                                    <label class="block font-medium mb-2">Import *</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
-                                        <option>Quiz</option>
+                                    <label class="block text-sm font-semibold mb-1">Import</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
                                     </select>
                                 </div>
+
                                 <div>
-                                    <label class="block font-medium mb-2">Batch Topic *</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
+                                    <label class="block text-sm font-semibold mb-1">Batch Topic *</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                         <option>Select</option>
                                     </select>
                                 </div>
@@ -224,112 +247,109 @@
 
                             <!-- Title -->
                             <div>
-                                <label class="block font-medium mb-2">Title *</label>
-                                <input type="text" class="w-full border border-gray-300 rounded-lg p-2"
+                                <label class="block text-sm font-semibold mb-1">Title *</label>
+                                <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm"
                                     placeholder="Enter...">
                             </div>
 
                             <!-- Dates -->
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div>
-                                    <label class="block font-medium mb-2">Start Date *</label>
-                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-2">
+                                    <label class="block text-sm font-semibold mb-1">Start Date *</label>
+                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                 </div>
+
                                 <div>
-                                    <label class="block font-medium mb-2">Submission Date *</label>
-                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-2">
+                                    <label class="block text-sm font-semibold mb-1">Submission Date *</label>
+                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                 </div>
+
                                 <div>
-                                    <label class="block font-medium mb-2">End Date *</label>
-                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-2">
+                                    <label class="block text-sm font-semibold mb-1">End Date *</label>
+                                    <input type="date" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                 </div>
                             </div>
 
                             <!-- Short + Color -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block font-medium mb-2">Short</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2">
+                                    <label class="block text-sm font-semibold mb-1">Short</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                 </div>
+
                                 <div>
-                                    <label class="block font-medium mb-2">Color</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2">
+                                    <label class="block text-sm font-semibold mb-1">Color</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                 </div>
                             </div>
 
-                            <!-- Weighted + Allow Reset + Random -->
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div>
-                                    <label class="block font-medium mb-2">Weighted Value</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2">
-                                </div>
-                                <div>
-                                    <label class="block font-medium mb-2">Allow Reset</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block font-medium mb-2">Random</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <!-- Total Marks, Weighted Value, Allow Reset -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                            <!-- Show Answer + Allow download -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block font-medium mb-2">Show Answer</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
+                                    <label class="block text-sm font-semibold mb-1">Total Marks *</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
                                 </div>
+
                                 <div>
-                                    <label class="block font-medium mb-2">Allow to download answer</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
-                                        <option>No</option>
-                                        <option>Yes</option>
+                                    <label class="block text-sm font-semibold mb-1">Weighted Value</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Allow Reset</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <!-- Teacher + Notes + Feedback -->
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Random + Show Answer -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block font-medium mb-2">Teacher</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
-                                        <option>---</option>
+                                    <label class="block text-sm font-semibold mb-1">Random</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
                                     </select>
                                 </div>
+
                                 <div>
-                                    <label class="block font-medium mb-2">Class Notes Topic</label>
-                                    <select class="w-full border border-gray-300 rounded-lg p-2">
-                                        <option>---</option>
+                                    <label class="block text-sm font-semibold mb-1">Show Answer</label>
+                                    <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                        <option>Select</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <label class="block font-medium mb-2">Feedback Questions</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2"
-                                        placeholder="Enter...">
-                                </div>
+                            </div>
+
+                            <!-- Allow Download -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Allow to download the answer.</label>
+                                <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+
+                            <!-- Description -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Description</label>
+                                <textarea class="w-full border border-gray-300 rounded-lg p-3 text-sm h-28"></textarea>
                             </div>
 
                             <!-- Buttons -->
-                            <div class="flex gap-4 mt-4">
+                            <div class="flex gap-4 pt-4">
                                 <button
-                                    class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-1 px-12 rounded-lg">
+                                    class="bg-yellow hover:bg-yellow-500 font-semibold py-2 px-10 rounded-lg transition-all duration-300">
                                     Submit
                                 </button>
+
                                 <button
-                                    class="hover:bg-gray-300 border border-gray-300 text-gray-800 font-semibold py-1 px-12 rounded-lg">
+                                    class="border hover:bg-black hover:text-yellow border-gray-300 text-gray-800 font-semibold py-2 px-10 rounded-lg transition-all duration-300">
                                     Cancel
                                 </button>
                             </div>
+
                         </form>
+
 
 
                     </div>
@@ -365,101 +385,101 @@
 
 
         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
             }
+        }
 
     </script>
 
