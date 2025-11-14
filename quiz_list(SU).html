@@ -81,7 +81,7 @@
                 <button
                     class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="create_previous.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/staffIcon.png" alt="">
+                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
                         <span class="text-nowrap truncate" title="Create (Previous)">Create (Previous)</span>
                     </a>
                 </button>
@@ -96,7 +96,7 @@
                 <button
                     class="flex items-center justify-start toggle-btn w-full text-left text-sm px-4 py-2 rounded font-medium text-black">
                     <a href="view_course_materials.html" class="flex items-center justify-start w-full">
-                        <img class="mr-2 w-4" src="images/createIcon.png" alt="">
+                        <img class="mr-2 w-4" src="images/viewIcon.png" alt="">
                         <span class="text-nowrap truncate" title="View Course Materials">View Course
                             Materials</span>
                     </a>
@@ -140,7 +140,7 @@
                         class="accordion-btn flex items-center justify-between w-full text-left text-sm px-4 py-2 rounded font-medium bg-transparent text-black border border-transparent hover:border-gray-200 transition"
                         data-target="menu-2">
                         <div class="flex items-center">
-                            <img class="mr-2 w-4" src="images/tasksIcon.png" alt="">
+                            <img class="mr-2 w-4" src="images/materialsIcon.png" alt="">
                             <span class="text-nowrap truncate" title="Materials">Materials</span>
                         </div>
                         <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" fill="none"
@@ -277,24 +277,24 @@
           </div>
 
 
-          <table class="w-full mt-4 text-left bg-white rounded-lg shadow-sm overflow-hidden">
+          <table class="w-full mt-4 text-left bg-white overflow-hidden">
             <thead class="bg-yellow">
               <tr class="text-sm font-semibold">
-                <th class="px-4 py-3 rounded-tl-lg">SL</th>
-                <th class="px-4 py-3">Quiz Name</th>
-                <th class="px-4 py-3">Batch</th>
-                <th class="px-4 py-3">Starting Date</th>
-                <th class="px-4 py-3 rounded-tr-lg">Action</th>
+                <th class="px-2 py-4 rounded-tl-xl rounded-bl-xl">SL</th>
+                <th class="px-2 py-4">Quiz Name</th>
+                <th class="px-2 py-4">Batch</th>
+                <th class="px-2 py-4">Starting Date</th>
+                <th class="px-2 py-4 rounded-tr-xl rounded-br-xl">Action</th>
               </tr>
             </thead>
 
             <tbody class="text-sm divide-y">
               <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3">01</td>
-                <td class="px-4 py-3">Type Test</td>
-                <td class="px-4 py-3">2025QA01</td>
-                <td class="px-4 py-3">12 May 2025</td>
-                <td class="px-4 py-3 flex items-center gap-2">
+                <td class="px-2 py-4">01</td>
+                <td class="px-2 py-4">Type Test</td>
+                <td class="px-2 py-4">2025QA01</td>
+                <td class="px-2 py-4">12 May 2025</td>
+                <td class="px-2 py-4 flex items-center gap-2">
                   <a href="quiz_result_list.html">
                     <button
                       class="bg-yellow hover:bg-yellow-400 text-black font-medium px-4 py-1.5 rounded-lg text-sm transition">
@@ -309,11 +309,11 @@
               </tr>
 
               <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3">02</td>
-                <td class="px-4 py-3">Type Test</td>
-                <td class="px-4 py-3">2025QA01</td>
-                <td class="px-4 py-3">12 May 2025</td>
-                <td class="px-4 py-3 flex items-center gap-2">
+                <td class="px-2 py-4">01</td>
+                <td class="px-2 py-4">Type Test</td>
+                <td class="px-2 py-4">2025QA01</td>
+                <td class="px-2 py-4">12 May 2025</td>
+                <td class="px-2 py-4 flex items-center gap-2">
                   <a href="quiz_result_list.html">
                     <button
                       class="bg-yellow hover:bg-yellow-400 text-black font-medium px-4 py-1.5 rounded-lg text-sm transition">
@@ -333,34 +333,36 @@
 
 
           <!-- Pagination -->
-          <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
-            <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
+          <div
+                            class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
+                            <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
 
-            <div class="flex items-center gap-3 text-blue-600 font-medium">
-              <!-- Previous -->
-              <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
-                <i class="fa-solid fa-arrow-left"></i>
-                Previous
-              </button>
+                            <div class="flex items-center gap-3 text-blue-600 font-medium">
+                                <!-- Previous -->
+                                <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                    Previous
+                                </button>
 
-              <!-- Page Numbers -->
-              <div class="flex items-center gap-2">
-                <button class="bg-blue-600 text-white px-3 py-1 rounded-lg cursor-pointer">1</button>
-                <button
-                  class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
-                <button
-                  class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
-                <span class="text-blue-600">—</span>
-                <span class="text-blue-600 cursor-pointer">100</span>
-              </div>
+                                <!-- Page Numbers -->
+                                <div class="flex items-center gap-2">
+                                    <button
+                                        class="border border-blue-600 text-white bg-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
+                                    <button
+                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">4</button>
+                                    <span class="text-blue-600">—</span>
+                                    <span class="text-blue-600 cursor-pointer">100</span>
+                                </div>
 
-              <!-- Next -->
-              <button class="flex items-center gap-1 cursor-pointer text-blue-600">
-                Next
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
+                                <!-- Next -->
+                                <button class="flex items-center gap-1 cursor-pointer text-blue-600">
+                                    Next
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
 
         </div>
 
