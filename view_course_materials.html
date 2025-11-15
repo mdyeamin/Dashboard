@@ -19,7 +19,6 @@
         --color-yellow: #FBCD0D
       }
     </style>
-
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -191,131 +190,60 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
-            <!-- back button  -->
-            <!-- Back Button + Breadcrumb Section -->
-            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
-                <!-- Back Button -->
-                <button onclick="window.history.back()"
-                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
-                    <span
-                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
 
-                        <i class=" fa-solid fa-angle-left"></i>
-                    </span>
-                    <span class="font-medium mr-2 text-gray-800">Back</span>
-                </button>
-
-                <!-- Breadcrumb -->
-                <nav class="text-gray-500 text-sm">
-                    <span>Home</span> /
-                    <span>Dashboard</span> /
-                    <span>View Course Materials</span> /
-                    <span class="text-black font-semibold">See Full Overview</span>
-                </nav>
-            </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="space-y-6 w-full bg-white rounded-2xl p-4">
-                    <!-- Header -->
-                    <h2 class="text-2xl md:text-4xl font-semibold">See Full Overview</h2>
+                <div class="p-6 bg-white rounded-2xl">
+                    <h2 class="text-3xl font-semibold mb-6">View Course Materials</h2>
 
-                    <!-- Filters -->
-                    <div class="flex flex-col items-end md:flex-row md:space-x-5 space-y-5 md:space-y-0 mb-4 w-full">
+                    <!-- Create Course -->
+                    <!-- Button Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
 
-                        <!-- Search Value -->
-                        <div class="flex flex-1 flex-col">
-                            <label class="block font-medium mb-1">Batch</label>
-                            <div class="flex">
-                                <select id="studentName"
-                                    class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none">
-                                    <option class="text" value="">Select Batch</option>
-                                    <option value="ASC">ASC</option>
-                                    <option value="DESC">DESC</option>
-                                </select>
+                        <a href="quiz_list(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Quiz
+                            </button>
+                        </a>
 
+                        <a href="assignment(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Assignment
+                            </button>
+                        </a>
+                        <a href="challenge(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Coding Challenge
+                            </button>
+                        </a>
+                        <a href="exam(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Exam
+                            </button>
+                        </a>
 
-                            </div>
-                        </div>
-
-
-                        <!-- Order By -->
-
-                        <div class="flex flex-1 flex-col">
-                            <label class="block font-medium mb-1">Module</label>
-                            <div class="flex">
-                                <select id="studentName"
-                                    class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none">
-                                    <option class="text" value="">Select Module</option>
-                                    <option value="ASC">ASC</option>
-                                    <option value="DESC">DESC</option>
-                                </select>
-                            </div>
-                        </div>
-
-
-                    </div>
+                        <a href="bootcamp(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Bootcamp
+                            </button>
+                        </a>
 
                     
-                    <!-- Table -->
-                    <div class="overflow-x-auto bg-white ">
-                        <table class="min-w-full divide-y divide-gray-200 bg-white">
-                            <thead class="bg-yellow">
-                                <tr>
-                                    <th class="py-4 px-3 text-left text-sm font-bold rounded-tl-xl rounded-bl-xl">
-                                        Batch
-                                    </th>
-                                    <th class="py-4 px-3 text-left text-sm font-bold">
-                                        Module
-                                    </th>
-                                    <th class="py-4 px-3 text-left text-sm font-bold rounded-tr-xl rounded-br-xl">
-                                        Topic Title
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody class="divide-y divide-black text-sm">
-
-                                <!-- Row 1 -->
-                                <tr>
-                                    <td class="py-4 px-3">QA Java | Master Btch</td>
-                                    <td class="py-4 px-3">0 - Module - Set up your device</td>
-                                    <td class="py-4 px-3">Prepare your Device</td>
-                                </tr>
-
-                                <!-- Row 2 -->
-                                <tr>
-                                    <td class="py-4 px-3">QA Java | Master Btch</td>
-                                    <td class="py-4 px-3">0 - Module - Set up your device</td>
-                                    <td class="py-4 px-3">Prepare your Device</td>
-                                </tr>
-
-                                <!-- Row 3 -->
-                                <tr>
-                                    <td class="py-4 px-3">QA Java | Master Btch</td>
-                                    <td class="py-4 px-3">0 - Module - Set up your device</td>
-                                    <td class="py-4 px-3">Prepare your Device</td>
-                                </tr>
-
-                                <!-- Row 4 -->
-                                <tr>
-                                    <td class="py-4 px-3">QA Java | Master Btch</td>
-                                    <td class="py-4 px-3">0 - Module - Set up your device</td>
-                                    <td class="py-4 px-3">Prepare your Device</td>
-                                </tr>
-
-                                <!-- Row 5 -->
-                                <tr>
-                                    <td class="py-4 px-3">QA Java | Master Btch</td>
-                                    <td class="py-4 px-3">0 - Module - Set up your device</td>
-                                    <td class="py-4 px-3">Prepare your Device</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-
+                        <a href="automation(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Automation
+                            </button>
+                        </a>
                     </div>
                 </div>
+
+
 
 
 

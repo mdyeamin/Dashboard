@@ -190,146 +190,149 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
+            <!-- back button  -->
+            <!-- Back Button + Breadcrumb Section -->
+            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+                    <span
+                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
 
+                        <i class=" fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="font-medium mr-2 text-gray-800">Back</span>
+                </button>
+
+                <!-- Breadcrumb -->
+                <nav class="text-gray-500 text-sm">
+                    <span>Home</span> /
+                    <span>Dashboard</span> /
+                    <span>View Course Materials</span> /
+                    <span class="text-black font-semibold">Automation</span>
+                </nav>
+            </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
 
 
 
-                <div class="bg-white p-4 rounded-lg mb-5">
-                    <h1 class="text-2xl font-bold">Automation</h1>
+                <div class="bg-white p-4 rounded-2xl mb-4">
+                    <h1 class="text-4xl font-semibold mb-2">Automation</h1>
 
-                    <div class="bg-white p-4 rounded-lg mb-5">
-                        <h1 class="text-2xl font-bold text-center">Automation</h1>
+                    <div class="bg-white rounded-lg ">
+                        <h1 class="text-lg font-semibold mb-8">Please Choose From Below</h1>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
-                            <button class="bg-gray-100 font-semibold py-2 px-5 rounded w-full">
+
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                 Dashboard
                             </button>
-                            <button class="bg-gray-100 font-semibold py-2 px-5 rounded w-full">
+
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                 Profile
                             </button>
-                            <button class="toggle-btn bg-gray-100 font-semibold py-2 px-5 rounded w-full">
+
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                 <a href="enroll.html"><span>Enroll Now</span></a>
                             </button>
-                            <button class="bg-gray-100 font-semibold py-2 px-5 rounded w-full">
+
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                 Return Site
                             </button>
-                            <button class="bg-gray-100 font-semibold py-2 px-5 rounded w-full">
+
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
                                 Others
                             </button>
+
                         </div>
+
                     </div>
 
 
                 </div>
 
 
-                <div class="bg-white p-4 rounded-lg ">
+                <div class="bg-white p-4 rounded-2xl ">
 
 
-<h1 class="text-2xl text-center font-bold">Automated the Table</h1>
+                    <h1 class="text-4xl text-center font-semibold">Automated the Table</h1>
+                    <!-- show & search -->
+                    <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
+                        <!-- Show entries dropdown -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <p>Show:</p>
+                            <div class="relative inline-block w-20">
+                                <select
+                                    class="block w-full border cursor-pointer border-gray-300 px-4 py-2 pr-10 rounded-xl  focus:outline-none appearance-none bg-white">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p>entries</p>
+                        </div>
 
+                        <!-- Search box -->
+                        <div class="w-full md:w-auto flex">
+                            <input type="text" placeholder="Search here..."
+                                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-xl focus:outline-none" />
+                            <button
+                                class="px-4 py-2 bg-black text-yellow cursor-pointer font-semibold rounded-r-xl focus:outline-none focus:ring-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
 
-                    <table class="w-full mt-4 text-left bg-white rounded shadow-sm border border-gray-300">
-                        <thead class="bg-yellow-300 border-b border-gray-300">
+                    <table class="w-full mt-4 text-left">
+                        <thead class="bg-yellow">
                             <tr class="text-sm font-semibold">
-                                <th class="px-4 py-2 border-r border-gray-300">Student ID</th>
-                                <th class="px-4 py-2 border-r border-gray-300">Full Name</th>
-                                <th class="px-4 py-2 border-r border-gray-300">Email</th>
-                                <th class="px-4 py-2">Phone</th>
+                                <th class="px-2 py-4 text-left rounded-tl-xl rounded-bl-xl">
+                                    Student ID
+                                </th>
+
+                                <th class="px-2 py-4 text-left">
+                                    Full Name
+                                </th>
+
+                                <th class="px-2 py-4 text-left">
+                                    Email
+                                </th>
+
+                                <th class="px-2 py-4 text-left rounded-tr-xl rounded-br-xl">
+                                    Phone
+                                </th>
                             </tr>
                         </thead>
-                        <tbody class="text-sm divide-y divide-gray-300">
+
+                        <tbody class="text-sm divide-y divide-black">
                             <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
+                                <td class="px-2 py-4">EIT2023AU0116</td>
+                                <td class="px-2 py-4">Muhammad Nurislam Sohag</td>
+                                <td class="px-2 py-4">muhammad.n.sohag@gmail.com</td>
+                                <td class="px-2 py-4">123-456-789_</td>
                             </tr>
                             <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Md Yeamin</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
+                                <td class="px-2 py-4">EIT2023AU0116</td>
+                                <td class="px-2 py-4">Muhammad Nurislam Sohag</td>
+                                <td class="px-2 py-4">muhammad.n.sohag@gmail.com</td>
+                                <td class="px-2 py-4">123-456-789_</td>
                             </tr>
 
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
 
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-4 py-2 border-r border-gray-200">EIT2023AU0116</td>
-                                <td class="px-4 py-2 border-r border-gray-200">Muhammad Nurislam Sohag</td>
-                                <td class="px-4 py-2 border-r border-gray-200">muhammad.n.sohag@gmail.com</td>
-                                <td class="px-4 py-2">123-456-789_</td>
-                            </tr>
                         </tbody>
                     </table>
 
@@ -366,101 +369,101 @@
 
 
         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
             }
+        }
 
     </script>
 
