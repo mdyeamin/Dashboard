@@ -19,6 +19,7 @@
         --color-yellow: #FBCD0D
       }
     </style>
+
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -190,146 +191,204 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
+            <!-- back button  -->
+            <!-- Back Button + Breadcrumb Section -->
+            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+                    <span
+                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
 
+                        <i class=" fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="font-medium mr-2 text-gray-800">Back</span>
+                </button>
+
+                <!-- Breadcrumb -->
+                <nav class="text-gray-500 text-sm">
+                    <span>Home</span> /
+                    <span>Dashboard</span> /
+                    <span>View Course Materials</span> /
+                    <span class="text-black font-semibold">Modules</span>
+                </nav>
+            </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div>
-                    <h1 class="text-2xl font-bold">Module List</h1>
-                    <div class=" p-4 rounded  space-y-4">
-                        <!-- Top: Filter/Search -->
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                            <!-- Search by Milestone Name -->
-                            <div class="flex items-center space-x-2 w-full sm:w-auto">
-                                <label for="milestoneSearch"
-                                    class="text-sm font-medium text-gray-700 whitespace-nowrap">Name:</label>
-                                <input id="milestoneSearch" type="text" placeholder="Search by Milestone Name"
-                                    class="border border-gray-300 rounded px-3 py-1.5 text-sm w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-yellow-300">
-                            </div>
+                <div class="space-y-6 w-full bg-white rounded-2xl p-4">
+                    <!-- Header -->
+                    <h2 class="text-2xl md:text-4xl font-semibold">Modules</h2>
 
-                            <!-- Buttons -->
-                            <div class="flex items-center space-x-2">
-                                <button
-                                    class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded transition">
+                    <!-- Filters -->
+                    <div class="flex flex-col items-end md:flex-row md:space-x-5 space-y-5 md:space-y-0 mb-4 w-full">
+
+                        <!-- Search Value -->
+                        <div class="flex flex-1 flex-col">
+                            <label class="block font-medium mb-1">Module Title:</label>
+                            <div class="flex">
+                                <input type="text" id="studentName" placeholder="Search by Milestone Name"
+                                    class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none" />
+                                <!-- <button
+                                    class="bg-yellow text-black cursor-pointer font-semibold px-4 py-2 rounded-xl ml-2 transition">
                                     Search
-                                </button>
+                                </button> -->
+                            </div>
+                        </div>
+
+
+                        <!-- Order By -->
+
+                        <div class="flex flex-1 flex-col">
+                            <label class="block font-medium mb-1">Topic Title</label>
+                            <div class="flex">
+                                <input type="text" id="studentName" placeholder="Search by Milestone Name"
+                                    class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none" />
+                                <!-- <button
+                                    class="bg-yellow text-black cursor-pointer font-semibold px-4 py-2 rounded-xl ml-2 transition">
+                                    Search
+                                </button> -->
+                            </div>
+                        </div>
+                        <!-- Create Class Note -->
+                        <div class="flex flex-col">
+                            <label class="invisible mb-1">.</label> <!-- spacing maintain -->
+                            <a href="add_module.html">
                                 <button
-                                    class="bg-red-400 hover:bg-red-500 text-white text-sm font-medium px-4 py-1.5 rounded flex items-center space-x-1 transition">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4v16m8-8H4" />
-                                    </svg>
-                                    <span>Add New Milestone</span>
+                                    class="bg-[#46B669] text-white px-12 py-2 flex-shrink-0 w-full md:w-auto rounded-lg flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-plus"></i> Add Module
                                 </button>
-                            </div>
+                            </a>
                         </div>
 
-                        <!-- Bottom: Show entries + Right search -->
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                            <!-- Show entries -->
-                            <div class="flex items-center space-x-2 text-sm text-gray-700">
-                                <label for="entriesSelect">Show</label>
-                                <select id="entriesSelect"
-                                    class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-yellow-300">
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                </select>
-                                <span>entries</span>
-                            </div>
-
-                            <!-- Table search -->
-                            <div class="flex items-center space-x-2 text-sm text-gray-700">
-                                <label for="tableSearch">Search:</label>
-                                <input id="tableSearch" type="text"
-                                    class="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300">
-                            </div>
-                        </div>
                     </div>
 
-                    <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
-                        <thead class="bg-yellow-300">
-                            <tr class="text-sm font-semibold ">
-                                <th class="px-4 py-2">SL</th>
-                                <th class="px-4 py-2">Milestone</th>
-                                <th class="px-4 py-2">Module Name</th>
+                    <!-- show & search -->
+                    <!-- show & search -->
+                    <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
+                        <!-- Show entries dropdown -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <p>Show:</p>
+                            <div class="relative inline-block w-20">
+                                <select
+                                    class="block w-full border cursor-pointer border-gray-300 px-4 py-2 pr-10 rounded-xl  focus:outline-none appearance-none bg-white">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p>entries</p>
+                        </div>
 
-                                <th class="px-4 py-2">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-sm divide-y">
-                            <tr class="">
-                                <td class="px-4 py-2">01</td>
-                                <td class="px-4 py-2">Milestone: JavaScript</td>
-                                <td class="px-4 py-2">Module- abcd</td>
-                                <td class="px-4 py-3 flex space-x-2 align-top">
-                                    <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                            class="fas fa-edit text-white"></i></button>
-                                    <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                            class="fas fa-trash-alt text-white"></i></button>
-                                </td>
-                                <tr />
-                        </tbody>
-
-                        <tbody class="text-sm divide-y">
-                            <tr class="">
-                                <td class="px-4 py-2">01</td>
-                                <td class="px-4 py-2">Milestone: JavaScript</td>
-                                <td class="px-4 py-2">Module- abcd</td>
-                                <td class="px-4 py-3 flex space-x-2 align-top">
-                                    <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                            class="fas fa-edit text-white"></i></button>
-                                    <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                            class="fas fa-trash-alt text-white"></i></button>
-                                </td>
-                                <tr />
-                        </tbody>
-
-                        <tbody class="text-sm divide-y">
-                            <tr class="">
-                                <td class="px-4 py-2">01</td>
-                                <td class="px-4 py-2">Milestone: JavaScript</td>
-                                <td class="px-4 py-2">Module- abcd</td>
-                                <td class="px-4 py-3 flex space-x-2 align-top">
-                                    <button class="bg-orange-400 hover:bg-orange-500 text-xs px-2 py-1 rounded"><i
-                                            class="fas fa-edit text-white"></i></button>
-                                    <button class="bg-red-400 hover:bg-red-500 text-xs px-2 py-1 rounded"><i
-                                            class="fas fa-trash-alt text-white"></i></button>
-                                </td>
-                                <tr />
-                        </tbody>
-                    </table>
-                    <div class="flex justify-center mt-6">
-                        <nav class="inline-flex items-center space-x-1 text-sm">
-                            <!-- Previous Button -->
+                        <!-- Search box -->
+                        <div class="w-full md:w-auto flex">
+                            <input type="text" placeholder="Search here..."
+                                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-xl focus:outline-none" />
                             <button
-                                class="px-3 py-1 border border-gray-300 rounded-l bg-white hover:bg-gray-100 text-gray-700 disabled:opacity-50"
-                                disabled>
+                                class="px-4 py-2 bg-black text-yellow cursor-pointer font-semibold rounded-r-xl focus:outline-none focus:ring-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Table -->
+                    <div class="overflow-x-auto bg-white ">
+                        <table class="min-w-full divide-y divide-gray-200 bg-white">
+                            <thead class="bg-yellow">
+                                <tr>
+                                    <th class="py-3 text-center text-sm font-semibold rounded-tl-xl rounded-bl-xl">
+                                        SL</th>
+                                    <th class="py-3 text-center text-sm font-semibold">Module Name</th>
+                                    <th class="py-3 text-center text-sm font-semibold">Topic</th>
+
+                                    <th class="py-3 text-center text-sm font-semibold rounded-tr-xl rounded-br-xl">
+                                        Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="divide-y divide-gray-200 text-sm">
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="py-3 text-center font-medium">1</td>
+                                    <td class="py-3 text-center">Master Free Class | Core Java</td>
+                                    <td class="py-3 text-center">Prepare Your Device</td>
+
+                                    <td class="py-3 text-center">
+                                        <a href="">
+                                            <button
+                                                class="bg-yellow px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-yellow-400 transition">
+                                                Edit
+                                            </button>
+                                        </a>
+                                        <button
+                                            class="bg-transparent border px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-black hover:text-yellow transition">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 text-center font-medium">1</td>
+                                    <td class="py-3 text-center">Master Free Class | Core Java</td>
+                                    <td class="py-3 text-center">Prepare Your Device</td>
+
+                                    <td class="py-3 text-center">
+                                        <a href="">
+                                            <button
+                                                class="bg-yellow px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-yellow-400 transition">
+                                                Edit
+                                            </button>
+                                        </a>
+                                        <button
+                                            class="bg-transparent border px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-black hover:text-yellow transition">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
+                        <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
+
+                        <div class="flex items-center gap-3 text-blue-600 font-medium">
+                            <!-- Previous -->
+                            <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
+                                <i class="fa-solid fa-arrow-left"></i>
                                 Previous
                             </button>
 
                             <!-- Page Numbers -->
-                            <button
-                                class="px-3 py-1 border border-gray-300 bg-yellow-300 text-black font-medium hover:bg-yellow-400">
-                                1
-                            </button>
-                            <button class="px-3 py-1 border border-gray-300 bg-white hover:bg-yellow-100 text-gray-700">
-                                2
-                            </button>
-                            <button class="px-3 py-1 border border-gray-300 bg-white hover:bg-yellow-100 text-gray-700">
-                                3
-                            </button>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="border border-blue-600 text-white bg-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
+                                <button
+                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
+                                <button
+                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">4</button>
+                                <span class="text-blue-600">—</span>
+                                <span class="text-blue-600 cursor-pointer">100</span>
+                            </div>
 
-                            <!-- Next Button -->
-                            <button
-                                class="px-3 py-1 border border-gray-300 rounded-r bg-white hover:bg-gray-100 text-gray-700">
+                            <!-- Next -->
+                            <button class="flex items-center gap-1 cursor-pointer text-blue-600">
                                 Next
+                                <i class="fa-solid fa-arrow-right"></i>
                             </button>
-                        </nav>
+                        </div>
                     </div>
-
                 </div>
-
 
 
 
@@ -342,7 +401,7 @@
     <script>
 
 
-         // Handle multiple accordions dynamically
+        // Handle multiple accordions dynamically
         document.querySelectorAll(".accordion-btn").forEach(btn => {
             btn.addEventListener("click", () => {
                 const targetId = btn.getAttribute("data-target");
@@ -364,101 +423,101 @@
 
 
         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
             }
+        }
 
     </script>
 
