@@ -193,180 +193,210 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <h1 class="text-3xl font-bold mb-4">Result Upload </h1>
+                <div class="bg-white p-4 rounded-2xl">
+                    <h1 class="text-3xl font-semibold mb-4">File Upload</h1>
 
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl mx-auto mt-4">
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl mx-auto mt-8">
+                        <!-- Class Schedule Upload Card -->
+                        <div
+                            class="bg-white border border-primary-bg p-4 rounded-xl shadow-sm flex flex-col justify-between h-full">
 
-                    <!-- Class Schedule Upload Card -->
-                    <div class="bg-white rounded-xl shadow-md">
-                        <!-- Header -->
-                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
-                            <i class="fa-solid fa-upload"></i>
-                            Class Schedule Upload
-                        </div>
+                            <!-- Header -->
+                            <div>
+                                <div class="bg-yellow text-center font-semibold text-lg rounded-lg px-5 py-3">
+                                    Class Schedule Upload
+                                </div>
 
-                        <!-- Body -->
-                        <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
+                                <!-- Body -->
+                                <div class="my-5">
+                                    <label class="block text-lg font-medium mb-4">Upload File</label>
 
-                            <!-- Custom File Input -->
-                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
-                                <!-- Browse Button -->
-                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
-                                    Browse
-                                </label>
-                                <!-- Hidden File Input -->
-                                <input id="fileUpload" type="file" class="hidden"
-                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
-                                <!-- Fake Text Input to show file name -->
-                                <input id="fileName" type="text" placeholder="No file chosen"
-                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                                    <!-- Custom File Input -->
+                                    <div
+                                        class="flex items-center border border-gray-300 rounded-lg overflow-hidden mb-8">
+                                        <label for="uploadFile1"
+                                            class="cursor-pointer px-4 py-2 text-sm font-medium bg-white">
+                                            Browse
+                                        </label>
+
+                                        <span id="fileName1" class="flex-1 px-3 text-sm text-gray-500">
+                                            No File Selected
+                                        </span>
+
+                                        <input id="uploadFile1" type="file" class="hidden file-input">
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
-                                Upload
+                                class="bg-primary-bg hover:bg-yellow-400 font-semibold px-6 py-1 rounded-lg transition-all duration-300 w-44 mt-auto">
+                                Upload Now
                             </button>
-                        </div>
-                    </div>
 
-                    <!-- Quiz Result Upload Card -->
-                    <div class="bg-white rounded-xl shadow-md">
-                        <!-- Header -->
-                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
-                            <i class="fa-solid fa-upload"></i>
-                            Quiz Result Upload
                         </div>
 
-                        <!-- Body -->
-                        <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
 
-                            <!-- Custom File Input -->
-                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
-                                <!-- Browse Button -->
-                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
-                                    Browse
-                                </label>
-                                <!-- Hidden File Input -->
-                                <input id="fileUpload" type="file" class="hidden"
-                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
-                                <!-- Fake Text Input to show file name -->
-                                <input id="fileName" type="text" placeholder="No file chosen"
-                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                        <!-- Quiz Result Upload Card -->
+                        <div
+                            class="bg-white border border-primary-bg p-4 rounded-xl shadow-sm flex flex-col justify-between h-full">
+
+                            <!-- Header -->
+                            <div>
+                                <div class="bg-yellow text-center font-semibold text-lg rounded-lg px-5 py-3">
+                                    Quiz Result Upload
+                                </div>
+
+                                <!-- Body -->
+                                <div class="my-5">
+                                    <label class="block text-lg font-medium mb-4">Upload File</label>
+
+                                    <div
+                                        class="flex items-center border border-gray-300 rounded-lg overflow-hidden mb-8">
+                                        <label for="uploadFile2"
+                                            class="cursor-pointer px-4 py-2 text-sm font-medium bg-white">
+                                            Browse
+                                        </label>
+
+                                        <span id="fileName2" class="flex-1 px-3 text-sm text-gray-500">
+                                            No File Selected
+                                        </span>
+
+                                        <input id="uploadFile2" type="file" class="hidden file-input">
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
-                                Upload
+                                class="bg-primary-bg hover:bg-yellow-400 font-semibold px-6 py-1 rounded-lg transition-all duration-300 w-44 mt-auto">
+                                Upload Now
                             </button>
-                        </div>
-                    </div>
 
-                    <!-- Home-Work Result Upload Card -->
-                    <div class="bg-white rounded-xl shadow-md">
-                        <!-- Header -->
-                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
-                            <i class="fa-solid fa-upload"></i>
-                            Home-Work Result Upload
                         </div>
 
-                        <!-- Body -->
-                        <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
 
-                            <!-- Custom File Input -->
-                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
-                                <!-- Browse Button -->
-                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
-                                    Browse
-                                </label>
-                                <!-- Hidden File Input -->
-                                <input id="fileUpload" type="file" class="hidden"
-                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
-                                <!-- Fake Text Input to show file name -->
-                                <input id="fileName" type="text" placeholder="No file chosen"
-                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                        <!-- Home-work Result Upload Card -->
+                        <div
+                            class="bg-white border border-primary-bg p-4 rounded-xl shadow-sm flex flex-col justify-between h-full">
+
+                            <!-- Header -->
+                            <div>
+                                <div class="bg-yellow text-center font-semibold text-lg rounded-lg px-5 py-3">
+                                    Home-work Result Upload
+                                </div>
+
+                                <!-- Body -->
+                                <div class="my-5">
+                                    <label class="block text-lg font-medium mb-4">Upload File</label>
+
+                                    <div
+                                        class="flex items-center border border-gray-300 rounded-lg overflow-hidden mb-8">
+                                        <label for="uploadFile3"
+                                            class="cursor-pointer px-4 py-2 text-sm font-medium bg-white">
+                                            Browse
+                                        </label>
+
+                                        <span id="fileName3" class="flex-1 px-3 text-sm text-gray-500">
+                                            No File Selected
+                                        </span>
+
+                                        <input id="uploadFile3" type="file" class="hidden file-input">
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
-                                Upload
+                                class="bg-primary-bg hover:bg-yellow-400 font-semibold px-6 py-1 rounded-lg transition-all duration-300 w-44 mt-auto">
+                                Upload Now
                             </button>
-                        </div>
-                    </div>
-                    <!-- Exam Result Upload Card -->
-                    <div class="bg-white rounded-xl shadow-md">
-                        <!-- Header -->
-                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
-                            <i class="fa-solid fa-upload"></i>
-                            Exam Result Upload
+
                         </div>
 
-                        <!-- Body -->
-                        <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
 
-                            <!-- Custom File Input -->
-                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
-                                <!-- Browse Button -->
-                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
-                                    Browse
-                                </label>
-                                <!-- Hidden File Input -->
-                                <input id="fileUpload" type="file" class="hidden"
-                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
-                                <!-- Fake Text Input to show file name -->
-                                <input id="fileName" type="text" placeholder="No file chosen"
-                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                        <!-- Exam Result Upload Card -->
+                        <div
+                            class="bg-white border border-primary-bg p-4 rounded-xl shadow-sm flex flex-col justify-between h-full">
+
+                            <!-- Header -->
+                            <div>
+                                <div class="bg-yellow text-center font-semibold text-lg rounded-lg px-5 py-3">
+                                    Exam Result Upload
+                                </div>
+
+                                <!-- Body -->
+                                <div class="my-5">
+                                    <label class="block text-lg font-medium mb-4">Upload File</label>
+
+                                    <div
+                                        class="flex items-center border border-gray-300 rounded-lg overflow-hidden mb-8">
+                                        <label for="uploadFile4"
+                                            class="cursor-pointer px-4 py-2 text-sm font-medium bg-white">
+                                            Browse
+                                        </label>
+
+                                        <span id="fileName4" class="flex-1 px-3 text-sm text-gray-500">
+                                            No File Selected
+                                        </span>
+
+                                        <input id="uploadFile4" type="file" class="hidden file-input">
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
-                                Upload
+                                class="bg-primary-bg hover:bg-yellow-400 font-semibold px-6 py-1 rounded-lg transition-all duration-300 w-44 mt-auto">
+                                Upload Now
                             </button>
-                        </div>
-                    </div>
-                    <!-- Bootcamp Upload Card -->
-                    <div class="bg-white rounded-xl shadow-md">
-                        <!-- Header -->
-                        <div class=" font-bold text-lg rounded-t-xl px-5 py-3 flex items-center gap-2">
-                            <i class="fa-solid fa-upload"></i>
-                            Bootcamp Result Upload
+
                         </div>
 
-                        <!-- Body -->
-                        <div class="p-6">
-                            <label class="block text-gray-700 font-medium mb-2">Upload File</label>
 
-                            <!-- Custom File Input -->
-                            <div class="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
-                                <!-- Browse Button -->
-                                <label for="fileUpload" class="  cursor-pointer px-4 py-2 text-sm font-medium">
-                                    Browse
-                                </label>
-                                <!-- Hidden File Input -->
-                                <input id="fileUpload" type="file" class="hidden"
-                                    onchange="document.getElementById('fileName').value = this.files[0]?.name || ''">
-                                <!-- Fake Text Input to show file name -->
-                                <input id="fileName" type="text" placeholder="No file chosen"
-                                    class="flex-grow px-3 py-2 text-gray-600 focus:outline-none" readonly>
+                        <!-- Bootcamp Result Upload Card -->
+                        <div
+                            class="bg-white border border-primary-bg p-4 rounded-xl shadow-sm flex flex-col justify-between h-full">
+
+                            <!-- Header -->
+                            <div>
+                                <div class="bg-yellow text-center font-semibold text-lg rounded-lg px-5 py-3">
+                                    Bootcamp Result Upload
+                                </div>
+
+                                <!-- Body -->
+                                <div class="my-5">
+                                    <label class="block text-lg font-medium mb-4">Upload File</label>
+
+                                    <div
+                                        class="flex items-center border border-gray-300 rounded-lg overflow-hidden mb-8">
+                                        <label for="uploadFile5"
+                                            class="cursor-pointer px-4 py-2 text-sm font-medium bg-white">
+                                            Browse
+                                        </label>
+
+                                        <span id="fileName5" class="flex-1 px-3 text-sm text-gray-500">
+                                            No File Selected
+                                        </span>
+
+                                        <input id="uploadFile5" type="file" class="hidden file-input">
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Upload Button -->
                             <button
-                                class="bg-yellow-400 hover:bg-yellow-500 font-semibold px-6 py-2 rounded-md transition w-full">
-                                Upload
+                                class="bg-primary-bg hover:bg-yellow-400 font-semibold px-6 py-1 rounded-lg transition-all duration-300 w-44 mt-auto">
+                                Upload Now
                             </button>
+
                         </div>
+
                     </div>
 
                 </div>
+
 
 
 
@@ -378,7 +408,7 @@
     <script>
 
 
-         // Handle multiple accordions dynamically
+        // Handle multiple accordions dynamically
         document.querySelectorAll(".accordion-btn").forEach(btn => {
             btn.addEventListener("click", () => {
                 const targetId = btn.getAttribute("data-target");
@@ -400,101 +430,123 @@
 
 
         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
-            }
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            const currentPage = window.location.pathname.split('/').pop();
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
+            }
+        });
 
 
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
+            }
+        }
 
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
+        // Handle multiple file uploads dynamically
+        document.querySelectorAll('.file-input').forEach((input) => {
+            input.addEventListener('change', function () {
+                const fileLabel = this.previousElementSibling; // label for "Choose File"
+                const fileSpan = this.parentElement.querySelector('span'); // <span> that shows name
+
+                if (this.files.length > 0) {
+                    if (this.files.length === 1) {
+                        fileSpan.textContent = this.files[0].name;
+                    } else {
+                        fileSpan.textContent = `${this.files.length} files selected`;
+                    }
+                    fileSpan.classList.remove('text-gray-500');
+                    fileSpan.classList.add('text-primary');
                 } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
+                    fileSpan.textContent = 'No file chosen';
+                    fileSpan.classList.remove('text-primary');
+                    fileSpan.classList.add('text-gray-500');
                 }
             });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
-            }
+        });
 
     </script>
 
