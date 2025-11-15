@@ -193,213 +193,90 @@
 
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                <div class="p-6 bg-white rounded-2xl">
                     <h2 class="text-3xl font-semibold mb-6">Create Course Materials</h2>
 
                     <!-- Create Course -->
-                    <div class="space-y-6">
-                        <h3 class="text-xl font-semibold">Create Course</h3>
+                    <!-- Button Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                        <a href="create_question.html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Question
+                            </button>
+                        </a>
+                        <a href="quiz_list(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Quiz
+                            </button>
+                        </a>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                            <!-- Milestone -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Milestone</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Milestone...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
+                        <a href="assignment(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Assignment
+                            </button>
+                        </a>
 
-                            <!-- Modules -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Modules</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Modules...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
+                        <a href="exam(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Exam
+                            </button>
+                        </a>
+                        <a href="exam(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Coding Challenge
+                            </button>
+                        </a>
+                        <a href="bootcamp(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Bootcamp
+                            </button>
+                        </a>
 
-                            <!-- Topic -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Topic</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Topic...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
+                        <a href="class_notes(SU).html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Class Notes
+                            </button>
+                        </a>
 
-                            <!-- Import -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Import</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Import...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
+                        <a href="class_video.html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Milestone
+                            </button>
+                        </a>
 
-                            <!-- See Full Overview -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">See Full Overview</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">See Full Overview...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                        <a href="setup_others.html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Module
+                            </button>
+                        </a>
 
-                    <!-- Create One -->
-                    <div class="mt-10 space-y-6">
-                        <h3 class="text-xl font-semibold">Create One</h3>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                            <!-- Question -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Question</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Question...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-
-                            <!-- Quiz -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Quiz</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Quiz...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-
-                            <!-- Assignment -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Assignment</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Assignment...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-
-                            <!-- Exam -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Exam</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Exam...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-
-                            <!-- Coding Challenge -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Coding Challenge</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Coding Challenge...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-
-                            <!-- Bootcamp -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Bootcamp</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Bootcamp...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-
-                            <!-- Class Notes -->
-                            <div
-                                class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-start shadow-sm hover:shadow-md transition">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <img class="w-8 h-8 object-contain" src="images/quizimg.png" alt="">
-                                    <div>
-                                        <h4 class="text-base font-semibold">Class Notes</h4>
-                                        <p class="text-sm text-gray-500 w-[12ch] truncate">Class Notes...</p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="bg-[#FBCD0D] text-black font-medium rounded-lg py-1 w-full hover:bg-[#f9c600] transition">
-                                    Create
-                                </button>
-                            </div>
-                        </div>
+                        <a href="interview.html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Topic
+                            </button>
+                        </a>
+                        <a href="interview.html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                Import
+                            </button>
+                        </a>
+                        <a href="interview.html">
+                            <button
+                                class="bg-secondary-bg py-4 rounded-lg text-xl font-medium hover:bg-yellow cursor-pointer transition w-full">
+                                See Full Overview
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -438,101 +315,101 @@
 
 
         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
             }
+        }
 
     </script>
 
