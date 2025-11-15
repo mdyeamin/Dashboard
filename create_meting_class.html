@@ -190,29 +190,50 @@
             <!-- Mobile toggle button -->
             <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
                 Menu</button>
+            <!-- back button  -->
+            <!-- Back Button + Breadcrumb Section -->
+            <div class="flex items-center gap-4 pb-4 rounded-t-2xl">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center gap-2 bg-white p-2 rounded-full transition">
+                    <span
+                        class="border w-8 h-8 rounded-full cursor-pointer hover:bg-black hover:text-yellow transition-all duration-300 flex items-center justify-center">
 
+                        <i class=" fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="font-medium mr-2 text-gray-800">Back</span>
+                </button>
+
+                <!-- Breadcrumb -->
+                <nav class="text-gray-500 text-sm">
+                    <span>Home</span> /
+                    <span>Dashboard</span> /
+                    <span>View Course Materials</span> /
+                    <span class="text-black font-semibold">Create Class</span>
+                </nav>
+            </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class="bg-white p-4 rounded-lg ">
-                    <h1 class="text-2xl font-bold">Meeting List</h1>
+                <div class="bg-white p-4 rounded-2xl ">
 
-                    <div class="bg-gray-50 p-6 rounded-xl">
+
+                    <div class="">
                         <h2 class="text-2xl md:text-4xl font-semibold text-gray-800 mb-6">Create Class</h2>
 
                         <form class="space-y-5">
+
                             <!-- Teacher & Batch -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-700">Teacher *</label>
-                                    <select
-                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <label class="block text-base font-semibold text-black">Teacher *</label>
+                                    <select class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                                         <option>Select</option>
                                     </select>
                                 </div>
+
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-700">Batch *</label>
-                                    <select
-                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <label class="block text-base font-semibold text-black">Batch *</label>
+                                    <select class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                                         <option>Select</option>
                                     </select>
                                 </div>
@@ -220,23 +241,24 @@
 
                             <!-- Title -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-700">Title *</label>
+                                <label class="block text-base font-semibold text-black">Title *</label>
                                 <input type="text" placeholder="Type..."
-                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                             </div>
 
                             <!-- Date & Notification -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-700">Date *</label>
+                                    <label class="block text-base font-semibold text-black">Date *</label>
                                     <input type="date"
-                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                                 </div>
+
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-700">Do you want to add this class
-                                        for student notification?</label>
-                                    <select
-                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                    <label class="block text-base font-semibold text-black">
+                                        Do you want to add this class for student notification?
+                                    </label>
+                                    <select class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                                         <option>Select</option>
                                     </select>
                                 </div>
@@ -244,30 +266,30 @@
 
                             <!-- Description -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-700">Description</label>
+                                <label class="block text-base font-semibold text-black">Description</label>
                                 <textarea rows="3"
-                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none"></textarea>
+                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none"></textarea>
                             </div>
 
                             <!-- End Time & Start Time -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-700">End Time</label>
+                                    <label class="block text-base font-semibold text-black">End Time</label>
                                     <input type="time"
-                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                                 </div>
+
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-700">Start Time</label>
+                                    <label class="block text-base font-semibold text-black">Start Time</label>
                                     <input type="time"
-                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                                 </div>
                             </div>
 
                             <!-- Meeting URL -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-700">Meeting URL *</label>
-                                <input type="text"
-                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                                <label class="block text-base font-semibold text-black">Meeting URL *</label>
+                                <input type="text" class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
                             </div>
 
                             <!-- Buttons -->
@@ -277,11 +299,13 @@
                                     Create Class
                                 </button>
                                 <button type="button"
-                                    class="border border-gray-300 hover:bg-gray-100 px-5 py-2 rounded-lg transition">
+                                    class="border hover:bg-black hover:text-yellow transition-all duration-300 px-5 py-2 rounded-lg">
                                     Cancel
                                 </button>
                             </div>
+
                         </form>
+
                     </div>
 
 
@@ -316,101 +340,101 @@
 
 
         // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
             }
+        }
 
     </script>
 

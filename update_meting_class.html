@@ -19,7 +19,6 @@
         --color-yellow: #FBCD0D
       }
     </style>
-
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -210,160 +209,107 @@
                     <span>Home</span> /
                     <span>Dashboard</span> /
                     <span>View Course Materials</span> /
-                    <span class="text-black font-semibold">Bootcamp Result List</span>
+                    <span class="text-black font-semibold">Update Class</span>
                 </nav>
             </div>
             <!-- Dynamic Content (right side content)-->
             <div id="main-content">
-                <div class=" space-y-6 w-full bg-white p-4 rounded-2xl">
-                    <h2 class="text-2xl md:text-4xl font-semibold">Bootcamp Result List</h2>
+                <div class="bg-white p-4 rounded-2xl ">
 
-                    <div class="flex items-center justify-between">
-                        <!-- বাম পাশে লেখা -->
-                        <div>
-                            <p class="text-xl font-medium">
-                                Python_User_Input_In_Defined_Function > Hey, 2024 Vehicle Engineering August. All
-                                Student's
-                            </p>
-                        </div>
 
-                        <!-- ডান পাশে আইকন -->
-                        <div class="flex gap-2">
-                            <i
-                                class="fa-solid fa-print bg-[#46B669] p-3 rounded-lg text-sm text-white cursor-pointer"></i>
-                            <i
-                                class="fa-solid fa-download bg-[#46B669] p-3 rounded-lg text-sm text-white cursor-pointer"></i>
-                            <i data-modal-target="bootcampMarkModal"
-                                class="fa-solid fa-upload bg-[#46B669] p-3 rounded-lg text-sm text-white cursor-pointer"></i>
-                        </div>
-                    </div>
+                    <div class="">
+                        <h2 class="text-2xl md:text-4xl font-semibold text-gray-800 mb-6">Update Class</h2>
 
-                    <!-- Modal -->
-                    <div id="bootcampMarkModal"
-                        class="modal fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
-                        <div class="bg-white rounded-2xl shadow-xl w-[95%] max-w-lg relative p-8">
+                        <form class="space-y-5">
 
-                            <!-- Close Button -->
-                            <button
-                                class="modal-close absolute top-3 right-4 text-gray-600 hover:text-black text-2xl cursor-pointer">&times;</button>
+                            <!-- Teacher & Batch -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-base font-semibold text-black">Teacher *</label>
+                                    <select class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-base font-semibold text-black">Batch *</label>
+                                    <select class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
 
                             <!-- Title -->
-                            <h2 class="text-lg md:text-xl font-semibold text-gray-900 mb-6">Bootcamp Mark</h2>
+                            <div>
+                                <label class="block text-base font-semibold text-black">Title *</label>
+                                <input type="text" placeholder="Type..."
+                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                            </div>
 
-                            <!-- Input Field -->
-                            <label for="bootcampMark" class="block text-gray-700 mb-2 font-medium">
-                                Marks (Muktar mizi)
-                            </label>
-                            <input type="text" id="bootcampMark"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-2 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400 mb-8"
-                                value="10">
+                            <!-- Date & Notification -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-base font-semibold text-black">Date *</label>
+                                    <input type="date"
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                                </div>
 
-                            <!-- Submit Button -->
-                            <div class="text-center">
-                                <button
-                                    class="bg-yellow text-black font-semibold px-10 py-2 rounded-lg cursor-pointer transition hover:bg-yellow-400">
-                                    Submit Mark
+                                <div>
+                                    <label class="block text-base font-semibold text-black">
+                                        Do you want to add this class for student notification?
+                                    </label>
+                                    <select class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div>
+                                <label class="block text-base font-semibold text-black">Description</label>
+                                <textarea rows="3"
+                                    class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none"></textarea>
+                            </div>
+
+                            <!-- End Time & Start Time -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-base font-semibold text-black">End Time</label>
+                                    <input type="time"
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                                </div>
+
+                                <div>
+                                    <label class="block text-base font-semibold text-black">Start Time</label>
+                                    <input type="time"
+                                        class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <!-- Meeting URL -->
+                            <div>
+                                <label class="block text-base font-semibold text-black">Meeting URL *</label>
+                                <input type="text" class="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none">
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex space-x-3 pt-2">
+                                <button type="submit"
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-5 py-2 rounded-lg transition">
+                                    Update Class
+                                </button>
+                                <button type="button"
+                                    class="border hover:bg-black hover:text-yellow transition-all duration-300 px-5 py-2 rounded-lg">
+                                    Cancel
                                 </button>
                             </div>
 
-                        </div>
-                    </div>
-
-
-
-
-
-                    <!-- show & search -->
-                    <!-- show & search -->
-                    <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
-                        <!-- Show entries dropdown -->
-                        <div class="flex flex-wrap items-center gap-2">
-                            <p>Show:</p>
-                            <div class="relative inline-block w-20">
-                                <select
-                                    class="block w-full border cursor-pointer border-gray-300 px-4 py-2 pr-10 rounded-xl  focus:outline-none appearance-none bg-white">
-                                    <option>10</option>
-                                    <option>20</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <p>entries</p>
-                        </div>
-
-                        <!-- Search box -->
-                        <div class="w-full md:w-auto flex">
-                            <input type="text" placeholder="Search here..."
-                                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-xl focus:outline-none" />
-                            <button
-                                class="px-4 py-2 bg-black text-yellow cursor-pointer font-semibold rounded-r-xl focus:outline-none focus:ring-2">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full text-left">
-                            <thead class="bg-yellow rounded-lg">
-                                <tr class="text-sm font-semibold">
-                                    <th class="px-2 py-4 rounded-tl-xl rounded-bl-xl">SL</th>
-                                    <th class="px-2 py-4">Homework Name</th>
-                                    <th class="px-2 py-4">Batch</th>
-                                    <th class="px-2 py-4">Starting Date</th>
-                                    <th class="px-2 py-4 rounded-tr-xl rounded-br-xl">Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody class="divide-y divide-gray-200 text-sm">
-                                <!-- Row 1 -->
-
-                            </tbody>
-                        </table>
-
+                        </form>
 
                     </div>
 
-                    <!-- Pagination -->
-                    <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
-                        <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
 
-                        <div class="flex items-center gap-3 text-blue-600 font-medium">
-                            <!-- Previous -->
-                            <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
-                                <i class="fa-solid fa-arrow-left"></i>
-                                Previous
-                            </button>
-
-                            <!-- Page Numbers -->
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="border border-blue-600 text-white bg-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
-                                <button
-                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
-                                <button
-                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">4</button>
-                                <span class="text-blue-600">—</span>
-                                <span class="text-blue-600 cursor-pointer">100</span>
-                            </div>
-
-                            <!-- Next -->
-                            <button class="flex items-center gap-1 cursor-pointer text-blue-600">
-                                Next
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
                 </div>
-
-
 
             </div>
         </div>
@@ -490,46 +436,6 @@
             }
         }
 
-
-        // modal 
-        // Open modal
-        document.querySelectorAll("[data-modal-target]").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const modalId = btn.getAttribute("data-modal-target");
-                document.getElementById(modalId).classList.remove("hidden");
-            });
-        });
-
-        // Close modal (by close btn or outside click)
-        document.querySelectorAll(".modal").forEach(modal => {
-            const closeBtn = modal.querySelector(".modal-close");
-            closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
-            modal.addEventListener("click", e => {
-                if (e.target === modal) modal.classList.add("hidden");
-            });
-        });
-
-        // Handle multiple file uploads dynamically
-        document.querySelectorAll('.file-input').forEach((input) => {
-            input.addEventListener('change', function () {
-                const fileLabel = this.previousElementSibling; // label for "Choose File"
-                const fileSpan = this.parentElement.querySelector('span'); // <span> that shows name
-
-                if (this.files.length > 0) {
-                    if (this.files.length === 1) {
-                        fileSpan.textContent = this.files[0].name;
-                    } else {
-                        fileSpan.textContent = `${this.files.length} files selected`;
-                    }
-                    fileSpan.classList.remove('text-gray-500');
-                    fileSpan.classList.add('text-primary');
-                } else {
-                    fileSpan.textContent = 'No file chosen';
-                    fileSpan.classList.remove('text-primary');
-                    fileSpan.classList.add('text-gray-500');
-                }
-            });
-        });
     </script>
 
 

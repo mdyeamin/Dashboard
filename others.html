@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- fontawesome cdn  -->
-  <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
-  <!-- custom css -->
-  <style type="text/tailwindcss">
-    @theme {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontawesome cdn  -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+        @theme {
         /* --color-clifford: #da373d; */
         --color-primary-bg: #efeeee;
         --color-secondary-bg: #FAF9F9;
@@ -19,28 +19,29 @@
         --color-yellow: #FBCD0D
       }
     </style>
-  <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
-  <title>Enthrall</title>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/25d8830708.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Enthrall</title>
 </head>
 
 <body class="bg-primary-bg max-w-7xl mx-auto">
-  <header class="bg-white h-16 my-4 rounded-2xl px-5">
-    <div class="h-full flex justify-between items-center ">
-      <img class="w-40" src="images/logo.png" alt="">
-      <div class="flex items-center gap-5">
-        <i class="fa-solid fa-bell text-lg"></i>
-        <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
-      </div>
-    </div>
-  </header>
+    <header class="bg-white h-16 my-4 rounded-2xl px-5">
+        <div class="h-full flex justify-between items-center ">
+            <img class="w-40" src="images/logo.png" alt="">
+            <div class="flex items-center gap-5">
+                <i class="fa-solid fa-bell text-lg"></i>
+                <img class="rounded-full w-5" src="images/office-worker.jpg" alt="">
+            </div>
+        </div>
+    </header>
 
-  </head>
+    </head>
 
-  <div class="min-h-screen flex">
-    <!-- Sidebar -->
-    <div id="sidebar" class="bg-white w-52 p-4 space-y-3 md:block hidden fixed md:relative z-10 h-full rounded-2xl">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-white w-52 p-4 space-y-3 md:block hidden fixed md:relative z-10 h-full rounded-2xl">
 
             <nav class="space-y-2">
                 <button
@@ -182,48 +183,60 @@
             </nav>
         </div>
 
-    <!-- Overlay for mobile -->
-    <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
+        <!-- Overlay for mobile -->
+        <div id="overlay" class="fixed inset-0 bg-transparent z-0 hidden md:hidden" onclick="toggleSidebar()"></div>
 
-    <!-- Main content -->
-    <div class="flex-1 px-4 ">
-      <!-- Mobile toggle button -->
-      <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
-        Menu</button>
+        <!-- Main content -->
+        <div class="flex-1 px-4 ">
+            <!-- Mobile toggle button -->
+            <button onclick="toggleSidebar()" class="md:hidden mb-4 text-dark-gray bg-yellow px-4 py-2 rounded">☰
+                Menu</button>
+            
+            <!-- Dynamic Content (right side content)-->
+            <div id="main-content">
+                <div class="space-y-6 w-full bg-white rounded-2xl p-4">
+                    <!-- Header -->
+                    <h2 class="text-2xl md:text-4xl font-semibold">Others</h2>
 
-      <!-- Dynamic Content (right side content)-->
-      <div id="main-content">
-        <div class="bg-white p-4 rounded-lg">
-          <h1 class="text-2xl md:text-4xl font-semibold">Others List</h1>
+                    <!-- Filters -->
+                    <div class="flex flex-col items-end md:flex-row md:space-x-5 space-y-5 md:space-y-0 mb-4 w-full">
 
-          <div class="w-full">
-            <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+                        <!-- Search Value -->
+                        <div class="flex flex-1 flex-col">
+                            <label class="block font-medium mb-1">Search Value</label>
+                            <div class="flex">
+                                <input type="text" id="studentName" placeholder="Enter..."
+                                    class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none" />
+                                
+                            </div>
+                        </div>
 
-              <!-- Student Name Input -->
-              <div class="flex flex-col w-full sm:w-1/2">
-                <label for="studentName" class="mb-1 text-sm font-medium text-gray-700">Student's
-                  Name</label>
-                <input type="text" id="studentName" placeholder="Enter student's name"
-                  class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-              </div>
 
-              <!-- Batch Select -->
-              <div class="flex flex-col w-full sm:w-1/2">
-                <label for="batch" class="mb-1 text-sm font-medium text-gray-700">Batch</label>
-                <select id="batch"
-                  class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                  <option>Select Batch</option>
-                  <option>Batch 1</option>
-                  <option>Batch 2</option>
-                  <option>Batch 3</option>
-                </select>
-              </div>
+                        <!-- Order By -->
 
-            </div>
-          </div>
+                        <div class="flex flex-1 flex-col">
+                            <label class="block font-medium mb-1">Order By</label>
+                            <div class="flex">
+                                <select id="studentName"
+                                    class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none">
+                                    <option class="text" value="">Select</option>
+                                    <option value="ASC">ASC</option>
+                                    <option value="DESC">DESC</option>
+                                </select>
 
-          <!-- show & search -->
-          <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
+                                <button
+                                    class="bg-yellow text-black cursor-pointer font-semibold px-4 py-2 rounded-xl ml-2 transition">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+
+                    <!-- show & search -->
+                    <!-- show & search -->
+                    <div class="flex flex-col my-6 md:flex-row justify-between items-start md:items-center ">
                         <!-- Show entries dropdown -->
                         <div class="flex flex-wrap items-center gap-2">
                             <p>Show:</p>
@@ -256,305 +269,220 @@
                             </button>
                         </div>
                     </div>
+                    <!-- Table -->
+                    <div class="overflow-x-auto bg-white ">
+                        <table class="min-w-full text-left">
+                            <thead class="bg-yellow">
+                                <tr>
+                                    <th class="px-2 py-4 text-sm font-semibold rounded-tl-xl rounded-bl-xl">
+                                        SL</th>
+                                    <th class="px-2 py-4 text-sm font-semibold">Title</th>
+                                    <th class="px-2 py-4 text-sm font-semibold">Batch</th>
 
-          <table class="w-full mt-4 text-left bg-white rounded shadow-sm">
-            <thead class="bg-yellow-300">
-              <tr class="text-sm font-semibold">
-                <th class="px-4 py-2">SL</th>
-                <th class="px-4 py-2">Title</th>
-                <th class="px-4 py-2">Batch</th>
+                                    <th class="px-2 py-4 text-sm font-semibold rounded-tr-xl rounded-br-xl">
+                                        Action</th>
+                                </tr>
+                            </thead>
 
+                            <tbody class="divide-y divide-gray-200 text-sm">
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="px-2 py-4 font-medium">1</td>
+                                    <td class="px-2 py-4">February 2025 Enthrall QA Bootcamp Presentation </td>
+                                    <td class="px-2 py-4">2024BE02, 2024QA03 </td>
 
-                <th class="px-4 py-2">Action</th>
-              </tr>
-            </thead>
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
+                                    <td class="px-2 py-4">
+                                        <a href="">
+                                            <button
+                                                class="bg-yellow px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-yellow-400 transition">
+                                                Click
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-2 py-4 font-medium">1</td>
+                                    <td class="px-2 py-4">February 2025 Enthrall QA Bootcamp Presentation </td>
+                                    <td class="px-2 py-4">2024BE02, 2024QA03 </td>
 
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
-
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
+                                    <td class="px-2 py-4">
+                                        <a href="">
+                                            <button
+                                                class="bg-yellow px-4 py-1 rounded-lg cursor-pointer text-sm font-medium hover:bg-yellow-400 transition">
+                                                Click
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
 
 
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
+                            </tbody>
+                        </table>
 
+                    </div>
 
+                    <!-- Pagination -->
+                    <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
+                        <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
 
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
+                        <div class="flex items-center gap-3 text-blue-600 font-medium">
+                            <!-- Previous -->
+                            <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                Previous
+                            </button>
 
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
-
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
-
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
-
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
-
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-
-            <tbody class="text-sm divide-y">
-              <tr>
-                <td class="px-4 py-2">01</td>
-                <td class="px-4 py-2">february 2025 enthrall QA Bootcamp Presentation</td>
-                <td class="px-4 py-2">2025QA01</td>
-
-
-                <td class="px-4 py-2">
-                  <button class="bg-yellow font-semibold px-3 py-1 rounded text-sm">Click</button>
-                  <!-- <button class="bg-transparent text-blue-600 border hover:bg-blue-600 hover:text-white px-3 py-1 rounded text-sm">Delete</button> -->
-                </td>
-                <tr />
-            </tbody>
-
-
-          </table>
-
-          <!-- Pagination -->
-          <div
-                            class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-4 gap-2">
-                            <p class="text-sm text-gray-500">Showing 01 of 20 Result</p>
-
-                            <div class="flex items-center gap-3 text-blue-600 font-medium">
-                                <!-- Previous -->
-                                <button class="flex items-center gap-1 text-gray-400 cursor-pointer">
-                                    <i class="fa-solid fa-arrow-left"></i>
-                                    Previous
-                                </button>
-
-                                <!-- Page Numbers -->
-                                <div class="flex items-center gap-2">
-                                    <button class="bg-blue-600 text-white px-3 py-1 rounded-lg cursor-pointer">1</button>
-                                    <button
-                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
-                                    <button
-                                        class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
-                                    <span class="text-blue-600">—</span>
-                                    <span class="text-blue-600 cursor-pointer">100</span>
-                                </div>
-
-                                <!-- Next -->
-                                <button class="flex items-center gap-1 cursor-pointer text-blue-600">
-                                    Next
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
+                            <!-- Page Numbers -->
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="border border-blue-600 text-white bg-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">2</button>
+                                <button
+                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">3</button>
+                                <button
+                                    class="border border-blue-600 text-blue-600 px-3 py-1 rounded-lg cursor-pointer transition">4</button>
+                                <span class="text-blue-600">—</span>
+                                <span class="text-blue-600 cursor-pointer">100</span>
                             </div>
+
+                            <!-- Next -->
+                            <button class="flex items-center gap-1 cursor-pointer text-blue-600">
+                                Next
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
+                    </div>
+                </div>
 
+
+
+
+
+            </div>
         </div>
-
-
-
-
-
-
-      </div>
     </div>
-  </div>
 
-  <script>
+    <script>
 
 
-    // Handle multiple accordions dynamically
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
 
-                    // Toggle menu
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
             });
+        });
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle multiple accordions dynamically
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                // Toggle menu
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // Handle accordions
+        document.querySelectorAll(".accordion-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                const arrow = btn.querySelector(".accordion-arrow");
+
+                menu.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-180");
+            });
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+
+        // ===============================
+        // ACTIVE LINK HIGHLIGHT (UPDATED)
+        // ===============================
+
+        // 1️⃣ Main menu buttons
+        const mainLinks = document.querySelectorAll('.toggle-btn a');
+
+        // 2️⃣ Materials submenu links
+        const subLinks = document.querySelectorAll('#menu-2 a');
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+
+        // MAIN SIDEBAR BUTTON ACTIVE
+        mainLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            const parentBtn = link.parentElement;
+
+            if (fileName === currentPage) {
+                parentBtn.classList.add('bg-yellow', 'text-black');
+            } else {
+                parentBtn.classList.remove('bg-yellow', 'text-black');
             }
+        });
 
 
-            // Handle accordions
-            document.querySelectorAll(".accordion-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const targetId = btn.getAttribute("data-target");
-                    const menu = document.getElementById(targetId);
-                    const arrow = btn.querySelector(".accordion-arrow");
+        // SUBMENU ACTIVE (Materials)
+        subLinks.forEach(link => {
+            const fileName = link.getAttribute('href').split('/').pop();
 
-                    menu.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                });
-            });
+            if (fileName === currentPage) {
+                // Highlight submenu item
+                link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
 
+                // Open accordion automatically
+                const menu = document.getElementById("menu-2");
+                const accordionBtn = document.querySelector('[data-target="menu-2"]');
+                const arrow = accordionBtn.querySelector('.accordion-arrow');
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('overlay');
-                sidebar.classList.toggle('hidden');
-                overlay.classList.toggle('hidden');
+                menu.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
             }
+        });
 
 
-            // ===============================
-            // ACTIVE LINK HIGHLIGHT (UPDATED)
-            // ===============================
-
-            // 1️⃣ Main menu buttons
-            const mainLinks = document.querySelectorAll('.toggle-btn a');
-
-            // 2️⃣ Materials submenu links
-            const subLinks = document.querySelectorAll('#menu-2 a');
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-
-            // MAIN SIDEBAR BUTTON ACTIVE
-            mainLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-                const parentBtn = link.parentElement;
-
-                if (fileName === currentPage) {
-                    parentBtn.classList.add('bg-yellow', 'text-black');
-                } else {
-                    parentBtn.classList.remove('bg-yellow', 'text-black');
-                }
-            });
-
-
-            // SUBMENU ACTIVE (Materials)
-            subLinks.forEach(link => {
-                const fileName = link.getAttribute('href').split('/').pop();
-
-                if (fileName === currentPage) {
-                    // Highlight submenu item
-                    link.classList.add('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-
-                    // Open accordion automatically
-                    const menu = document.getElementById("menu-2");
-                    const accordionBtn = document.querySelector('[data-target="menu-2"]');
-                    const arrow = accordionBtn.querySelector('.accordion-arrow');
-
-                    menu.classList.remove("hidden");
-                    arrow.classList.add("rotate-180");
-                } else {
-                    link.classList.remove('bg-yellow', 'text-black', 'rounded-lg', 'px-2');
-                }
-            });
-
-
-            // Default Dashboard highlight
-            if (!currentPage || currentPage === "index.html") {
-                const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
-                if (dashboard) {
-                    dashboard.parentElement.classList.add('bg-yellow', 'text-black');
-                }
+        // Default Dashboard highlight
+        if (!currentPage || currentPage === "index.html") {
+            const dashboard = document.querySelector('.toggle-btn a[href="index.html"]');
+            if (dashboard) {
+                dashboard.parentElement.classList.add('bg-yellow', 'text-black');
             }
+        }
 
-  </script>
+    </script>
 
 
 </body>
